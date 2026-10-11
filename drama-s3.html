@@ -325,6 +325,18 @@
   .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
   .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
   .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
   .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
   .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
   .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
@@ -362,7 +374,7 @@
   <p class="cast">主要角色：陳金生、陳文雄父子（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
 </header>
 <div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
-<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button></nav>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button><button type="button" role="tab" id="tab7" aria-controls="ep7" aria-selected="false" data-i="7" class="recap-tab">季末總整理</button></nav>
 <section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
 <div class="ep-head"><span class="code">S3・E1</span><span class="yr">1895</span></div>
 <h2>乙未</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1895 年夏天</p><p><b class="kw">臺灣民主國</b>很快就瓦解了，可是各地的人沒有放下武器。新竹、苗栗、彰化、臺南，到處都在打。這場仗叫<b class="kw">乙未戰爭</b>。</p><p class="line">「我們不是為了皇帝打，」一位義軍頭目說，「是為了家。」</p><p>日軍花了將近半年才控制全島。傷亡的數字，雙方都很驚人。</p></div>
@@ -405,6 +417,12 @@
 <div class="keypts"><h3>本集重點</h3><ul><li><b>1937</b> 起<b>皇民化運動</b>：國語（日語）家庭、改日本姓名、參拜神社、志願兵。</li><li>日治三階段：<b>特別統治（1895）→ 同化政策（1919）→ 皇民化（1937）</b>。</li><li><b>1945</b> 日本投降，結束 50 年統治。</li></ul></div>
 <div class="teaser"><b>下集預告</b>第四季：新的政府來了。大家到碼頭歡迎，以為好日子要來了。</div>
 <div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q13</span><span>皇民化運動開始於？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 1915</button><button class="opt-btn" type="button" data-k="B">(B) 1919</button><button class="opt-btn" type="button" data-k="C">(C) 1937</button><button class="opt-btn" type="button" data-k="D">(D) 1945</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>1937 年中日戰爭爆發後推行皇民化。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q14</span><span>日治時期「國語家庭」的「國語」指的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 華語</button><button class="opt-btn" type="button" data-k="B">(B) 日語</button><button class="opt-btn" type="button" data-k="C">(C) 臺語</button><button class="opt-btn" type="button" data-k="D">(D) 英語</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>日治時期的國語是日語。</div></details></div></div>
+</section><section class="ep recap" id="ep7" role="tabpanel" aria-labelledby="tab7" hidden>
+<div class="ep-head"><span class="code">S3・季末總整理</span><span class="yr">1895－1945</span></div>
+<h2>《帝國的南方》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p><b>1895</b> 年日本拿到台灣，可是台灣人沒有乖乖接受。各地義軍和日軍打了將近半年，這就是<b>乙未戰爭</b>。</p><p>日本一開始派<b>武官總督</b>，用軍隊鎮壓。<b>六三法</b>讓總督可以自己發布具有法律效力的命令，行政、立法、軍事一把抓。這個階段叫<b>特別統治</b>。</p><p>真正把台灣「管起來」的，是醫生出身的<b>後藤新平</b>。他相信統治要像治病，先調查再下藥。於是有了<b>土地調查</b>、<b>戶口調查</b>：總督府買斷<b>大租</b>，把<b>小租戶</b>登記為業主，一田一主，稅收大增。再加上十戶一甲的<b>保甲制度</b>和鴉片、樟腦、鹽的<b>專賣</b>，台灣被管得又細又緊。</p><p>武裝抗日還在繼續，直到 <b>1915</b> 年<b>西來庵事件</b>被血腥鎮壓。從此，台灣人知道拿刀槍拚不過現代軍隊。</p><blockquote class="chain">抗日方式轉變：1915 前用<b>槍</b>（武裝抗日）→ 1915 後用<b>筆</b>（政治與文化運動）</blockquote><p><b>1919</b> 年起換成<b>文官總督</b>，政策變成<b>同化政策</b>（內地延長主義）。<b>1921</b> 年，在日本的台灣留學生發起<b>臺灣議會設置請願運動</b>，要求在台灣設立民選議會，前後請願 15 次；同年，<b>蔣渭水</b>等人成立<b>臺灣文化協會</b>，到處演講、辦讀報社。</p><p>經濟上，台灣的任務是當日本的米倉和糖罐。<b>蓬萊米</b>、新式糖廠、<b>1930</b> 年完工的<b>嘉南大圳</b>，都是為了這個目標。這叫「<b>工業日本、農業台灣</b>」。</p><p>同樣在 <b>1930</b> 年，山上爆發<b>霧社事件</b>，賽德克族頭目<b>莫那・魯道</b>帶領族人反抗。事後倖存族人被遷到<b>川中島</b>，總督府也推動<b>集團移住</b>，影響到今天的傳統領域議題。</p><p><b>1937</b> 年中日戰爭爆發，總督府推動<b>皇民化運動</b>：講日語的「<b>國語家庭</b>」、改日本姓名、參拜神社、徵召志願兵。台灣也因為日本「南進」而開始發展軍需工業。</p><blockquote class="chain">統治三階段：<b>特別統治（1895）→ 同化政策（1919）→ 皇民化（1937）</b></blockquote><p><b>1945</b> 年日本戰敗投降，五十年的日本統治結束了。</p><p>下一季：《戒嚴與黎明》。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">馬關條約、乙未戰爭（1895）→ 武官總督、六三法 → 後藤新平：土地調查、保甲、專賣 → 西來庵事件（1915），武裝抗日結束 → 文官總督、同化政策（1919）→ 議會請願、文化協會（1921）→ 蓬萊米、嘉南大圳、霧社事件（1930）→ 皇民化運動（1937）→ 日本投降（1945）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">用槍統治</span><span>乙未戰爭、武官總督、六三法</span></div><div><b>第二幕</b><span class="at">調查與控制</span><span>後藤新平的土地調查、保甲、專賣</span></div><div><b>第三幕</b><span class="at">從槍到筆</span><span>西來庵後改走請願、文化協會；米糖經濟</span></div><div><b>第四幕</b><span class="at">戰爭與皇民化</span><span>霧社事件、皇民化運動、日本投降</span></div></div></div>
 </section>
 <div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-s4.html" hidden>看第四季 →</a></div>
 <section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="tw-japan.html">日治時期</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的東亞和世界。</p></section>
@@ -553,7 +571,7 @@
 </script>
 <script>
 (function(){
-  var K='s3', N=7, SK='drama-watch-v1', st={};
+  var K='s3', N=8, SK='drama-watch-v1', st={};
   try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
   st[K]=st[K]||{seen:{},cur:0};
   function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }

@@ -325,6 +325,18 @@
   .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
   .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
   .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
   .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
   .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
   .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
@@ -362,7 +374,7 @@
   <p class="cast">主要角色：麗雅：新港社的西拉雅女孩（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
 </header>
 <div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
-<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button></nav>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6" class="recap-tab">季末總整理</button></nav>
 <section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
 <div class="ep-head"><span class="code">S1・E1</span><span class="yr">約 1,500 年前</span></div>
 <h2>火與鐵的村落</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">淡水河口・十三行</p><p>夜裡的海風很冷，少年阿嵐守著煉鐵爐，一夜沒睡。爐火映紅了整片沙丘。</p><p>村裡的長老說，祖先是坐船來的。比他們更早，東海岸的<b class="kw">長濱</b>已經有人用打製石器過日子，北部的<b class="kw">大坌坑</b>有人開始做陶器。</p><p class="line">「爐火不能熄，」長老說，「鐵是我們跟海那邊換東西的本錢。」</p><p>天亮時，一艘外地船靠岸，帶來瑪瑙珠和一串有方孔的銅錢。阿嵐把銅錢串在脖子上。一千多年後，考古學家會在這片沙丘下挖到同樣的錢。</p></div>
@@ -399,6 +411,12 @@
 <div class="keypts"><h3>本集重點</h3><ul><li>鄭經改稱<b>東寧</b>；<b>陳永華</b>建孔廟、辦學校，帶進儒學教育。</li><li>軍隊<b>屯田</b>（營盤田），地名「營」由此而來。</li><li><b>1683</b> 年施琅攻臺，鄭克塽降清；<b>1684</b> 年設臺灣府，隸屬福建省。</li></ul></div>
 <div class="teaser"><b>下集預告</b>第二季：一個少年躲在船艙底，偷渡黑水溝。他要找的，是一塊屬於自己的田。</div>
 <div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q11</span><span>鄭氏時期在臺灣建孔廟、設學校的是誰？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 施琅</button><button class="opt-btn" type="button" data-k="B">(B) 陳永華</button><button class="opt-btn" type="button" data-k="C">(C) 郭懷一</button><button class="opt-btn" type="button" data-k="D">(D) 劉銘傳</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>陳永華建孔廟、辦教育，儒學在臺灣扎根。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q12</span><span>1684 年清朝設臺灣府，隸屬哪一省？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 廣東</button><button class="opt-btn" type="button" data-k="B">(B) 浙江</button><button class="opt-btn" type="button" data-k="C">(C) 福建</button><button class="opt-btn" type="button" data-k="D">(D) 臺灣</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>臺灣府隸屬福建省；臺灣建省要到 1885 年。</div></details></div></div>
+</section><section class="ep recap" id="ep6" role="tabpanel" aria-labelledby="tab6" hidden>
+<div class="ep-head"><span class="code">S1・季末總整理</span><span class="yr">史前－1683</span></div>
+<h2>《台灣島爭奪戰》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p>很久以前，台灣並不是一座沒人住的荒島。島上早就有<b>原住民族</b>生活，他們屬於<b>南島語族</b>。考古學家在東海岸的<b>長濱</b>找到舊石器，在北部的<b>大坌坑</b>找到早期陶器，在淡水河口的<b>十三行</b>挖到煉鐵的痕跡，還有從外地換來的銅錢和珠子。</p><blockquote class="chain">史前三站：<b>長濱（舊石器）→ 大坌坑（新石器、陶器）→ 十三行（金屬器、煉鐵）</b></blockquote><p>到了 17 世紀，大航海時代來了。歐洲船隊在亞洲四處找貿易據點，台灣突然成了大家眼中的「黃金轉運站」。</p><p><b>荷蘭東印度公司</b>在 <b>1624</b> 年先占了南部的大員，蓋起<b>熱蘭遮城</b>。他們來不是為了種田，而是為了做生意：把台灣的<b>鹿皮</b>賣到日本，把中國的<b>生絲、瓷器</b>轉運出去。為了賺更多，他們招來大批漢人種<b>稻米、甘蔗</b>（<b>王田</b>），又把和原住民村社做買賣的權利拿來標售（<b>贌社</b>）。傳教士還教西拉雅人用<b>羅馬字</b>寫自己的語言。</p><p>北部也有人來搶。<b>西班牙</b>在 <b>1626</b> 年進入<b>雞籠</b>，後來到淡水，傳<b>天主教</b>。台灣一度變成「<b>南荷蘭、北西班牙</b>」。</p><p>荷蘭心想：「一座島怎麼能讓你分一半？」<b>1642</b> 年北上趕走西班牙，成為島上唯一的歐洲主人。</p><p>可是島上的漢人越來越多，稅也越收越重。<b>1652</b> 年<b>郭懷一</b>起事，很快被鎮壓。荷蘭人的統治，其實並不穩。</p><p>沒想到，更大的對手從海上出現。明朝滅亡後，<b>鄭成功</b>為了「<b>反清復明</b>」需要一個基地。<b>1661</b> 年他從<b>鹿耳門</b>進攻，<b>1662</b> 年荷蘭投降。台灣從荷蘭人的國際貿易站，變成對抗清朝的根據地。</p><p>鄭氏設<b>承天府</b>，後來改名<b>東寧</b>。謀士<b>陳永華</b>蓋孔廟、辦學校，軍隊閒時下田（<b>營盤田</b>）。漢人的制度和儒學，從這時開始在台灣扎根。</p><p>可是鄭氏也沒撐太久。<b>1683</b> 年清朝派<b>施琅</b>攻台，鄭克塽投降。第一季的爭奪戰，最後由清朝收尾。</p><p>下一季：《渡海的人》。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">原住民 → 荷蘭占南部（1624）→ 西班牙占北部（1626）→ 荷蘭趕走西班牙（1642）→ 郭懷一事件（1652）→ 鄭成功趕走荷蘭（1662）→ 陳永華建制度 → 施琅攻台、鄭氏降清（1683）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">島上的主人</span><span>原住民族與史前文化</span></div><div><b>第二幕</b><span class="at">歐洲人來搶台灣</span><span>荷蘭在南、西班牙在北，荷蘭勝</span></div><div><b>第三幕</b><span class="at">國姓爺的基地</span><span>鄭氏把台灣當反清復明的根據地</span></div><div><b>第四幕</b><span class="at">清朝收尾</span><span>施琅攻台，鄭氏投降</span></div></div></div>
 </section>
 <div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-s2.html" hidden>看第二季 →</a></div>
 <section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="tw-early.html">早期台灣</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的東亞和世界。</p></section>
@@ -547,7 +565,7 @@
 </script>
 <script>
 (function(){
-  var K='s1', N=6, SK='drama-watch-v1', st={};
+  var K='s1', N=7, SK='drama-watch-v1', st={};
   try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
   st[K]=st[K]||{seen:{},cur:0};
   function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }

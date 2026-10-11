@@ -325,6 +325,18 @@
   .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
   .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
   .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
   .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
   .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
   .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
@@ -362,7 +374,7 @@
   <p class="cast">主要角色：陳阿水：偷渡來臺的漳州少年（虛構）／潘家：麗雅的後代（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
 </header>
 <div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
-<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button></nav>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button><button type="button" role="tab" id="tab7" aria-controls="ep7" aria-selected="false" data-i="7" class="recap-tab">季末總整理</button></nav>
 <section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
 <div class="ep-head"><span class="code">S2・E1</span><span class="yr">1700 年代初</span></div>
 <h2>黑水溝</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">漳州・港邊</p><p>清朝規定，要到臺灣必須先申請<b class="kw">照單</b>，而且不准帶家眷。這叫<b class="kw">渡臺禁令</b>。阿水沒有照單，只有一身力氣。</p><p class="line">「六死三留一回頭，」船頭老大說，「十個人過<b class="kw">黑水溝</b>，六個死在海上。你還要去？」</p><p class="line">「要去。家裡沒田了。」</p></div><div class="scene"><p class="scene-cap">臺灣海峽</p><p>船艙底又悶又臭。浪大時，有人被打下海，再也沒上來。三天後，阿水看見了陸地。</p><p>清廷為什麼這麼不放心？因為鄭氏剛被打下來，朝廷擔心臺灣再變成反清的基地。這種想法叫「<b class="kw">為防臺而治臺</b>」。</p></div>
@@ -405,6 +417,12 @@
 <div class="keypts"><h3>本集重點</h3><ul><li><b>1894 甲午戰爭</b>清朝戰敗，<b>1895 馬關條約</b>割讓臺灣、澎湖。</li><li>臺灣士紳成立<b>臺灣民主國</b>抵抗。</li><li>清朝統治臺灣共 <b>212</b> 年（1683－1895）。</li></ul></div>
 <div class="teaser"><b>下集預告</b>第三季：新的統治者帶著尺和本子，走進每一塊田、每一戶人家。</div>
 <div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q13</span><span>臺灣割讓給日本是根據哪個條約？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 南京條約</button><button class="opt-btn" type="button" data-k="B">(B) 天津條約</button><button class="opt-btn" type="button" data-k="C">(C) 馬關條約</button><button class="opt-btn" type="button" data-k="D">(D) 北京條約</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>1895 年馬關條約割讓臺灣、澎湖。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q14</span><span>割臺後，臺灣士紳成立了什麼來抵抗？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 臺灣文化協會</button><button class="opt-btn" type="button" data-k="B">(B) 臺灣民主國</button><button class="opt-btn" type="button" data-k="C">(C) 新民會</button><button class="opt-btn" type="button" data-k="D">(D) 臺灣議會</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1895 年成立臺灣民主國抵抗日軍。</div></details></div></div>
+</section><section class="ep recap" id="ep7" role="tabpanel" aria-labelledby="tab7" hidden>
+<div class="ep-head"><span class="code">S2・季末總整理</span><span class="yr">1684－1895</span></div>
+<h2>《渡海的人》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p>清朝打下台灣後，其實有點頭痛：「這座海外孤島到底要不要留？」最後決定留下，<b>1684</b> 年設<b>臺灣府</b>，隸屬<b>福建省</b>。</p><p>但清廷一開始很不放心。鄭氏剛被打下來，朝廷怕台灣再變成反清的基地，所以採取<b>消極治台</b>：要來台灣得先申請<b>照單</b>，而且不准帶家眷，這就是<b>渡臺禁令</b>。</p><p>可是一道海峽擋不住想找土地的人。福建、廣東的漢人冒著「<b>六死三留一回頭</b>」的風險，偷渡<b>黑水溝</b>。</p><p>人一多，就開始<b>開墾</b>。漢人向原住民租地、買地，很多契約用羅馬字寫成，這就是<b>新港文書</b>。官府劃了<b>番界</b>（土牛溝）想擋住開墾，但界線一年一年往山裡推。大家合力挖水圳，像<b>八堡圳</b>、<b>瑠公圳</b>。平原上的原住民被擠壓，有些漢化，有些往山區移動。</p><p>移民依祖籍抱團，為了土地、水源打起來，就是<b>分類械鬥</b>（閩粵械鬥、漳泉械鬥）。人民對官府不滿，又會爆發<b>民變</b>，最有名的是 <b>1721 朱一貴</b>和 <b>1786 林爽文</b>。</p><blockquote class="chain">清領前期 ＝ 開發快速、人口暴增、政府管不太動的「<b>移墾社會</b>」</blockquote><p>故事到了 19 世紀突然轉折：西方列強又回來了。這次他們不占領，而是用<b>天津條約、北京條約</b>逼清朝<b>開港</b>。<b>安平、淡水</b>先開，後來加上<b>打狗、雞籠</b>。<b>茶、糖、樟腦</b>大量出口，大稻埕的洋行生意興隆，<b>馬偕</b>在北部、<b>馬雅各</b>在南部傳教行醫。</p><blockquote class="chain">早期重心在南部 → 開港後北部茶葉、樟腦興起 → 經濟重心<b>逐漸北移</b></blockquote><p>接著外患一個接一個。<b>1874</b> 年日本藉口<b>牡丹社事件</b>出兵南台灣；<b>1884</b> 年<b>清法戰爭</b>打到基隆、淡水。清廷終於發現：「等等，台灣不是可有可無的小島，它的位置超重要！」</p><p>於是清廷由消極轉為<b>積極</b>。<b>沈葆楨</b>來台推動<b>開山撫番</b>、廢除渡臺禁令；<b>1885</b> 年台灣<b>建省</b>，首任巡撫<b>劉銘傳</b>蓋了<b>基隆到新竹的鐵路</b>，架電報、清查田賦。</p><p>可是故事已經走到尾聲。<b>1894</b> 年甲午戰爭清朝戰敗，<b>1895</b> 年<b>馬關條約</b>把台灣、澎湖割給日本。台灣人成立<b>臺灣民主國</b>想抵抗，卻擋不住日軍登陸。</p><p>下一季：《帝國的南方》。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">設臺灣府（1684）→ 渡臺禁令、消極治台 → 偷渡黑水溝、大量開墾 → 番界與新港文書 → 民變（朱一貴、林爽文）與分類械鬥 → 開港通商（1860）→ 茶、糖、樟腦，經濟重心北移 → 牡丹社事件（1874）→ 清法戰爭 → 建省、劉銘傳（1885）→ 馬關條約割台（1895）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">清朝勉強接管</span><span>設府、渡臺禁令、消極治台</span></div><div><b>第二幕</b><span class="at">移民狂進來</span><span>開墾、番界、民變與分類械鬥</span></div><div><b>第三幕</b><span class="at">世界敲門</span><span>開港通商，經濟重心北移</span></div><div><b>第四幕</b><span class="at">外患逼清朝認真</span><span>牡丹社、清法戰爭→積極治台、建省→割台</span></div></div></div>
 </section>
 <div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-s3.html" hidden>看第三季 →</a></div>
 <section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="tw-qing.html">清領時期</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的東亞和世界。</p></section>
@@ -553,7 +571,7 @@
 </script>
 <script>
 (function(){
-  var K='s2', N=7, SK='drama-watch-v1', st={};
+  var K='s2', N=8, SK='drama-watch-v1', st={};
   try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
   st[K]=st[K]||{seen:{},cur:0};
   function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }

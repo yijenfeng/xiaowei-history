@@ -325,6 +325,18 @@
   .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
   .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
   .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
   .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
   .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
   .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
@@ -362,7 +374,7 @@
   <p class="cast">主要角色：陳文雄、陳秀英、陳志明（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
 </header>
 <div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
-<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button></nav>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6">E7</button><button type="button" role="tab" id="tab7" aria-controls="ep7" aria-selected="false" data-i="7" class="recap-tab">季末總整理</button></nav>
 <section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
 <div class="ep-head"><span class="code">S4・E1</span><span class="yr">1945－1946</span></div>
 <h2>碼頭上的旗子</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1945 年 10 月・基隆港</p><p>陳文雄帶著全家到碼頭，揮著新做的旗子，歡迎國軍上岸。中華民國接收臺灣，設立<b class="kw">臺灣省行政長官公署</b>，行政長官是<b class="kw">陳儀</b>。</p></div><div class="scene"><p class="scene-cap">一年後</p><p>米價一天比一天高。工作機會大多給了外省來的人，官員貪汙的傳聞也越來越多。</p><p class="line">「<b class="kw">狗去豬來</b>，」市場裡有人小聲說。</p><p>期待，慢慢變成了失望。</p></div>
@@ -405,6 +417,12 @@
 <div class="keypts"><h3>本集重點</h3><ul><li><b>1996</b> 首次總統直選；<b>2000</b> 首次中央政黨輪替。</li><li>政治民主化主線：<b>1947 二二八 → 1949 戒嚴 → 1987 解嚴 → 1991－92 國會改選 → 1996 總統直選</b>。</li><li>回顧全劇：同一塊土地，經歷荷西、鄭氏、清領、日治、戰後五個時代。</li></ul></div>
 <div class="teaser"><b>下集預告</b>全劇終。回到第一季，看看那張紙是怎麼開始的。</div>
 <div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q13</span><span>臺灣首次總統直選是哪一年？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 1987</button><button class="opt-btn" type="button" data-k="B">(B) 1991</button><button class="opt-btn" type="button" data-k="C">(C) 1996</button><button class="opt-btn" type="button" data-k="D">(D) 2000</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>1996 年首次總統直選。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q14</span><span>2000 年在臺灣政治史上的意義是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 解除戒嚴</button><button class="opt-btn" type="button" data-k="B">(B) 首次中央政黨輪替</button><button class="opt-btn" type="button" data-k="C">(C) 退出聯合國</button><button class="opt-btn" type="button" data-k="D">(D) 國會全面改選</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>2000 年首次中央政黨輪替。</div></details></div></div>
+</section><section class="ep recap" id="ep7" role="tabpanel" aria-labelledby="tab7" hidden>
+<div class="ep-head"><span class="code">S4・季末總整理</span><span class="yr">1945－2000</span></div>
+<h2>《戒嚴與黎明》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p><b>1945</b> 年中華民國接收台灣，設立<b>臺灣省行政長官公署</b>，由陳儀主持。大家本來滿心期待，結果迎來<b>物價飛漲</b>、官員貪汙和差別待遇。</p><p><b>1947</b> 年，查緝私菸的衝突引爆了<b>二二八事件</b>。政府派軍隊鎮壓，造成大量傷亡，也在台灣社會留下很深的傷痕。</p><p><b>1949</b> 年，政府發布<b>臺灣省戒嚴令</b>，同一年中華民國政府撤退來台。言論、集會、出版都受到管制，一管就是 38 年。</p><p>這時候，國際局勢救了台灣。<b>1950</b> 年<b>韓戰</b>爆發，美國派<b>第七艦隊</b>協防台灣海峽，隔年開始提供<b>美援</b>。台灣成了<b>冷戰</b>的前線。</p><p>政府在農村推動土地改革：先<b>三七五減租</b>，再<b>公地放領</b>，<b>1953</b> 年<b>耕者有其田</b>，讓佃農有了自己的田。</p><blockquote class="chain">土地改革：<b>三七五減租 → 公地放領 → 耕者有其田</b></blockquote><p>經濟一步步往上爬。1950 年代先保護本地產業（<b>進口替代</b>），<b>1966</b> 年高雄<b>加工出口區</b>成立，轉向<b>出口導向</b>，家家戶戶「客廳即工廠」。1970 年代推動<b>十大建設</b>，<b>1980</b> 年新竹科學園區成立，走向高科技。</p><blockquote class="chain">經濟四階段：<b>進口替代 → 出口導向 → 重化工業 → 高科技</b></blockquote><p>外交卻一路受挫。<b>1971</b> 年退出<b>聯合國</b>，<b>1979</b> 年美國斷交，另訂<b>臺灣關係法</b>。同年底，高雄爆發<b>美麗島事件</b>，黨外人士被捕受審，卻也讓更多人開始關心民主。</p><p>黎明終於來了。<b>1987</b> 年<b>解除戒嚴</b>，隔年解除報禁；<b>1991</b> 年終止動員戡亂時期，<b>1991－1992</b> 年<b>國會全面改選</b>，「萬年國會」走入歷史；<b>1996</b> 年<b>第一次總統直選</b>；<b>2000</b> 年第一次<b>中央政黨輪替</b>。</p><blockquote class="chain">民主化主線：<b>二二八（1947）→ 戒嚴（1949）→ 解嚴（1987）→ 國會改選（1991－92）→ 總統直選（1996）→ 政黨輪替（2000）</b></blockquote><p>從荷蘭人的商館到第一張總統選票，台灣花了將近四百年。全劇終。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">接收、行政長官公署（1945）→ 二二八事件（1947）→ 戒嚴、政府遷台（1949）→ 韓戰、美援（1950）→ 土地改革（1953 耕者有其田）→ 加工出口區（1966）→ 退出聯合國（1971）→ 十大建設 → 美國斷交、美麗島事件（1979）→ 解嚴（1987）→ 國會全面改選（1991－92）→ 總統直選（1996）→ 政黨輪替（2000）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">期待變失望</span><span>接收、物價飛漲、二二八事件</span></div><div><b>第二幕</b><span class="at">冷戰下的台灣</span><span>戒嚴、韓戰、美援、土地改革</span></div><div><b>第三幕</b><span class="at">經濟奇蹟</span><span>加工出口區、十大建設、科學園區</span></div><div><b>第四幕</b><span class="at">走向民主</span><span>外交困境、美麗島、解嚴、國會改選、總統直選</span></div></div></div>
 </section>
 <div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="taiwan-drama.html" hidden>回到劇場首頁 →</a></div>
 <section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="tw-postwar.html">戰後台灣</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的東亞和世界。</p></section>
@@ -553,7 +571,7 @@
 </script>
 <script>
 (function(){
-  var K='s4', N=7, SK='drama-watch-v1', st={};
+  var K='s4', N=8, SK='drama-watch-v1', st={};
   try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
   st[K]=st[K]||{seen:{},cur:0};
   function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }

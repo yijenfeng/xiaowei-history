@@ -325,6 +325,18 @@
   .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
   .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
   .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
   .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
   .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
   .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
@@ -358,7 +370,7 @@
 <header class="hero">
   <span class="eyebrow">台灣史・劇情版</span>
   <h1>台灣史劇場</h1>
-  <p class="sub">把四百年的台灣史拍成四季連續劇。每季 6 到 7 集，一集約 3 分鐘讀完，結尾有本集重點、下集預告和兩題小測驗。適合在讀完教材後複習，或睡前看一集。</p>
+  <p class="sub">把四百年的台灣史拍成四季連續劇。每季 6 到 7 集，一集約 3 分鐘讀完，結尾有本集重點、下集預告和兩題小測驗。每季最後還有一篇「季末總整理」，用旁白把整季從頭說一次，附劇情骨架與四幕重點。適合在讀完教材後複習，或睡前看一集。</p>
 </header>
 <div class="lede"><p>貫穿全劇的是一張<b>新港文書</b>：第一季的西拉雅女孩學會羅馬字，第二季她的後代用它和偷渡來的少年訂下租地契約，之後這張紙在陳家傳了三百年。跟著這張紙，就能把每個時代串起來。</p></div>
 <div class="seasons"><a class="scard" href="drama-s1.html" data-k="s1" data-n="6">
@@ -388,7 +400,7 @@
   document.querySelectorAll('.scard').forEach(function(c){
     var k=c.getAttribute('data-k'), n=+c.getAttribute('data-n'), s=st[k];
     if(!s) return;
-    var seen=Object.keys(s.seen||{}).length;
+    var seen=Object.keys(s.seen||{}).filter(function(x){ return +x<n; }).length;
     c.querySelector('.bar i').style.width=Math.round(seen/n*100)+'%';
     c.querySelector('.pg').textContent='已看完 '+seen+' / '+n+' 集';
     c.querySelector('.go').textContent = seen>=n ? '重看一次 →' : '繼續看 E'+((s.cur||0)+1)+' →';
