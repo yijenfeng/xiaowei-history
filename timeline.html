@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>世界歷史時間軸｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E6EEE9;
+    --ink:#1C2A24;
+    --ink-muted:#58695F;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --amber:#E0973C;  --amber-ink:#3A2306;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#CFE8DA;  --hl-sup:#DCE8F5;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(46,125,91,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+      --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+      --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(124,201,162,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+    --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+    --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(124,201,162,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+<style>
+  .tl-tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; margin:0 0 1.4rem; }
+  .tl-tools .lbl{ font-size:0.82rem; color:var(--ink-muted); margin-right:0.2rem; }
+  .chipbtn{ font:inherit; font-size:0.85rem; padding:0.3rem 0.8rem; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--ink-muted); cursor:pointer; }
+  .chipbtn[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .chipbtn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .chipbtn i{ display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:0.35rem; vertical-align:0; }
+  .era{ background:var(--surface); border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow); margin:0 0 1.2rem; overflow:hidden; }
+  .era-h{ padding:0.9rem 1.2rem; background:var(--surface-2); border-bottom:1px solid var(--line); }
+  .era-h h2{ font-size:1.15rem; font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .era-h p{ margin:0.2rem 0 0; font-size:0.88rem; color:var(--ink-muted); }
+  .lanes{ display:grid; grid-template-columns:repeat(var(--n,3), minmax(0,1fr)); }
+  .lane{ padding:0.7rem 1rem 0.9rem; border-left:1px solid var(--line); min-width:0; }
+  .lane:first-child{ border-left:0; }
+  .lane-h{ font-size:0.78rem; font-weight:700; letter-spacing:0.08em; padding:0.1rem 0.5rem; border-radius:4px; display:inline-block; margin-bottom:0.4rem; }
+  .lane[data-lane="w"] .lane-h{ background:var(--hl-sup); }
+  .lane[data-lane="e"] .lane-h{ background:var(--hl-ex); }
+  .lane[data-lane="t"] .lane-h{ background:var(--hl-ts); }
+  .lane ol{ list-style:none; margin:0; padding:0; display:grid; gap:0.15rem; }
+  .lane li a{ display:grid; grid-template-columns:auto; text-decoration:none; color:var(--ink); padding:0.3rem 0.4rem; border-radius:5px; line-height:1.45; }
+  .lane li a:hover{ background:var(--accent-soft); }
+  .lane li a:focus-visible{ outline:2px solid var(--accent); }
+  .lane .y{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.76rem; color:var(--ink-muted); }
+  .lane .t{ font-size:0.92rem; }
+  .lane li.must .y{ color:var(--accent); font-weight:700; }
+  .lane li.must .t{ font-weight:700; }
+  .lane li.none{ font-size:0.82rem; color:var(--ink-muted); padding:0.3rem 0.4rem; }
+  body.only-must .lane li.ev:not(.must){ display:none; }
+  body.mask-y .lane .y{ filter:blur(5px); user-select:none; }
+  body.mask-y .lane li.shown .y{ filter:none; }
+  @media (max-width:720px){
+    .lanes{ grid-template-columns:minmax(0,1fr) !important; }
+    .lane{ border-left:0; border-top:1px solid var(--line); }
+    .lane:first-child{ border-top:0; }
+  }
+  @media (prefers-reduced-motion: reduce){ .lane .y{ transition:none; } }
+</style>
+</head>
+<body>
+<div class="page" style="max-width:1080px">
+<a class="back" href="index.html">← 回到歷史學習地圖</a>
+<header class="hero">
+  <span class="eyebrow">總覽・時間軸</span>
+  <h1>世界歷史時間軸</h1>
+  <p class="sub">把世界、東亞、台灣放在同一張表上，看「同一個時代，三個地方各發生了什麼」。學測常出跨冊題，這張表就是三冊的共同座標。共 96 個事件，粗體是必背的 45 個；點任何一個事件，會打開它所在的教材。</p>
+</header>
+<div class="tl-tools"><span class="lbl">顯示</span><button class="chipbtn" type="button" data-lane="w" aria-pressed="true"><i style="background:var(--hl-sup);border:1px solid var(--line)"></i>世界</button><button class="chipbtn" type="button" data-lane="e" aria-pressed="true"><i style="background:var(--hl-ex);border:1px solid var(--line)"></i>東亞</button><button class="chipbtn" type="button" data-lane="t" aria-pressed="true"><i style="background:var(--hl-ts);border:1px solid var(--line)"></i>台灣</button><span class="lbl" style="margin-left:0.6rem">篩選</span><button class="chipbtn" type="button" id="bMust" aria-pressed="false">只看必背（45）</button><button class="chipbtn" type="button" id="bMask" aria-pressed="false">遮住年代自我測驗</button></div>
+<section class="era"><div class="era-h"><h2>古代到 15 世紀</h2><p>城邦、帝國與宗教；東亞形成以中國為中心的朝貢秩序；台灣是原住民族的世界</p></div><div class="lanes"><div class="lane" data-lane="w"><div class="lane-h">世界</div><ol><li class="ev must"><a href="wd-early.html"><span class="y">前 5 世紀</span><span class="t">雅典民主政治、希臘哲學</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">前 27</span><span class="t">羅馬帝國建立，羅馬法</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">380</span><span class="t">基督教成為羅馬國教</span></a></li><li class="ev must"><a href="wd-early.html"><span class="y">476</span><span class="t">西羅馬帝國滅亡，進入中古歐洲</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">622</span><span class="t">伊斯蘭教聖遷，伊斯蘭世界興起</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">1096–1291</span><span class="t">十字軍東征</span></a></li><li class="ev must"><a href="wd-early.html"><span class="y">14–16 世紀</span><span class="t">文藝復興：人文主義</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">1453</span><span class="t">鄂圖曼攻陷君士坦丁堡，商路受阻</span></a></li><li class="ev must"><a href="wd-early.html"><span class="y">1492</span><span class="t">哥倫布抵達美洲，大航海時代</span></a></li></ol></div><div class="lane" data-lane="e"><div class="lane-h">東亞</div><ol><li class="ev must"><a href="ea-traditional.html"><span class="y">前 221</span><span class="t">秦統一中國，郡縣制、統一文字</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">漢代</span><span class="t">漢武帝獨尊儒術；絲路往來</span></a></li><li class="ev must"><a href="ea-traditional.html"><span class="y">隋唐</span><span class="t">隋創科舉；唐代律令、佛教東傳</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">645</span><span class="t">日本大化革新，仿效唐制</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">宋代</span><span class="t">科舉成為做官主要管道，士大夫政治</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">1405–1433</span><span class="t">鄭和下西洋，擴大朝貢關係</span></a></li></ol></div><div class="lane" data-lane="t"><div class="lane-h">台灣</div><ol><li class="ev"><a href="tw-early.html"><span class="y">史前</span><span class="t">長濱、大坌坑、十三行等史前文化</span></a></li><li class="ev"><a href="tw-early.html"><span class="y">17 世紀前</span><span class="t">原住民族的部落社會（南島語族）</span></a></li></ol></div></div></section><section class="era"><div class="era-h"><h2>1500–1800</h2><p>歐洲走向全球；東亞大多限制對外往來；台灣被捲入國際貿易，再成為清朝的一部分</p></div><div class="lanes"><div class="lane" data-lane="w"><div class="lane-h">世界</div><ol><li class="ev must"><a href="wd-early.html"><span class="y">1517</span><span class="t">馬丁路德宗教改革</span></a></li><li class="ev"><a href="wd-early.html"><span class="y">1519–1522</span><span class="t">麥哲倫船隊環球航行</span></a></li><li class="ev"><a href="wd-revolutions.html"><span class="y">1543</span><span class="t">哥白尼地動說，科學革命開始</span></a></li><li class="ev"><a href="wd-revolutions.html"><span class="y">1688</span><span class="t">英國光榮革命</span></a></li><li class="ev must"><a href="wd-revolutions.html"><span class="y">18 世紀</span><span class="t">啟蒙運動：洛克、孟德斯鳩、盧梭</span></a></li><li class="ev must"><a href="wd-revolutions.html"><span class="y">1760s</span><span class="t">英國工業革命開始</span></a></li><li class="ev must"><a href="wd-revolutions.html"><span class="y">1776</span><span class="t">美國獨立宣言</span></a></li><li class="ev must"><a href="wd-revolutions.html"><span class="y">1789</span><span class="t">法國大革命、人權宣言</span></a></li><li class="ev"><a href="wd-revolutions.html"><span class="y">1799–1815</span><span class="t">拿破崙統治法國</span></a></li></ol></div><div class="lane" data-lane="e"><div class="lane-h">東亞</div><ol><li class="ev"><a href="ea-traditional.html"><span class="y">1603</span><span class="t">日本江戶幕府成立，之後實施鎖國</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">1644</span><span class="t">清軍入關，清朝統治中國</span></a></li><li class="ev"><a href="ea-traditional.html"><span class="y">1757</span><span class="t">清朝限廣州一口通商</span></a></li></ol></div><div class="lane" data-lane="t"><div class="lane-h">台灣</div><ol><li class="ev must"><a href="tw-early.html"><span class="y">1624</span><span class="t">荷蘭占領大員</span></a></li><li class="ev"><a href="tw-early.html"><span class="y">1626</span><span class="t">西班牙占領北部雞籠</span></a></li><li class="ev"><a href="tw-early.html"><span class="y">1642</span><span class="t">荷蘭驅逐西班牙</span></a></li><li class="ev must"><a href="tw-early.html"><span class="y">1662</span><span class="t">鄭成功擊退荷蘭，鄭氏政權開始</span></a></li><li class="ev must"><a href="tw-early.html"><span class="y">1683</span><span class="t">清軍攻台，隔年設台灣府</span></a></li><li class="ev"><a href="tw-qing.html"><span class="y">1721</span><span class="t">朱一貴事件</span></a></li><li class="ev"><a href="tw-qing.html"><span class="y">1786</span><span class="t">林爽文事件</span></a></li></ol></div></div></section><section class="era"><div class="era-h"><h2>1800–1900</h2><p>工業化的西方叩關東亞；日本變強、清朝改革不順；台灣開港、建省、割讓</p></div><div class="lanes"><div class="lane" data-lane="w"><div class="lane-h">世界</div><ol><li class="ev"><a href="wd-revolutions.html"><span class="y">1848</span><span class="t">《共產黨宣言》，社會主義</span></a></li><li class="ev"><a href="wd-revolutions.html"><span class="y">1861 / 1871</span><span class="t">義大利統一 / 德意志統一</span></a></li><li class="ev"><a href="wd-imperialism.html"><span class="y">1884–1885</span><span class="t">柏林會議，列強瓜分非洲</span></a></li></ol></div><div class="lane" data-lane="e"><div class="lane-h">東亞</div><ol><li class="ev must"><a href="ea-modern.html"><span class="y">1840–1842</span><span class="t">鴉片戰爭、南京條約</span></a></li><li class="ev"><a href="ea-modern.html"><span class="y">1854</span><span class="t">日本開國</span></a></li><li class="ev"><a href="ea-modern.html"><span class="y">1856–1860</span><span class="t">英法聯軍</span></a></li><li class="ev must"><a href="ea-modern.html"><span class="y">1860s–1890s</span><span class="t">清朝自強運動</span></a></li><li class="ev must"><a href="ea-modern.html"><span class="y">1868</span><span class="t">日本明治維新</span></a></li><li class="ev"><a href="ea-modern.html"><span class="y">1876</span><span class="t">江華島條約，朝鮮開國</span></a></li><li class="ev must"><a href="ea-modern.html"><span class="y">1894–1895</span><span class="t">甲午戰爭、馬關條約</span></a></li><li class="ev"><a href="ea-modern.html"><span class="y">1898</span><span class="t">戊戌變法</span></a></li></ol></div><div class="lane" data-lane="t"><div class="lane-h">台灣</div><ol><li class="ev must"><a href="tw-qing.html"><span class="y">1858–1860</span><span class="t">天津、北京條約，台灣開港</span></a></li><li class="ev must"><a href="tw-qing.html"><span class="y">1874</span><span class="t">牡丹社事件，清廷轉為積極治台</span></a></li><li class="ev"><a href="tw-qing.html"><span class="y">1884–1885</span><span class="t">清法戰爭</span></a></li><li class="ev must"><a href="tw-qing.html"><span class="y">1885</span><span class="t">台灣建省，劉銘傳任巡撫</span></a></li><li class="ev must"><a href="tw-japan.html"><span class="y">1895</span><span class="t">割讓日本，日治開始</span></a></li><li class="ev"><a href="tw-japan.html"><span class="y">1898–1906</span><span class="t">後藤新平：土地調查、保甲</span></a></li></ol></div></div></section><section class="era"><div class="era-h"><h2>1900–1945</h2><p>兩次世界大戰；日本擴張；台灣在日本統治下近代化</p></div><div class="lanes"><div class="lane" data-lane="w"><div class="lane-h">世界</div><ol><li class="ev must"><a href="wd-imperialism.html"><span class="y">1914–1918</span><span class="t">第一次世界大戰</span></a></li><li class="ev"><a href="wd-imperialism.html"><span class="y">1917</span><span class="t">俄國革命</span></a></li><li class="ev must"><a href="wd-imperialism.html"><span class="y">1919</span><span class="t">巴黎和會；民族自決</span></a></li><li class="ev must"><a href="wd-imperialism.html"><span class="y">1929</span><span class="t">經濟大恐慌，極權主義興起</span></a></li><li class="ev must"><a href="wd-imperialism.html"><span class="y">1939–1945</span><span class="t">第二次世界大戰</span></a></li></ol></div><div class="lane" data-lane="e"><div class="lane-h">東亞</div><ol><li class="ev"><a href="ea-modern.html"><span class="y">1900</span><span class="t">八國聯軍</span></a></li><li class="ev"><a href="ea-modern.html"><span class="y">1905</span><span class="t">日俄戰爭，日本獲勝</span></a></li><li class="ev"><a href="ea-20c.html"><span class="y">1910</span><span class="t">日本併吞韓國</span></a></li><li class="ev must"><a href="ea-modern.html"><span class="y">1911–1912</span><span class="t">辛亥革命，中華民國成立</span></a></li><li class="ev must"><a href="ea-modern.html"><span class="y">1919</span><span class="t">五四運動；韓國三一運動</span></a></li><li class="ev"><a href="ea-20c.html"><span class="y">1931</span><span class="t">九一八事變，滿洲國</span></a></li><li class="ev must"><a href="ea-20c.html"><span class="y">1937</span><span class="t">七七事變，中日全面戰爭</span></a></li><li class="ev"><a href="ea-20c.html"><span class="y">1941–1945</span><span class="t">太平洋戰爭，日本戰敗</span></a></li></ol></div><div class="lane" data-lane="t"><div class="lane-h">台灣</div><ol><li class="ev must"><a href="tw-japan.html"><span class="y">1915</span><span class="t">西來庵事件，武裝抗日結束</span></a></li><li class="ev must"><a href="tw-japan.html"><span class="y">1919</span><span class="t">文官總督，同化政策</span></a></li><li class="ev"><a href="tw-japan.html"><span class="y">1921</span><span class="t">台灣文化協會、議會請願運動</span></a></li><li class="ev"><a href="tw-japan.html"><span class="y">1930</span><span class="t">霧社事件；嘉南大圳完工</span></a></li><li class="ev must"><a href="tw-japan.html"><span class="y">1937</span><span class="t">皇民化運動</span></a></li></ol></div></div></section><section class="era"><div class="era-h"><h2>1945 以後</h2><p>冷戰與去殖民；東亞分成兩個陣營；台灣經濟起飛，走向民主</p></div><div class="lanes"><div class="lane" data-lane="w"><div class="lane-h">世界</div><ol><li class="ev"><a href="wd-imperialism.html"><span class="y">1945</span><span class="t">聯合國成立</span></a></li><li class="ev must"><a href="wd-imperialism.html"><span class="y">1947</span><span class="t">杜魯門主義，冷戰開始；印度獨立</span></a></li><li class="ev"><a href="wd-imperialism.html"><span class="y">1949</span><span class="t">北約成立</span></a></li><li class="ev"><a href="wd-imperialism.html"><span class="y">1960</span><span class="t">非洲年，去殖民化浪潮</span></a></li><li class="ev"><a href="wd-imperialism.html"><span class="y">1962</span><span class="t">古巴飛彈危機</span></a></li><li class="ev must"><a href="wd-imperialism.html"><span class="y">1989 / 1991</span><span class="t">柏林圍牆倒塌 / 蘇聯解體，冷戰結束</span></a></li></ol></div><div class="lane" data-lane="e"><div class="lane-h">東亞</div><ol><li class="ev must"><a href="ea-20c.html"><span class="y">1949</span><span class="t">中華人民共和國成立</span></a></li><li class="ev must"><a href="ea-20c.html"><span class="y">1950–1953</span><span class="t">韓戰，東亞冷戰格局成形</span></a></li><li class="ev"><a href="ea-20c.html"><span class="y">1958</span><span class="t">大躍進、人民公社</span></a></li><li class="ev must"><a href="ea-20c.html"><span class="y">1966–1976</span><span class="t">文化大革命</span></a></li><li class="ev must"><a href="ea-20c.html"><span class="y">1978</span><span class="t">中國改革開放</span></a></li><li class="ev"><a href="ea-20c.html"><span class="y">1987</span><span class="t">南韓民主化</span></a></li></ol></div><div class="lane" data-lane="t"><div class="lane-h">台灣</div><ol><li class="ev must"><a href="tw-postwar.html"><span class="y">1945</span><span class="t">中華民國接收台灣</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1947</span><span class="t">二二八事件</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1949</span><span class="t">戒嚴；中華民國政府遷台</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1950</span><span class="t">美國協防台灣，隔年起美援</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">1953</span><span class="t">耕者有其田，土地改革完成</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1966</span><span class="t">高雄加工出口區</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">1971</span><span class="t">退出聯合國</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">1974 起</span><span class="t">十大建設</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">1979</span><span class="t">美國斷交；美麗島事件</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1987</span><span class="t">解除戒嚴</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">1991–1992</span><span class="t">終止動員戡亂；國會全面改選</span></a></li><li class="ev must"><a href="tw-postwar.html"><span class="y">1996</span><span class="t">首次總統直選</span></a></li><li class="ev"><a href="tw-postwar.html"><span class="y">2000</span><span class="t">首次中央政黨輪替</span></a></li></ol></div></div></section>
+<section class="part">
+  <span class="part-kicker">怎麼用</span>
+  <ul class="clean"><li>每週讀完一份教材後，回來這裡找到本週的事件，看看同一時間另外兩欄發生什麼。</li><li>考前用「只看必背」＋「遮住年代」，先說出年代，再點一下事件看答案；再點一次才會打開教材。</li><li>跨冊題最常考的交會點：1858–1860 英法聯軍的條約與台灣開港、1895 甲午戰爭與割台、1950 韓戰與美國協防台灣。</li></ul>
+</section>
+<footer>
+  <p>事件依部定必修歷史課程整理，只收錄考試常用的節點，不是完整年表。</p>
+  <div class="id"><span>筱葳學測歷史</span><span>世界歷史時間軸</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='hist-timeline-v1', st={};
+  try{ st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ st={}; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  var lanes=[].slice.call(document.querySelectorAll('.chipbtn[data-lane]'));
+  function apply(){
+    var on=lanes.filter(function(b){ return !(st.off||{})[b.getAttribute('data-lane')]; }).map(function(b){ return b.getAttribute('data-lane'); });
+    lanes.forEach(function(b){ b.setAttribute('aria-pressed', on.indexOf(b.getAttribute('data-lane'))>=0 ? 'true':'false'); });
+    document.querySelectorAll('.lane').forEach(function(l){ l.hidden = on.indexOf(l.getAttribute('data-lane'))<0; });
+    document.querySelectorAll('.lanes').forEach(function(g){ g.style.setProperty('--n', Math.max(on.length,1)); });
+    document.body.classList.toggle('only-must', !!st.must); document.getElementById('bMust').setAttribute('aria-pressed', st.must?'true':'false');
+    document.body.classList.toggle('mask-y', !!st.mask); document.getElementById('bMask').setAttribute('aria-pressed', st.mask?'true':'false');
+  }
+  lanes.forEach(function(b){ b.addEventListener('click', function(){
+    st.off=st.off||{}; var k=b.getAttribute('data-lane');
+    var onCount=lanes.filter(function(x){ return !st.off[x.getAttribute('data-lane')]; }).length;
+    if(!st.off[k] && onCount===1) return;
+    st.off[k]=!st.off[k]; save(); apply();
+  }); });
+  document.getElementById('bMust').addEventListener('click', function(){ st.must=!st.must; save(); apply(); });
+  document.getElementById('bMask').addEventListener('click', function(){ st.mask=!st.mask; save(); apply(); });
+  document.querySelector('.page').addEventListener('click', function(ev){
+    if(!st.mask) return;
+    var li=ev.target.closest('.lane li.ev'); if(!li || li.classList.contains('shown')) return;
+    ev.preventDefault(); li.classList.add('shown');
+  });
+  document.getElementById('bMask').addEventListener('click', function(){ document.querySelectorAll('.lane li.shown').forEach(function(x){ x.classList.remove('shown'); }); });
+  apply();
+})();
+</script>
+</body>
+</html>
