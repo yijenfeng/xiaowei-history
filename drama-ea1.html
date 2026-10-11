@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>東亞史劇場 第一季｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E6EEE9;
+    --ink:#1C2A24;
+    --ink-muted:#58695F;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --amber:#E0973C;  --amber-ink:#3A2306;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#CFE8DA;  --hl-sup:#DCE8F5;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(46,125,91,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+      --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+      --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(124,201,162,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+    --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+    --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(124,201,162,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+<style>
+  /* drama: one episode at a time, scene captions like a script, dialogue set off */
+  .season-tag{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em; color:var(--accent); }
+  .cast{ font-size:0.86rem; color:var(--ink-muted); margin:0.6rem 0 0; }
+  .eptabs{ display:flex; flex-wrap:wrap; gap:0.4rem; margin:1.4rem 0 1rem; }
+  .eptabs button{ font:inherit; font-family:var(--f-mono); font-size:0.82rem; border:1px solid var(--line); background:var(--surface); color:var(--ink-muted); border-radius:999px; padding:0.3rem 0.8rem; cursor:pointer; }
+  .eptabs button[aria-selected="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .eptabs button.seen::after{ content:' ✓'; }
+  .ep{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.3rem 1.4rem 1.4rem; box-shadow:var(--shadow); }
+  .ep-head{ display:flex; flex-wrap:wrap; gap:0.3rem 0.8rem; align-items:baseline; margin-bottom:0.2rem; }
+  .ep-head .code{ font-family:var(--f-mono); font-size:0.8rem; color:var(--accent); font-weight:700; }
+  .ep-head .yr{ font-family:var(--f-mono); font-size:0.8rem; color:var(--ink-muted); }
+  .ep h2{ font-size:1.5rem; margin:0 0 0.6rem; }
+  .scene{ margin:1.2rem 0 0; }
+  .scene-cap{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.05em; color:var(--ink-muted); border-left:3px solid var(--amber); padding-left:0.6rem; margin:0 0 0.6rem; }
+  .scene p{ margin:0 0 0.7rem; line-height:1.95; }
+  .scene p.line{ font-family:var(--f-display); font-size:1.06rem; background:var(--surface-2); border-radius:6px; padding:0.45rem 0.8rem; }
+  .scene b.kw{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .scene .yr-hl{ font-family:var(--f-mono); font-weight:700; color:var(--accent); font-size:0.95em; }
+  .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
+  .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
+  .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
+  .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
+  .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
+  .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
+  .teaser{ border:1px dashed var(--amber); border-radius:8px; padding:0.7rem 1rem; margin:1rem 0 0; font-family:var(--f-display); }
+  .teaser b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--amber); display:block; letter-spacing:0.06em; }
+  .quiz{ margin:1.4rem 0 0; display:grid; gap:0.7rem; }
+  .quiz h3{ font-size:1rem; margin:0; }
+  .epnav{ display:flex; justify-content:space-between; gap:0.6rem; margin:1.2rem 0 0; flex-wrap:wrap; }
+  .epnav button, .epnav a{ font:inherit; font-size:0.92rem; border:1px solid var(--accent); background:var(--surface); color:var(--accent); border-radius:8px; padding:0.5rem 1rem; cursor:pointer; text-decoration:none; }
+  .epnav .next{ background:var(--accent); color:var(--accent-ink); }
+  .epnav [hidden]{ display:none; }
+  .seasons{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin:1.4rem 0; }
+  .scard{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.2rem; box-shadow:var(--shadow); display:grid; gap:0.4rem; align-content:start; text-decoration:none; color:var(--ink); }
+  .scard:hover{ border-color:var(--accent); }
+  .scard .snum{ font-family:var(--f-display); font-size:1.7rem; font-weight:700; line-height:1.1; }
+  .scard .t{ font-family:var(--f-display); font-size:1.15rem; font-weight:600; }
+  .scard .y{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .lg{ font-size:0.88rem; color:var(--ink-muted); line-height:1.7; }
+  .scard .bar{ height:6px; background:var(--surface-2); border-radius:3px; overflow:hidden; margin-top:0.3rem; }
+  .scard .bar i{ display:block; height:100%; background:var(--accent); width:0; }
+  .scard .pg{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .go{ color:var(--accent); font-weight:700; font-size:0.92rem; }
+  .thread{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .thread div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; font-size:0.86rem; line-height:1.6; }
+  .thread b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); display:block; }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="eastasia-drama.html">← 回到東亞史劇場</a>
+<header class="hero">
+  <span class="eyebrow">東亞史劇場・第一季・前 221－1800 年代</span>
+  <h1>天朝與四方</h1>
+  <p class="sub">一本手抄的《論語》從長安出發，跟著遣唐使的船到了日本。兩千年來，東亞各國用同一套文字、讀同一本書，卻各有各的算盤。</p>
+  <p class="cast">主要角色：抄書的人與他們的後代（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
+</header>
+<div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6" class="recap-tab">季末總整理</button></nav>
+<section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
+<div class="ep-head"><span class="code">S1・E1</span><span class="yr">前 221</span></div>
+<h2>皇帝的文字</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">咸陽・前 221 年</p><p>秦王政滅了六國，自稱始皇帝。他不要分封諸侯，改把全國分成郡和縣，由中央派官員治理，這叫<b class="kw">郡縣制</b>。</p><p>小吏阿昌每天抄寫公文。以前各國的字寫法都不一樣，現在全國統一用一種字，車軌、度量衡也統一了。</p><p class="line">「從今以後，」縣令說，「不管在哪裡，天下人讀的是同一種字。」</p><p>國家把每戶人家登記在戶籍上，按戶徵兵、徵役。這就是<b class="kw">編戶齊民</b>，皇帝第一次能直接掌握每一個人。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>前 221</b> 年秦統一，實施<b>郡縣制</b>：中央集權的起點。</li><li>統一文字、車軌、度量衡；<b>編戶齊民</b>，戶籍成為動員人力的依據。</li><li>封建（分封諸侯）→ 郡縣（中央派官），是中國政治制度的大轉變。</li></ul></div>
+<div class="teaser"><b>下集預告</b>一百年後，一位年輕的皇帝問：天下要用什麼思想來治理？</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q1</span><span>秦朝以哪一種制度取代分封？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 郡縣制</button><button class="opt-btn" type="button" data-k="B">(B) 科舉制</button><button class="opt-btn" type="button" data-k="C">(C) 租庸調</button><button class="opt-btn" type="button" data-k="D">(D) 朝貢體系</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>秦把全國分成郡縣，由中央派官治理。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q2</span><span>郡縣制下「編戶齊民」最重要的意義是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 戶籍成為動員人力的依據</button><button class="opt-btn" type="button" data-k="B">(B) 人民可以自由遷徙</button><button class="opt-btn" type="button" data-k="C">(C) 貴族世襲官位</button><button class="opt-btn" type="button" data-k="D">(D) 廢除賦稅</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>國家直接掌握人民，依戶籍徵兵徵役。</div></details></div></div>
+</section><section class="ep" id="ep1" role="tabpanel" aria-labelledby="tab1" hidden>
+<div class="ep-head"><span class="code">S1・E2</span><span class="yr">前 140－前 87</span></div>
+<h2>獨尊儒術</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">長安・太學</p><p>漢武帝接受<b class="kw">董仲舒</b>的建議：「罷黜百家，<b class="kw">獨尊儒術</b>」。儒家成了官方思想，京城設立<b class="kw">太學</b>，專門教儒家經典。</p><p>地方官要推薦有品德、讀經書的人當官，這叫<b class="kw">察舉</b>。讀書人從此成了官員的主要來源。</p><p>太學生阿昌的後代，一字一字抄下了一部《論語》。</p></div><div class="scene"><p class="scene-cap">西域</p><p>同一個時代，張騫兩次出使西域。東西往來的道路越走越熱鬧，後人叫它<b class="kw">絲路</b>。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>漢武帝採董仲舒建議<b>獨尊儒術</b>，設太學；儒學成為官方思想。</li><li><b>察舉</b>制度大量任用讀書人，<b>儒生成為官員主要來源</b>。</li><li>張騫通西域，<b>絲路</b>連結東西。</li></ul></div>
+<div class="teaser"><b>下集預告</b>幾百年後，一艘從日本來的船，停在中國的港口。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q3</span><span>漢武帝採納誰的建議獨尊儒術？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 董仲舒</button><button class="opt-btn" type="button" data-k="B">(B) 孔子</button><button class="opt-btn" type="button" data-k="C">(C) 張騫</button><button class="opt-btn" type="button" data-k="D">(D) 韓非</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>董仲舒建議罷黜百家、獨尊儒術。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q4</span><span>漢代擴大察舉造成的結果是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 儒生成為官員主要來源</button><button class="opt-btn" type="button" data-k="B">(B) 地方權力提高</button><button class="opt-btn" type="button" data-k="C">(C) 商人地位提高</button><button class="opt-btn" type="button" data-k="D">(D) 廢除郡縣</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>察舉大量任用讀書人為官。</div></details></div></div>
+</section><section class="ep" id="ep2" role="tabpanel" aria-labelledby="tab2" hidden>
+<div class="ep-head"><span class="code">S1・E3</span><span class="yr">589－907</span></div>
+<h2>遣唐使的船</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">隋・考場</p><p>隋朝開創<b class="kw">科舉</b>：不看出身，考試及格就能做官。唐朝把法律和官制寫成完整的<b class="kw">律令</b>，土地和賦稅用均田制與<b class="kw">租庸調</b>。</p></div><div class="scene"><p class="scene-cap">長安・西市</p><p>日本派來的<b class="kw">遣唐使</b>帶著留學生和僧侶，在長安學制度、學漢字、學佛法。一位叫清人的日本留學生，買下了一部舊《論語》抄本。</p><p class="line">「回去以後，我們的國家也要有律令。」</p><p><b class="kw">645</b> 年日本推行<b class="kw">大化革新</b>，模仿唐朝：土地分給人民（班田收授），人民繳租庸調。朝鮮的新羅也學唐制。漢字、儒學、佛教、律令，成了<b class="kw">東亞文化圈</b>的共同語言。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>隋創<b>科舉</b>；唐代<b>律令</b>完備、均田制與<b>租庸調</b>。</li><li>日本派<b>遣唐使</b>；<b>645 大化革新</b>仿唐制（班田收授、租庸調）。</li><li><b>東亞文化圈</b>四要素：<b>漢字、儒學、佛教、律令</b>。</li></ul></div>
+<div class="teaser"><b>下集預告</b>宋朝的城市燈火通明，考場裡擠滿了想翻身的讀書人。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q5</span><span>東亞文化圈的共同要素是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 漢字、儒學、佛教、律令</button><button class="opt-btn" type="button" data-k="B">(B) 拉丁文、基督教</button><button class="opt-btn" type="button" data-k="C">(C) 伊斯蘭教、阿拉伯文</button><button class="opt-btn" type="button" data-k="D">(D) 印度教、種姓</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>漢字、儒學、佛教、律令是東亞各國共有的元素。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q6</span><span>日本大化革新主要模仿哪一朝？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 秦</button><button class="opt-btn" type="button" data-k="B">(B) 漢</button><button class="opt-btn" type="button" data-k="C">(C) 唐</button><button class="opt-btn" type="button" data-k="D">(D) 明</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>645 年大化革新模仿唐朝律令與租庸調。</div></details></div></div>
+</section><section class="ep" id="ep3" role="tabpanel" aria-labelledby="tab3" hidden>
+<div class="ep-head"><span class="code">S1・E4</span><span class="yr">960－1368</span></div>
+<h2>考場的燈</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">宋・汴京</p><p>宋朝重文輕武，<b class="kw">科舉</b>成了做官的主要管道。考上的讀書人叫<b class="kw">士大夫</b>，他們和皇帝共治天下。朱熹等人發展出<b class="kw">理學</b>。</p><p>泉州的港口擠滿外國商船，政府設<b class="kw">市舶司</b>管理海外貿易。人多地少的福建人，靠海外貿易過日子。</p></div><div class="scene"><p class="scene-cap">元・大都</p><p>蒙古人建立元朝，帝國橫跨歐亞，東西交流更頻繁。可是讀書人的地位變了：儒士被編成「<b class="kw">儒戶</b>」，待遇大約和僧人、道士一樣，做官的機會卻少了很多。</p><p class="line">「讀聖賢書，還不如會說蒙古話。」一個老秀才嘆氣。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>宋代<b>科舉</b>成為做官主要管道，形成<b>士大夫</b>政治；<b>理學</b>興起。</li><li>宋元海外貿易繁盛，<b>泉州</b>是大港，設<b>市舶司</b>。</li><li>元代<b>儒戶</b>待遇類同僧道，但士人仕進機會不如前後各代。</li></ul></div>
+<div class="teaser"><b>下集預告</b>明朝的皇帝下令：片板不許下海。可是一支龐大的艦隊，卻要遠航西洋。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q7</span><span>宋代以後做官的主要管道是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 察舉</button><button class="opt-btn" type="button" data-k="B">(B) 世襲</button><button class="opt-btn" type="button" data-k="C">(C) 科舉</button><button class="opt-btn" type="button" data-k="D">(D) 捐官</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>宋代科舉成為主要管道，形成士大夫政治。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q8</span><span>元代儒士的待遇最接近？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 奴隸</button><button class="opt-btn" type="button" data-k="B">(B) 宗教神職人員</button><button class="opt-btn" type="button" data-k="C">(C) 皇族</button><button class="opt-btn" type="button" data-k="D">(D) 軍人</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>儒戶待遇約略等於佛僧和道士。</div></details></div></div>
+</section><section class="ep" id="ep4" role="tabpanel" aria-labelledby="tab4" hidden>
+<div class="ep-head"><span class="code">S1・E5</span><span class="yr">1368－1644</span></div>
+<h2>鄭和的寶船</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">南京・1405 年</p><p>明朝一方面實施<b class="kw">海禁</b>，不准百姓私自出海；一方面派鄭和率領巨大的寶船艦隊七下西洋（<b class="kw">1405－1433</b>）。</p><p>鄭和不占土地、不建殖民地。他帶著皇帝的詔書，邀請各國來<b class="kw">朝貢</b>。</p></div><div class="scene"><p class="scene-cap">朝貢的規矩</p><p>周邊國家的新王即位，要派使臣來請皇帝<b class="kw">冊封</b>，之後定期進貢。皇帝則回賜更多禮物，還准許商人做買賣。這就是<b class="kw">朝貢體系</b>。</p><p class="line">「我們給天朝面子，」琉球使臣笑說，「天朝給我們生意。」</p><p>琉球靠著朝貢的身分，在中國、日本、東南亞之間做<b class="kw">中轉貿易</b>，一個小王國也能富起來。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>明代<b>海禁</b>＋<b>朝貢貿易</b>；<b>鄭和下西洋（1405－1433）</b>宣揚國威、擴大朝貢，不是殖民。</li><li><b>朝貢體系</b>：<b>冊封 → 朝貢 → 回賜</b>，雙方各取所需（正當性＋貿易）。</li><li><b>琉球</b>利用朝貢身分做中轉貿易。</li></ul></div>
+<div class="teaser"><b>下集預告</b>日本的幕府把大門關上了，只留下一扇小窗：長崎。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q9</span><span>鄭和下西洋的主要目的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 建立殖民地</button><button class="opt-btn" type="button" data-k="B">(B) 宣揚國威、擴大朝貢</button><button class="opt-btn" type="button" data-k="C">(C) 尋找通往歐洲的航路</button><button class="opt-btn" type="button" data-k="D">(D) 傳播佛教</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>鄭和不占領土地，邀請各國朝貢。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q10</span><span>周邊國家願意朝貢的原因是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 被迫繳稅</button><button class="opt-btn" type="button" data-k="B">(B) 獲得冊封正當性與貿易利益</button><button class="opt-btn" type="button" data-k="C">(C) 信仰相同</button><button class="opt-btn" type="button" data-k="D">(D) 中國派兵駐守</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>冊封帶來正當性，回賜與貿易帶來經濟利益。</div></details></div></div>
+</section><section class="ep" id="ep5" role="tabpanel" aria-labelledby="tab5" hidden>
+<div class="ep-head"><span class="code">S1・E6</span><span class="yr">1600－1800 年代</span></div>
+<h2>鎖國的長崎</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">江戶・長崎出島</p><p>德川家康建立<b class="kw">江戶幕府</b>。為了禁止<b class="kw">天主教</b>、控制貿易，幕府實施<b class="kw">鎖國</b>，只准荷蘭人和中國商人在<b class="kw">長崎</b>貿易，荷蘭人住在人工島<b class="kw">出島</b>上。</p><p>那部從唐朝帶來的《論語》，傳到一個長崎醫生的家裡。他的書架上，《論語》旁邊多了幾本荷蘭的解剖學書。這些從荷蘭學來的西方知識，叫<b class="kw">蘭學</b>。</p></div><div class="scene"><p class="scene-cap">漢城・廣州</p><p>朝鮮對中國「<b class="kw">事大</b>」、對日本「<b class="kw">交鄰</b>」，小心翼翼維持平衡。</p><p>清朝在 <b class="kw">1757</b> 年規定西方商人只能在<b class="kw">廣州</b>一個港口貿易。英國商人抱怨連連，覺得受夠了天朝的規矩。</p><p class="line">「總有一天，」一個英國商人說，「我們會用大砲打開這扇門。」第一季，結束。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>江戶日本<b>鎖國</b>，只開<b>長崎</b>給荷蘭與中國商人；<b>蘭學</b>傳入西方知識。</li><li>朝鮮外交原則：<b>事大交鄰</b>（對中國事大、對日本交鄰）。</li><li>清朝 <b>1757</b> 年限<b>廣州一口通商</b>。</li></ul></div>
+<div class="teaser"><b>下集預告</b>第二季：英國的軍艦開到廣州外海，船上載的是鴉片。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q11</span><span>江戶時代日本只開放哪裡給荷蘭人貿易？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 橫濱</button><button class="opt-btn" type="button" data-k="B">(B) 長崎</button><button class="opt-btn" type="button" data-k="C">(C) 大阪</button><button class="opt-btn" type="button" data-k="D">(D) 神戶</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>荷蘭人只能在長崎出島貿易。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q12</span><span>朝鮮「事大交鄰」的意思是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 對中國事大、對日本交鄰</button><button class="opt-btn" type="button" data-k="B">(B) 對日本事大、對中國交鄰</button><button class="opt-btn" type="button" data-k="C">(C) 與西方結盟</button><button class="opt-btn" type="button" data-k="D">(D) 閉關自守</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>對中國行事大之禮，與日本維持交鄰關係。</div></details></div></div>
+</section><section class="ep recap" id="ep6" role="tabpanel" aria-labelledby="tab6" hidden>
+<div class="ep-head"><span class="code">S1・季末總整理</span><span class="yr">前 221－1800 年代</span></div>
+<h2>《天朝與四方》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p>兩千多年前，中國的故事從一個字開始：<b>統一</b>。</p><p><b>前 221</b> 年秦始皇統一六國，不再分封諸侯，改用<b>郡縣制</b>，由中央派官治理；又統一文字、度量衡，把每戶人家登記在戶籍上（<b>編戶齊民</b>）。皇帝第一次能直接掌握每一個人。</p><blockquote class="chain">政治大轉變：<b>封建（分封諸侯）→ 郡縣（中央集權）</b></blockquote><p>可是光有制度還不夠，國家還需要一套思想。<b>漢武帝</b>採納<b>董仲舒</b>的建議，<b>獨尊儒術</b>，設太學，用<b>察舉</b>挑選讀書人當官。儒家從此成了中國的官方思想。同時，張騫通西域，<b>絲路</b>熱鬧起來。</p><p>到了隋唐，制度更完整了。隋朝開創<b>科舉</b>，唐朝有完整的<b>律令</b>和<b>租庸調</b>。中國成了東亞的「模範生」，周邊國家都來學。</p><p>日本派<b>遣唐使</b>到長安，<b>645</b> 年推行<b>大化革新</b>，仿唐朝的土地與賦稅制度；朝鮮也學唐制。於是東亞各國共享四樣東西：</p><blockquote class="chain">東亞文化圈四要素：<b>漢字、儒學、佛教、律令</b></blockquote><p>宋朝以後，<b>科舉</b>成了做官的主要管道，讀書人變成<b>士大夫</b>，和皇帝共治天下；<b>理學</b>興起，<b>泉州</b>的海外貿易非常熱鬧。蒙古人建立元朝後，帝國橫跨歐亞，但儒士的地位下降，被編成「<b>儒戶</b>」。</p><p>明朝一方面<b>海禁</b>，一方面派<b>鄭和</b>七下西洋（<b>1405－1433</b>）。鄭和不占領土地，而是邀請各國來朝貢。周邊國家請皇帝<b>冊封</b>，定期進貢，皇帝回賜禮物並准許貿易，這就是<b>朝貢體系</b>：中國得到面子，周邊國家得到正當性和生意。<b>琉球</b>就靠這個身分做中轉貿易。</p><blockquote class="chain">朝貢體系：<b>冊封 → 朝貢 → 回賜</b>，雙方各取所需</blockquote><p>到了 17、18 世紀，東亞各國都把門關得更緊。日本<b>江戶幕府</b>實施<b>鎖國</b>，只留<b>長崎</b>給荷蘭與中國商人，日本人從荷蘭書學西方知識（<b>蘭學</b>）；朝鮮對中國<b>事大</b>、對日本<b>交鄰</b>；清朝在 <b>1757</b> 年只准西方商人在<b>廣州</b>貿易。</p><p>天朝的秩序看起來很穩。可是海的另一邊，英國的工廠正在冒煙。</p><p>下一季：《黑船與砲聲》。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">秦統一、郡縣制（前 221）→ 漢武帝獨尊儒術、察舉 → 隋科舉、唐律令 → 日本遣唐使、大化革新（645）→ 宋士大夫、理學 → 元儒戶 → 明海禁、鄭和下西洋（1405）、朝貢體系 → 江戶鎖國、長崎蘭學 → 清廣州一口通商（1757）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">建立帝國</span><span>秦郡縣制、漢獨尊儒術</span></div><div><b>第二幕</b><span class="at">東亞都來學</span><span>科舉、律令；遣唐使、大化革新</span></div><div><b>第三幕</b><span class="at">讀書人的天下</span><span>宋士大夫、理學；元儒戶</span></div><div><b>第四幕</b><span class="at">天朝與四方</span><span>朝貢體系、鄭和、鎖國</span></div></div></div>
+</section>
+<div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-ea2.html" hidden>看第二季 →</a></div>
+<section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="ea-traditional.html">傳統東亞</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的台灣和世界。</p></section>
+<footer>
+  <p>劇情中的主角、家族與對白為虛構；歷史人物只敘述其史實作為。年代與事件依部定必修東亞史整理。</p>
+  <div class="id"><span>筱葳學測歷史</span><span>東亞史劇場 S1</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var PAGE = (document.querySelector('.eyebrow') || {}).textContent || location.pathname;
+  var SKEY = 'practice-v1:' + PAGE;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SKEY) || '{}') || {}; } catch (e) { saved = {}; }
+  function persist(){ try { localStorage.setItem(SKEY, JSON.stringify(saved)); } catch (e) {} }
+
+  var cards = [].slice.call(document.querySelectorAll('.qcard.mcq[data-ans], .qcard.txt'));
+  var state = {};
+  var sb = document.getElementById('score');
+  function updScore(){
+    if (!sb) return;
+    var ok = 0, done = 0;
+    cards.forEach(function(c, i){ if (state[i] !== undefined) { done++; if (state[i]) ok++; } });
+    sb.textContent = '答對 ' + ok + ' / ' + cards.length + (done === cards.length && cards.length ? '・全部完成' : '');
+    sb.className = 'meter ' + (done === cards.length && cards.length ? (ok / cards.length >= 0.8 ? 'ok' : 'warn') : '');
+  }
+
+  /* ---------- multiple choice ---------- */
+  function lockMcq(q, k, idx){
+    var ans = q.getAttribute('data-ans');
+    var btn = q.querySelector('.opt-btn[data-k="' + k + '"]');
+    if (!btn) return;
+    if (k === ans) btn.classList.add('right');
+    else { btn.classList.add('wrong'); var r = q.querySelector('.opt-btn[data-k="' + ans + '"]'); if (r) r.classList.add('right'); }
+    q.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+    var d = q.querySelector('details'); if (d) d.open = true;
+    state[idx] = (k === ans);
+  }
+
+  /* ---------- text answers ---------- */
+  function expand(s){
+    return s.replace(/[’‘`]/g, "'")
+      .replace(/\b(won)'t\b/g, 'will not').replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+      .replace(/n't\b/g, ' not')
+      .replace(/\b(it|that|there|what|he|she|who)'s\b/g, '$1 is')
+      .replace(/'re\b/g, ' are').replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will').replace(/\bi'm\b/g, 'i am');
+  }
+  function norm(s){
+    s = expand(String(s).toLowerCase());
+    s = s.replace(/[（）()「」『』“”"]/g, ' ')
+         .replace(/[，。、！？；：,.!?;:／\/|]/g, ' ')
+         .replace(/(\w)-(\w)/g, '$1$2')
+         .replace(/\s+/g, ' ').trim();
+    return s;
+  }
+  function toks(s){ return norm(s) ? norm(s).split(' ') : []; }
+  function lcs(a, b){
+    var m = a.length, n = b.length, dp = [], i, j;
+    for (i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); }
+    for (i = m - 1; i >= 0; i--) for (j = n - 1; j >= 0; j--)
+      dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    var ka = {}, kb = {}; i = 0; j = 0;
+    while (i < m && j < n) {
+      if (a[i] === b[j]) { ka[i] = 1; kb[j] = 1; i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return { len: dp[0][0], ka: ka, kb: kb };
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function judge(inp){
+    var val = inp.value;
+    if (!norm(val)) return { empty: true };
+    var kw = inp.getAttribute('data-kw');
+    if (kw) {
+      var groups = JSON.parse(kw), low = val.toLowerCase();
+      var ok = groups.every(function(g){ return g.some(function(w){ return low.indexOf(String(w).toLowerCase()) !== -1; }); });
+      return { kw: true, ok: ok };
+    }
+    var accepts = (inp.getAttribute('data-accept') || '').split('||').filter(Boolean);
+    var you = toks(val), best = null;
+    for (var i = 0; i < accepts.length; i++) {
+      var ref = toks(accepts[i]);
+      if (ref.join(' ') === you.join(' ')) return { ok: true, exact: true };
+      var r = lcs(you, ref), sim = (2 * r.len) / (you.length + ref.length || 1);
+      if (!best || sim > best.sim) best = { sim: sim, r: r, ref: ref, raw: accepts[i] };
+    }
+    return { ok: false, best: best, you: you };
+  }
+  function render(inp, res){
+    var v = inp.parentNode.querySelector('.verdict[data-for="' + inp.id + '"]');
+    if (!v) return;
+    if (res.empty) { v.innerHTML = '<span class="vd warn">還沒有作答</span>'; return; }
+    if (res.ok && res.kw) { v.innerHTML = '<span class="vd good">✓ 關鍵答案正確</span>　請再看下方解析確認說法。'; return; }
+    if (res.ok) { v.innerHTML = '<span class="vd good">✓ 和標準答案相同</span>'; return; }
+    if (res.kw) { v.innerHTML = '<span class="vd bad">✗ 還沒寫到關鍵答案</span>　看看下方解析。'; return; }
+    var b = res.best, you = res.you;
+    var yl = you.map(function(t, i){ return b.r.ka[i] ? esc(t) : '<span class="dx-bad">' + esc(t) + '</span>'; }).join(' ');
+    var rl = b.ref.map(function(t, i){ return b.r.kb[i] ? esc(t) : '<span class="dx-good">' + esc(t) + '</span>'; }).join(' ');
+    v.innerHTML = '<span class="vd bad">✗ 和標準答案不同（相似度 ' + Math.round(b.sim * 100) + '%）</span>' +
+      '<div class="dx"><div><b>你的答案</b>' + yl + '</div><div><b>標準答案</b>' + rl + '</div></div>' +
+      '<p class="dx-note">紅色是和標準答案不同的字，綠色是標準答案有、你沒寫到的字。大小寫與標點不影響比對；翻譯和改寫可能有其他正確寫法，請對照解析判斷。</p>';
+  }
+  function checkCard(c, idx){
+    var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+    var all = true, any = false;
+    ins.forEach(function(inp){ var r = judge(inp); render(inp, r); if (!r.empty) any = true; if (!r.ok) all = false; });
+    if (any) state[idx] = all;
+    var d = c.querySelector('details'); if (d && any) d.open = true;
+    updScore();
+  }
+
+  cards.forEach(function(c, idx){
+    if (c.classList.contains('mcq')) {
+      var answered = false;
+      c.querySelectorAll('.opt-btn').forEach(function(b){
+        b.addEventListener('click', function(){
+          if (answered) return; answered = true;
+          lockMcq(c, b.getAttribute('data-k'), idx);
+          saved['m' + idx] = b.getAttribute('data-k'); persist(); updScore();
+        });
+      });
+      if (saved['m' + idx]) { answered = true; lockMcq(c, saved['m' + idx], idx); }
+    } else {
+      var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+      ins.forEach(function(inp, k){
+        if (!inp.id) inp.id = 'q' + idx + '_' + k;
+        var key = 't' + idx + '_' + k;
+        if (saved[key]) inp.value = saved[key];
+        inp.addEventListener('input', function(){ saved[key] = inp.value; persist(); });
+        inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' && inp.tagName === 'INPUT') { e.preventDefault(); checkCard(c, idx); } });
+      });
+      var btn = c.querySelector('.chk');
+      if (btn) btn.addEventListener('click', function(){ checkCard(c, idx); });
+      if (ins.some(function(i){ return norm(i.value); }) && saved['c' + idx]) checkCard(c, idx);
+      if (btn) btn.addEventListener('click', function(){ saved['c' + idx] = 1; persist(); });
+    }
+  });
+
+  var reset = document.getElementById('resetPractice');
+  if (reset) reset.addEventListener('click', function(){
+    saved = {}; persist(); location.reload();
+  });
+  updScore();
+})();
+
+</script>
+<script>
+(function(){
+  var K='ea1', N=7, SK='drama-watch-v1', st={};
+  try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
+  st[K]=st[K]||{seen:{},cur:0};
+  function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }
+  var tabs=[].slice.call(document.querySelectorAll('.eptabs button'));
+  var panels=[].slice.call(document.querySelectorAll('.ep'));
+  var prev=document.getElementById('prev'), next=document.getElementById('next'), ns=document.getElementById('nextSeason');
+  var h=(location.hash||'').match(/^#e(\d+)$/);
+  var cur = h ? Math.min(N-1, Math.max(0, +h[1]-1)) : (st[K].cur||0);
+  function paint(){
+    tabs.forEach(function(t,i){ t.setAttribute('aria-selected', i===cur?'true':'false'); t.classList.toggle('seen', !!st[K].seen[i]); });
+    panels.forEach(function(p,i){ p.hidden = i!==cur; });
+    prev.hidden = cur===0; next.hidden = cur===N-1; ns.hidden = cur!==N-1;
+  }
+  function go(i, scroll){ cur=i; st[K].cur=i; save(); paint(); if(scroll) document.querySelector('.eptabs').scrollIntoView({behavior:'smooth', block:'start'}); }
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){ go(i,false); }); });
+  prev.addEventListener('click',function(){ go(cur-1,true); });
+  next.addEventListener('click',function(){ st[K].seen[cur]=1; go(cur+1,true); });
+  ns.addEventListener('click',function(){ st[K].seen[cur]=1; save(); });
+  panels.forEach(function(p,i){
+    p.querySelectorAll('.opt-btn').forEach(function(b){ b.addEventListener('click',function(){
+      setTimeout(function(){ var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done){ st[K].seen[i]=1; save(); paint(); } },0);
+    }); });
+    var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done) st[K].seen[i]=1;
+  });
+  save(); paint();
+})();
+</script>
+</body>
+</html>
