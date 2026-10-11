@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>世界史劇場 第二季｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E6EEE9;
+    --ink:#1C2A24;
+    --ink-muted:#58695F;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --amber:#E0973C;  --amber-ink:#3A2306;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#CFE8DA;  --hl-sup:#DCE8F5;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(46,125,91,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+      --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+      --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(124,201,162,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+    --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+    --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(124,201,162,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+<style>
+  /* drama: one episode at a time, scene captions like a script, dialogue set off */
+  .season-tag{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em; color:var(--accent); }
+  .cast{ font-size:0.86rem; color:var(--ink-muted); margin:0.6rem 0 0; }
+  .eptabs{ display:flex; flex-wrap:wrap; gap:0.4rem; margin:1.4rem 0 1rem; }
+  .eptabs button{ font:inherit; font-family:var(--f-mono); font-size:0.82rem; border:1px solid var(--line); background:var(--surface); color:var(--ink-muted); border-radius:999px; padding:0.3rem 0.8rem; cursor:pointer; }
+  .eptabs button[aria-selected="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .eptabs button.seen::after{ content:' ✓'; }
+  .ep{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.3rem 1.4rem 1.4rem; box-shadow:var(--shadow); }
+  .ep-head{ display:flex; flex-wrap:wrap; gap:0.3rem 0.8rem; align-items:baseline; margin-bottom:0.2rem; }
+  .ep-head .code{ font-family:var(--f-mono); font-size:0.8rem; color:var(--accent); font-weight:700; }
+  .ep-head .yr{ font-family:var(--f-mono); font-size:0.8rem; color:var(--ink-muted); }
+  .ep h2{ font-size:1.5rem; margin:0 0 0.6rem; }
+  .scene{ margin:1.2rem 0 0; }
+  .scene-cap{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.05em; color:var(--ink-muted); border-left:3px solid var(--amber); padding-left:0.6rem; margin:0 0 0.6rem; }
+  .scene p{ margin:0 0 0.7rem; line-height:1.95; }
+  .scene p.line{ font-family:var(--f-display); font-size:1.06rem; background:var(--surface-2); border-radius:6px; padding:0.45rem 0.8rem; }
+  .scene b.kw{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .scene .yr-hl{ font-family:var(--f-mono); font-weight:700; color:var(--accent); font-size:0.95em; }
+  .kw-key{ font-size:0.8rem; color:var(--ink-muted); margin:0 0 0.4rem; }
+  .kw-key b{ background:linear-gradient(transparent 45%, var(--hl-ex) 45%); color:var(--ink); }
+  .kw-key span{ font-family:var(--f-mono); font-weight:700; color:var(--accent); }
+  .eptabs .recap-tab{ border-color:var(--amber); color:var(--ink); }
+  .eptabs .recap-tab[aria-selected="true"]{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+  .recap-body p{ margin:0 0 0.8rem; line-height:1.95; }
+  .recap-body b{ font-weight:700; color:var(--ink); background:linear-gradient(transparent 45%, var(--hl-ex) 45%); padding:0 1px; }
+  .chain{ margin:0.4rem 0 1rem; padding:0.6rem 0.9rem; border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 6px 6px 0; font-size:0.95rem; line-height:1.8; }
+  .chain b{ background:none; }
+  .skel{ margin:0; line-height:2; font-size:0.95rem; }
+  .acts-wrap{ margin:1.2rem 0 0; } .acts-wrap h3{ font-size:1rem; margin:0 0 0.5rem; }
+  .acts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .acts div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; display:grid; gap:0.15rem; font-size:0.86rem; line-height:1.55; }
+  .acts b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); }
+  .acts .at{ font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); }
+  .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
+  .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
+  .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
+  .teaser{ border:1px dashed var(--amber); border-radius:8px; padding:0.7rem 1rem; margin:1rem 0 0; font-family:var(--f-display); }
+  .teaser b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--amber); display:block; letter-spacing:0.06em; }
+  .quiz{ margin:1.4rem 0 0; display:grid; gap:0.7rem; }
+  .quiz h3{ font-size:1rem; margin:0; }
+  .epnav{ display:flex; justify-content:space-between; gap:0.6rem; margin:1.2rem 0 0; flex-wrap:wrap; }
+  .epnav button, .epnav a{ font:inherit; font-size:0.92rem; border:1px solid var(--accent); background:var(--surface); color:var(--accent); border-radius:8px; padding:0.5rem 1rem; cursor:pointer; text-decoration:none; }
+  .epnav .next{ background:var(--accent); color:var(--accent-ink); }
+  .epnav [hidden]{ display:none; }
+  .seasons{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin:1.4rem 0; }
+  .scard{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.2rem; box-shadow:var(--shadow); display:grid; gap:0.4rem; align-content:start; text-decoration:none; color:var(--ink); }
+  .scard:hover{ border-color:var(--accent); }
+  .scard .snum{ font-family:var(--f-display); font-size:1.7rem; font-weight:700; line-height:1.1; }
+  .scard .t{ font-family:var(--f-display); font-size:1.15rem; font-weight:600; }
+  .scard .y{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .lg{ font-size:0.88rem; color:var(--ink-muted); line-height:1.7; }
+  .scard .bar{ height:6px; background:var(--surface-2); border-radius:3px; overflow:hidden; margin-top:0.3rem; }
+  .scard .bar i{ display:block; height:100%; background:var(--accent); width:0; }
+  .scard .pg{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .go{ color:var(--accent); font-weight:700; font-size:0.92rem; }
+  .thread{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .thread div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; font-size:0.86rem; line-height:1.6; }
+  .thread b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); display:block; }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="world-drama.html">← 回到世界史劇場</a>
+<header class="hero">
+  <span class="eyebrow">世界史劇場・第二季・1543－1871</span>
+  <h1>革命的時代</h1>
+  <p class="sub">先是有人敢問「地球真的不動嗎」，接著有人問「國王的權力從哪裡來」。三百年裡，思想、政治和經濟接連翻轉。</p>
+  <p class="cast">主要角色：英國織工湯瑪斯與法國印刷工瑪莉兩家（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
+</header>
+<div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button><button type="button" role="tab" id="tab6" aria-controls="ep6" aria-selected="false" data-i="6" class="recap-tab">季末總整理</button></nav>
+<section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
+<div class="ep-head"><span class="code">S2・E1</span><span class="yr">1543－1687</span></div>
+<h2>望遠鏡裡的天空</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1543 年</p><p><b class="kw">哥白尼</b>提出<b class="kw">地動說</b>：不是太陽繞地球，而是地球繞太陽。<b class="kw">科學革命</b>開始了。</p><p>後來伽利略用望遠鏡觀察天空，看見木星的衛星，支持了地動說。</p></div><div class="scene"><p class="scene-cap">1687 年・倫敦</p><p><b class="kw">牛頓</b>提出<b class="kw">萬有引力</b>，用同一套定律解釋蘋果落地和行星運行。</p><p class="line">「如果自然有規律，」印刷工瑪莉的祖父邊排字邊說，「那社會是不是也有規律？」</p><p>科學家相信靠<b class="kw">觀察和實驗</b>，人的<b class="kw">理性</b>可以找到真理。這個信念，很快就被拿來檢討政治和社會。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1543 哥白尼地動說</b>，<b>科學革命</b>開始；伽利略以望遠鏡觀測。</li><li><b>1687 牛頓萬有引力</b>。</li><li>科學革命讓人相信<b>理性</b>，為<b>啟蒙運動</b>鋪路。</li></ul></div>
+<div class="teaser"><b>下集預告</b>咖啡館裡的人開始討論：國王的權力，是上帝給的，還是人民給的？</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q1</span><span>科學革命的開端是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 牛頓萬有引力</button><button class="opt-btn" type="button" data-k="B">(B) 哥白尼地動說</button><button class="opt-btn" type="button" data-k="C">(C) 瓦特蒸汽機</button><button class="opt-btn" type="button" data-k="D">(D) 達爾文進化論</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1543 年哥白尼提出地動說。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q2</span><span>科學革命對後來的影響是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 讓人相信理性，促成啟蒙運動</button><button class="opt-btn" type="button" data-k="B">(B) 恢復教會權威</button><button class="opt-btn" type="button" data-k="C">(C) 導致十字軍</button><button class="opt-btn" type="button" data-k="D">(D) 促成宗教改革</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>相信理性可以找到規律，延伸到政治社會。</div></details></div></div>
+</section><section class="ep" id="ep1" role="tabpanel" aria-labelledby="tab1" hidden>
+<div class="ep-head"><span class="code">S2・E2</span><span class="yr">1688－18 世紀</span></div>
+<h2>咖啡館裡的理性</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1688 年・倫敦</p><p>英國發生<b class="kw">光榮革命</b>，國會迎來新國王，通過<b class="kw">權利法案</b>，確立國會的權力。英國走向<b class="kw">君主立憲</b>。</p></div><div class="scene"><p class="scene-cap">18 世紀・巴黎的沙龍</p><p>思想家用<b class="kw">理性</b>檢討政治與社會，這是<b class="kw">啟蒙運動</b>：</p><p><b class="kw">洛克</b>說人有天生的生命、自由、財產權（<b class="kw">天賦人權</b>），政府失職，人民可以推翻它。</p><p><b class="kw">孟德斯鳩</b>主張<b class="kw">三權分立</b>：立法、行政、司法互相制衡。</p><p><b class="kw">盧梭</b>提出<b class="kw">社會契約</b>、<b class="kw">主權在民</b>。</p><p class="line">「這些書，」瑪莉印完最後一頁說，「會讓國王睡不著。」</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1688 光榮革命</b>、<b>權利法案</b>：英國確立國會主權與君主立憲。</li><li><b>啟蒙運動</b>：<b>洛克</b>天賦人權、<b>孟德斯鳩</b>三權分立、<b>盧梭</b>社會契約與主權在民。</li><li>啟蒙思想影響美國獨立與法國大革命。</li></ul></div>
+<div class="teaser"><b>下集預告</b>大西洋對岸的殖民地人民說：我們繳稅，卻沒有代表。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q3</span><span>主張三權分立的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 洛克</button><button class="opt-btn" type="button" data-k="B">(B) 孟德斯鳩</button><button class="opt-btn" type="button" data-k="C">(C) 盧梭</button><button class="opt-btn" type="button" data-k="D">(D) 牛頓</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>孟德斯鳩主張立法、行政、司法互相制衡。</div></details></div><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q4</span><span>洛克的主要主張是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 天賦人權</button><button class="opt-btn" type="button" data-k="B">(B) 三權分立</button><button class="opt-btn" type="button" data-k="C">(C) 共產主義</button><button class="opt-btn" type="button" data-k="D">(D) 君權神授</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>人有天賦的生命、自由、財產權。</div></details></div></div>
+</section><section class="ep" id="ep2" role="tabpanel" aria-labelledby="tab2" hidden>
+<div class="ep-head"><span class="code">S2・E3</span><span class="yr">1765－1787</span></div>
+<h2>無代表不納稅</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">北美殖民地</p><p>英國向北美十三州殖民地加稅，殖民地人民喊出「<b class="kw">無代表不納稅</b>」：我們在英國國會沒有代表，憑什麼要繳稅？</p></div><div class="scene"><p class="scene-cap">1776 年・費城</p><p><b class="kw">1776</b> 年 7 月 4 日，殖民地發表<b class="kw">獨立宣言</b>，宣布人人生而平等，擁有生命、自由與追求幸福的權利。這些話，幾乎就是<b class="kw">洛克</b>思想的翻版。</p><p>獨立戰爭勝利後，<b class="kw">1787</b> 年制定<b class="kw">美國憲法</b>，採用<b class="kw">三權分立</b>，建立共和國。</p><p>湯瑪斯的叔叔移民到了美國。他寫信回英國：「這裡沒有國王，只有選票。」</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>「<b>無代表不納稅</b>」：北美殖民地反抗英國徵稅。</li><li><b>1776 獨立宣言</b>（受洛克天賦人權影響）。</li><li><b>1787 美國憲法</b>：<b>三權分立</b>（受孟德斯鳩影響）。</li></ul></div>
+<div class="teaser"><b>下集預告</b>十三年後，巴黎的人民攻進了一座監獄。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q5</span><span>美國獨立宣言主要受誰的思想影響？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 洛克</button><button class="opt-btn" type="button" data-k="B">(B) 馬克思</button><button class="opt-btn" type="button" data-k="C">(C) 路德</button><button class="opt-btn" type="button" data-k="D">(D) 喀爾文</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>天賦人權的思想來自洛克。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q6</span><span>美國憲法採取的政治原則是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 君權神授</button><button class="opt-btn" type="button" data-k="B">(B) 三權分立</button><button class="opt-btn" type="button" data-k="C">(C) 共產主義</button><button class="opt-btn" type="button" data-k="D">(D) 封建制度</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>受孟德斯鳩影響採三權分立。</div></details></div></div>
+</section><section class="ep" id="ep3" role="tabpanel" aria-labelledby="tab3" hidden>
+<div class="ep-head"><span class="code">S2・E4</span><span class="yr">1789－1815</span></div>
+<h2>巴黎的鐘聲</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1789 年・巴黎</p><p>法國財政破產，貴族和教士不用繳稅，重擔都在平民身上，他們被稱為<b class="kw">第三階級</b>。<b class="kw">1789</b> 年，<b class="kw">法國大革命</b>爆發，人民攻下巴士底監獄。</p><p>國民議會發表<b class="kw">人權宣言</b>：人生而自由、權利平等，主權屬於國民。革命的口號是「<b class="kw">自由、平等、博愛</b>」。</p><p class="line">「我們印的不是紙，」瑪莉對學徒說，「是新的國家。」</p></div><div class="scene"><p class="scene-cap">拿破崙</p><p>革命後政局混亂，軍人<b class="kw">拿破崙</b>掌權，後來稱帝，征服大半個歐洲。他頒布的<b class="kw">拿破崙法典</b>，把法律之前人人平等的理念傳遍歐洲。<b class="kw">1815</b> 年他戰敗下台。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1789 法國大革命</b>：<b>第三階級</b>不滿；<b>人權宣言</b>，口號<b>自由、平等、博愛</b>。</li><li>盧梭的<b>主權在民</b>影響法國大革命。</li><li><b>拿破崙</b>（1799－1815）：<b>拿破崙法典</b>傳播革命理念。</li></ul></div>
+<div class="teaser"><b>下集預告</b>英國的工廠煙囪一根接一根立起來。湯瑪斯的織布機，被一台蒸汽機取代了。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q7</span><span>「人生而自由，在權利上一律平等」出自？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 英國權利法案</button><button class="opt-btn" type="button" data-k="B">(B) 法國人權宣言</button><button class="opt-btn" type="button" data-k="C">(C) 美國憲法</button><button class="opt-btn" type="button" data-k="D">(D) 共產黨宣言</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1789 年法國人權宣言。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q8</span><span>法國大革命前不滿最深的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 第一階級教士</button><button class="opt-btn" type="button" data-k="B">(B) 第二階級貴族</button><button class="opt-btn" type="button" data-k="C">(C) 第三階級平民</button><button class="opt-btn" type="button" data-k="D">(D) 國王</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>第三階級負擔重稅卻沒有特權。</div></details></div></div>
+</section><section class="ep" id="ep4" role="tabpanel" aria-labelledby="tab4" hidden>
+<div class="ep-head"><span class="code">S2・E5</span><span class="yr">1760 年代－19 世紀</span></div>
+<h2>蒸汽與煙囪</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">曼徹斯特</p><p><b class="kw">工業革命</b>從<b class="kw">英國</b>開始：英國有豐富的<b class="kw">煤和鐵</b>、資本、海外殖民地市場，圈地運動又讓很多農民流入城市當勞工。</p><p><b class="kw">1769</b> 年<b class="kw">瓦特</b>改良<b class="kw">蒸汽機</b>，工廠用機器生產，紡織業最先改變。</p></div><div class="scene"><p class="scene-cap">工廠的早晨</p><p>湯瑪斯失去了手工織布的工作，只好帶著十歲的兒子進工廠，一天工作十四個小時。城市裡煙囪林立，貧民窟擁擠骯髒。</p><p class="line">「機器讓布變便宜了，」湯瑪斯說，「卻沒讓我們的日子變好。」</p><p><b class="kw">都市化</b>、<b class="kw">童工</b>、勞工問題，成了工業革命的另一面。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>工業革命</b>（1760 年代）從<b>英國</b>開始：煤鐵、資本、殖民地市場、勞力。</li><li><b>1769 瓦特</b>改良<b>蒸汽機</b>；機器生產取代手工。</li><li>社會影響：<b>都市化、童工、勞工問題</b>，促成社會主義。</li></ul></div>
+<div class="teaser"><b>下集預告</b>一位德國思想家在倫敦寫下：全世界的無產者，聯合起來！</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="A"><div class="qhead"><span class="qnum">Q9</span><span>工業革命最先發生在英國的原因是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 煤鐵豐富、有海外市場</button><button class="opt-btn" type="button" data-k="B">(B) 君主專制</button><button class="opt-btn" type="button" data-k="C">(C) 人口減少</button><button class="opt-btn" type="button" data-k="D">(D) 禁止貿易</button></div><details><summary>看解析</summary><div class="ans"><b>A。</b>英國有煤鐵、資本與殖民地市場。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q10</span><span>工業革命帶來的社會影響是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 人口移回鄉村</button><button class="opt-btn" type="button" data-k="B">(B) 都市化與勞工問題</button><button class="opt-btn" type="button" data-k="C">(C) 貴族權力增加</button><button class="opt-btn" type="button" data-k="D">(D) 手工業復興</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>工廠集中城市，產生勞工問題。</div></details></div></div>
+</section><section class="ep" id="ep5" role="tabpanel" aria-labelledby="tab5" hidden>
+<div class="ep-head"><span class="code">S2・E6</span><span class="yr">1848－1871</span></div>
+<h2>宣言與統一</h2><p class="kw-key"><b>螢光底</b>＝要記的名詞，<span>綠色數字</span>＝年代</p><div class="scene"><p class="scene-cap">1848 年・倫敦</p><p>馬克思和恩格斯發表<b class="kw">共產黨宣言</b>，主張工人（<b class="kw">無產階級</b>）團結起來，推翻資本家，建立平等的社會。這就是<b class="kw">社會主義</b>思想，回應工業化帶來的貧富差距。</p></div><div class="scene"><p class="scene-cap">羅馬與柏林</p><p>同一時期，<b class="kw">民族主義</b>席捲歐洲：同一個民族，應該建立自己的國家。<b class="kw">1861</b> 年<b class="kw">義大利統一</b>，<b class="kw">1871</b> 年<b class="kw">德意志統一</b>。</p><p>湯瑪斯的孫子在工會裡發傳單，瑪莉的孫女在報社寫評論。一個新的強大德國，出現在歐洲中央。第二季，結束。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1848 共產黨宣言</b>（馬克思）：<b>社會主義</b>、階級鬥爭。</li><li><b>民族主義</b>促成 <b>1861 義大利統一</b>、<b>1871 德意志統一</b>。</li><li>因果鏈：<b>科學革命 → 啟蒙 → 美法革命</b>；<b>工業革命 → 勞工問題 → 社會主義</b>。</li></ul></div>
+<div class="teaser"><b>下集預告</b>第三季：歐洲列強拿著尺，在非洲地圖上畫線。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q11</span><span>《共產黨宣言》的作者是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 亞當斯密</button><button class="opt-btn" type="button" data-k="B">(B) 馬克思、恩格斯</button><button class="opt-btn" type="button" data-k="C">(C) 盧梭</button><button class="opt-btn" type="button" data-k="D">(D) 洛克</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1848 年馬克思與恩格斯發表。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q12</span><span>推動義大利與德意志統一的思潮是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 帝國主義</button><button class="opt-btn" type="button" data-k="B">(B) 民族主義</button><button class="opt-btn" type="button" data-k="C">(C) 人文主義</button><button class="opt-btn" type="button" data-k="D">(D) 重商主義</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>同一民族建立自己的國家。</div></details></div></div>
+</section><section class="ep recap" id="ep6" role="tabpanel" aria-labelledby="tab6" hidden>
+<div class="ep-head"><span class="code">S2・季末總整理</span><span class="yr">1543－1871</span></div>
+<h2>《革命的時代》</h2><p class="kw-key">這一季的劇情，用旁白的方式從頭說一次。<b>粗體</b>是要記的名詞。</p>
+<div class="recap-body"><p>這一季的主角是一個詞：<b>理性</b>。</p><p><b>1543</b> 年<b>哥白尼</b>說地球繞著太陽轉，<b>科學革命</b>開始了；伽利略用望遠鏡證明，<b>1687</b> 年<b>牛頓</b>提出<b>萬有引力</b>。人們發現，只要靠<b>觀察和實驗</b>，就能找到自然的規律。</p><p>既然自然有規律，社會是不是也可以用理性來檢討？於是 18 世紀出現了<b>啟蒙運動</b>：</p><blockquote class="chain">啟蒙三巨頭：<b>洛克</b>（天賦人權）、<b>孟德斯鳩</b>（三權分立）、<b>盧梭</b>（社會契約、主權在民）</blockquote><p>英國先走了一步：<b>1688</b> 年<b>光榮革命</b>，通過<b>權利法案</b>，國會的權力高過國王，走向<b>君主立憲</b>。</p><p>大西洋對岸，北美殖民地喊出「<b>無代表不納稅</b>」，<b>1776</b> 年發表<b>獨立宣言</b>（洛克的天賦人權），<b>1787</b> 年制定<b>美國憲法</b>（孟德斯鳩的三權分立）。</p><p><b>1789</b> 年，輪到法國。負擔重稅的<b>第三階級</b>起來革命，發表<b>人權宣言</b>，喊出「<b>自由、平等、博愛</b>」（盧梭的主權在民）。之後<b>拿破崙</b>掌權，用<b>拿破崙法典</b>把革命理念帶到全歐洲。</p><blockquote class="chain">思想改變政治：<b>科學革命 → 啟蒙運動 → 美國獨立、法國大革命</b></blockquote><p>同一時間，另一場革命在英國的工廠裡發生。<b>工業革命</b>從 <b>1760 年代</b>的英國開始，因為英國有<b>煤鐵</b>、資本和殖民地市場；<b>1769</b> 年<b>瓦特</b>改良<b>蒸汽機</b>，機器取代了手工。</p><p>可是工廠也帶來<b>都市化</b>、<b>童工</b>和勞工問題。<b>1848</b> 年<b>馬克思</b>發表<b>共產黨宣言</b>，提出<b>社會主義</b>，要工人團結起來。</p><blockquote class="chain">工業改變社會：<b>工業革命 → 勞工問題 → 社會主義</b></blockquote><p>最後，<b>民族主義</b>讓歐洲地圖重畫：<b>1861</b> 年<b>義大利統一</b>，<b>1871</b> 年<b>德意志統一</b>。一個強大的新德國出現在歐洲中央，下一個世紀的風暴正在醞釀。</p><p>下一季：《帝國與冷戰》。</p></div>
+<div class="keypts"><h3>只背一條劇情骨架</h3><p class="skel">哥白尼地動說（1543）→ 牛頓萬有引力（1687）→ 光榮革命、權利法案（1688）→ 啟蒙運動（洛克、孟德斯鳩、盧梭）→ 工業革命（1760s）、瓦特蒸汽機（1769）→ 美國獨立宣言（1776）→ 美國憲法（1787）→ 法國大革命、人權宣言（1789）→ 拿破崙（1799－1815）→ 共產黨宣言（1848）→ 義大利統一（1861）→ 德意志統一（1871）</p></div>
+<div class="acts-wrap"><h3>切成四幕來記</h3><div class="acts"><div><b>第一幕</b><span class="at">理性的發現</span><span>科學革命：哥白尼、牛頓</span></div><div><b>第二幕</b><span class="at">理性進入政治</span><span>光榮革命、啟蒙三巨頭</span></div><div><b>第三幕</b><span class="at">兩場政治革命</span><span>美國獨立、法國大革命、拿破崙</span></div><div><b>第四幕</b><span class="at">工業與民族</span><span>工業革命、社會主義、義德統一</span></div></div></div>
+</section>
+<div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-wd3.html" hidden>看第三季 →</a></div>
+<section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="wd-revolutions.html">近代革命</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的台灣和東亞。</p></section>
+<footer>
+  <p>劇情中的主角、家族與對白為虛構；歷史人物只敘述其史實作為。年代與事件依部定必修世界史整理。</p>
+  <div class="id"><span>筱葳學測歷史</span><span>世界史劇場 S2</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var PAGE = (document.querySelector('.eyebrow') || {}).textContent || location.pathname;
+  var SKEY = 'practice-v1:' + PAGE;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SKEY) || '{}') || {}; } catch (e) { saved = {}; }
+  function persist(){ try { localStorage.setItem(SKEY, JSON.stringify(saved)); } catch (e) {} }
+
+  var cards = [].slice.call(document.querySelectorAll('.qcard.mcq[data-ans], .qcard.txt'));
+  var state = {};
+  var sb = document.getElementById('score');
+  function updScore(){
+    if (!sb) return;
+    var ok = 0, done = 0;
+    cards.forEach(function(c, i){ if (state[i] !== undefined) { done++; if (state[i]) ok++; } });
+    sb.textContent = '答對 ' + ok + ' / ' + cards.length + (done === cards.length && cards.length ? '・全部完成' : '');
+    sb.className = 'meter ' + (done === cards.length && cards.length ? (ok / cards.length >= 0.8 ? 'ok' : 'warn') : '');
+  }
+
+  /* ---------- multiple choice ---------- */
+  function lockMcq(q, k, idx){
+    var ans = q.getAttribute('data-ans');
+    var btn = q.querySelector('.opt-btn[data-k="' + k + '"]');
+    if (!btn) return;
+    if (k === ans) btn.classList.add('right');
+    else { btn.classList.add('wrong'); var r = q.querySelector('.opt-btn[data-k="' + ans + '"]'); if (r) r.classList.add('right'); }
+    q.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+    var d = q.querySelector('details'); if (d) d.open = true;
+    state[idx] = (k === ans);
+  }
+
+  /* ---------- text answers ---------- */
+  function expand(s){
+    return s.replace(/[’‘`]/g, "'")
+      .replace(/\b(won)'t\b/g, 'will not').replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+      .replace(/n't\b/g, ' not')
+      .replace(/\b(it|that|there|what|he|she|who)'s\b/g, '$1 is')
+      .replace(/'re\b/g, ' are').replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will').replace(/\bi'm\b/g, 'i am');
+  }
+  function norm(s){
+    s = expand(String(s).toLowerCase());
+    s = s.replace(/[（）()「」『』“”"]/g, ' ')
+         .replace(/[，。、！？；：,.!?;:／\/|]/g, ' ')
+         .replace(/(\w)-(\w)/g, '$1$2')
+         .replace(/\s+/g, ' ').trim();
+    return s;
+  }
+  function toks(s){ return norm(s) ? norm(s).split(' ') : []; }
+  function lcs(a, b){
+    var m = a.length, n = b.length, dp = [], i, j;
+    for (i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); }
+    for (i = m - 1; i >= 0; i--) for (j = n - 1; j >= 0; j--)
+      dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    var ka = {}, kb = {}; i = 0; j = 0;
+    while (i < m && j < n) {
+      if (a[i] === b[j]) { ka[i] = 1; kb[j] = 1; i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return { len: dp[0][0], ka: ka, kb: kb };
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function judge(inp){
+    var val = inp.value;
+    if (!norm(val)) return { empty: true };
+    var kw = inp.getAttribute('data-kw');
+    if (kw) {
+      var groups = JSON.parse(kw), low = val.toLowerCase();
+      var ok = groups.every(function(g){ return g.some(function(w){ return low.indexOf(String(w).toLowerCase()) !== -1; }); });
+      return { kw: true, ok: ok };
+    }
+    var accepts = (inp.getAttribute('data-accept') || '').split('||').filter(Boolean);
+    var you = toks(val), best = null;
+    for (var i = 0; i < accepts.length; i++) {
+      var ref = toks(accepts[i]);
+      if (ref.join(' ') === you.join(' ')) return { ok: true, exact: true };
+      var r = lcs(you, ref), sim = (2 * r.len) / (you.length + ref.length || 1);
+      if (!best || sim > best.sim) best = { sim: sim, r: r, ref: ref, raw: accepts[i] };
+    }
+    return { ok: false, best: best, you: you };
+  }
+  function render(inp, res){
+    var v = inp.parentNode.querySelector('.verdict[data-for="' + inp.id + '"]');
+    if (!v) return;
+    if (res.empty) { v.innerHTML = '<span class="vd warn">還沒有作答</span>'; return; }
+    if (res.ok && res.kw) { v.innerHTML = '<span class="vd good">✓ 關鍵答案正確</span>　請再看下方解析確認說法。'; return; }
+    if (res.ok) { v.innerHTML = '<span class="vd good">✓ 和標準答案相同</span>'; return; }
+    if (res.kw) { v.innerHTML = '<span class="vd bad">✗ 還沒寫到關鍵答案</span>　看看下方解析。'; return; }
+    var b = res.best, you = res.you;
+    var yl = you.map(function(t, i){ return b.r.ka[i] ? esc(t) : '<span class="dx-bad">' + esc(t) + '</span>'; }).join(' ');
+    var rl = b.ref.map(function(t, i){ return b.r.kb[i] ? esc(t) : '<span class="dx-good">' + esc(t) + '</span>'; }).join(' ');
+    v.innerHTML = '<span class="vd bad">✗ 和標準答案不同（相似度 ' + Math.round(b.sim * 100) + '%）</span>' +
+      '<div class="dx"><div><b>你的答案</b>' + yl + '</div><div><b>標準答案</b>' + rl + '</div></div>' +
+      '<p class="dx-note">紅色是和標準答案不同的字，綠色是標準答案有、你沒寫到的字。大小寫與標點不影響比對；翻譯和改寫可能有其他正確寫法，請對照解析判斷。</p>';
+  }
+  function checkCard(c, idx){
+    var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+    var all = true, any = false;
+    ins.forEach(function(inp){ var r = judge(inp); render(inp, r); if (!r.empty) any = true; if (!r.ok) all = false; });
+    if (any) state[idx] = all;
+    var d = c.querySelector('details'); if (d && any) d.open = true;
+    updScore();
+  }
+
+  cards.forEach(function(c, idx){
+    if (c.classList.contains('mcq')) {
+      var answered = false;
+      c.querySelectorAll('.opt-btn').forEach(function(b){
+        b.addEventListener('click', function(){
+          if (answered) return; answered = true;
+          lockMcq(c, b.getAttribute('data-k'), idx);
+          saved['m' + idx] = b.getAttribute('data-k'); persist(); updScore();
+        });
+      });
+      if (saved['m' + idx]) { answered = true; lockMcq(c, saved['m' + idx], idx); }
+    } else {
+      var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+      ins.forEach(function(inp, k){
+        if (!inp.id) inp.id = 'q' + idx + '_' + k;
+        var key = 't' + idx + '_' + k;
+        if (saved[key]) inp.value = saved[key];
+        inp.addEventListener('input', function(){ saved[key] = inp.value; persist(); });
+        inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' && inp.tagName === 'INPUT') { e.preventDefault(); checkCard(c, idx); } });
+      });
+      var btn = c.querySelector('.chk');
+      if (btn) btn.addEventListener('click', function(){ checkCard(c, idx); });
+      if (ins.some(function(i){ return norm(i.value); }) && saved['c' + idx]) checkCard(c, idx);
+      if (btn) btn.addEventListener('click', function(){ saved['c' + idx] = 1; persist(); });
+    }
+  });
+
+  var reset = document.getElementById('resetPractice');
+  if (reset) reset.addEventListener('click', function(){
+    saved = {}; persist(); location.reload();
+  });
+  updScore();
+})();
+
+</script>
+<script>
+(function(){
+  var K='wd2', N=7, SK='drama-watch-v1', st={};
+  try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
+  st[K]=st[K]||{seen:{},cur:0};
+  function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }
+  var tabs=[].slice.call(document.querySelectorAll('.eptabs button'));
+  var panels=[].slice.call(document.querySelectorAll('.ep'));
+  var prev=document.getElementById('prev'), next=document.getElementById('next'), ns=document.getElementById('nextSeason');
+  var h=(location.hash||'').match(/^#e(\d+)$/);
+  var cur = h ? Math.min(N-1, Math.max(0, +h[1]-1)) : (st[K].cur||0);
+  function paint(){
+    tabs.forEach(function(t,i){ t.setAttribute('aria-selected', i===cur?'true':'false'); t.classList.toggle('seen', !!st[K].seen[i]); });
+    panels.forEach(function(p,i){ p.hidden = i!==cur; });
+    prev.hidden = cur===0; next.hidden = cur===N-1; ns.hidden = cur!==N-1;
+  }
+  function go(i, scroll){ cur=i; st[K].cur=i; save(); paint(); if(scroll) document.querySelector('.eptabs').scrollIntoView({behavior:'smooth', block:'start'}); }
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){ go(i,false); }); });
+  prev.addEventListener('click',function(){ go(cur-1,true); });
+  next.addEventListener('click',function(){ st[K].seen[cur]=1; go(cur+1,true); });
+  ns.addEventListener('click',function(){ st[K].seen[cur]=1; save(); });
+  panels.forEach(function(p,i){
+    p.querySelectorAll('.opt-btn').forEach(function(b){ b.addEventListener('click',function(){
+      setTimeout(function(){ var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done){ st[K].seen[i]=1; save(); paint(); } },0);
+    }); });
+    var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done) st[K].seen[i]=1;
+  });
+  save(); paint();
+})();
+</script>
+</body>
+</html>
