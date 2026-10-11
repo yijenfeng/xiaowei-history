@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>台灣史劇場 第一季｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E6EEE9;
+    --ink:#1C2A24;
+    --ink-muted:#58695F;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --amber:#E0973C;  --amber-ink:#3A2306;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#CFE8DA;  --hl-sup:#DCE8F5;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(46,125,91,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+      --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+      --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(124,201,162,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+    --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+    --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(124,201,162,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+<style>
+  /* drama: one episode at a time, scene captions like a script, dialogue set off */
+  .season-tag{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em; color:var(--accent); }
+  .cast{ font-size:0.86rem; color:var(--ink-muted); margin:0.6rem 0 0; }
+  .eptabs{ display:flex; flex-wrap:wrap; gap:0.4rem; margin:1.4rem 0 1rem; }
+  .eptabs button{ font:inherit; font-family:var(--f-mono); font-size:0.82rem; border:1px solid var(--line); background:var(--surface); color:var(--ink-muted); border-radius:999px; padding:0.3rem 0.8rem; cursor:pointer; }
+  .eptabs button[aria-selected="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .eptabs button.seen::after{ content:' ✓'; }
+  .ep{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.3rem 1.4rem 1.4rem; box-shadow:var(--shadow); }
+  .ep-head{ display:flex; flex-wrap:wrap; gap:0.3rem 0.8rem; align-items:baseline; margin-bottom:0.2rem; }
+  .ep-head .code{ font-family:var(--f-mono); font-size:0.8rem; color:var(--accent); font-weight:700; }
+  .ep-head .yr{ font-family:var(--f-mono); font-size:0.8rem; color:var(--ink-muted); }
+  .ep h2{ font-size:1.5rem; margin:0 0 0.6rem; }
+  .scene{ margin:1.2rem 0 0; }
+  .scene-cap{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.05em; color:var(--ink-muted); border-left:3px solid var(--amber); padding-left:0.6rem; margin:0 0 0.6rem; }
+  .scene p{ margin:0 0 0.7rem; line-height:1.95; }
+  .scene p.line{ font-family:var(--f-display); font-size:1.06rem; background:var(--surface-2); border-radius:6px; padding:0.45rem 0.8rem; }
+  .keypts{ background:var(--accent-soft); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1rem; margin:1.4rem 0 0; }
+  .keypts h3{ font-size:1rem; margin:0 0 0.4rem; }
+  .keypts ul{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; font-size:0.95rem; }
+  .teaser{ border:1px dashed var(--amber); border-radius:8px; padding:0.7rem 1rem; margin:1rem 0 0; font-family:var(--f-display); }
+  .teaser b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--amber); display:block; letter-spacing:0.06em; }
+  .quiz{ margin:1.4rem 0 0; display:grid; gap:0.7rem; }
+  .quiz h3{ font-size:1rem; margin:0; }
+  .epnav{ display:flex; justify-content:space-between; gap:0.6rem; margin:1.2rem 0 0; flex-wrap:wrap; }
+  .epnav button, .epnav a{ font:inherit; font-size:0.92rem; border:1px solid var(--accent); background:var(--surface); color:var(--accent); border-radius:8px; padding:0.5rem 1rem; cursor:pointer; text-decoration:none; }
+  .epnav .next{ background:var(--accent); color:var(--accent-ink); }
+  .epnav [hidden]{ display:none; }
+  .seasons{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin:1.4rem 0; }
+  .scard{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.2rem; box-shadow:var(--shadow); display:grid; gap:0.4rem; align-content:start; text-decoration:none; color:var(--ink); }
+  .scard:hover{ border-color:var(--accent); }
+  .scard .snum{ font-family:var(--f-display); font-size:1.7rem; font-weight:700; line-height:1.1; }
+  .scard .t{ font-family:var(--f-display); font-size:1.15rem; font-weight:600; }
+  .scard .y{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .lg{ font-size:0.88rem; color:var(--ink-muted); line-height:1.7; }
+  .scard .bar{ height:6px; background:var(--surface-2); border-radius:3px; overflow:hidden; margin-top:0.3rem; }
+  .scard .bar i{ display:block; height:100%; background:var(--accent); width:0; }
+  .scard .pg{ font-family:var(--f-mono); font-size:0.78rem; color:var(--ink-muted); }
+  .scard .go{ color:var(--accent); font-weight:700; font-size:0.92rem; }
+  .thread{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.5rem; }
+  .thread div{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; font-size:0.86rem; line-height:1.6; }
+  .thread b{ font-family:var(--f-mono); font-size:0.75rem; color:var(--accent); display:block; }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="taiwan-drama.html">← 回到台灣史劇場</a>
+<header class="hero">
+  <span class="eyebrow">台灣史劇場・第一季・史前－1683</span>
+  <h1>大航海的島嶼</h1>
+  <p class="sub">一個西拉雅女孩學會用羅馬字寫下自己的語言。這套文字後來寫進一張契約，在兩個家族之間傳了三百年。</p>
+  <p class="cast">主要角色：麗雅：新港社的西拉雅女孩（虛構）。主角與家族為虛構，歷史事件與年代依課程內容。</p>
+</header>
+<div class="scorebar"><span>一次看一集，看完做兩題小測驗。進度和作答會保留在這台裝置。</span><span class="meter" id="score"></span><button class="toggle" type="button" id="resetPractice" aria-pressed="false">清除作答</button></div>
+<nav class="eptabs" role="tablist" aria-label="集數"><button type="button" role="tab" id="tab0" aria-controls="ep0" aria-selected="false" data-i="0">E1</button><button type="button" role="tab" id="tab1" aria-controls="ep1" aria-selected="false" data-i="1">E2</button><button type="button" role="tab" id="tab2" aria-controls="ep2" aria-selected="false" data-i="2">E3</button><button type="button" role="tab" id="tab3" aria-controls="ep3" aria-selected="false" data-i="3">E4</button><button type="button" role="tab" id="tab4" aria-controls="ep4" aria-selected="false" data-i="4">E5</button><button type="button" role="tab" id="tab5" aria-controls="ep5" aria-selected="false" data-i="5">E6</button></nav>
+<section class="ep" id="ep0" role="tabpanel" aria-labelledby="tab0" hidden>
+<div class="ep-head"><span class="code">S1・E1</span><span class="yr">約 1,500 年前</span></div>
+<h2>火與鐵的村落</h2><div class="scene"><p class="scene-cap">淡水河口・十三行</p><p>夜裡的海風很冷，少年阿嵐守著煉鐵爐，一夜沒睡。爐火映紅了整片沙丘。</p><p>村裡的長老說，祖先是坐船來的。比他們更早，東海岸的長濱已經有人用打製石器過日子，北部的大坌坑有人開始做陶器。</p><p class="line">「爐火不能熄，」長老說，「鐵是我們跟海那邊換東西的本錢。」</p><p>天亮時，一艘外地船靠岸，帶來瑪瑙珠和一串有方孔的銅錢。阿嵐把銅錢串在脖子上。一千多年後，考古學家會在這片沙丘下挖到同樣的錢。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>臺灣最早的主人是原住民族，屬於<b>南島語族</b>。</li><li>史前文化記三個：<b>長濱</b>（舊石器）、<b>大坌坑</b>（新石器早期、陶器）、<b>十三行</b>（金屬器、煉鐵）。</li><li>十三行遺址出土外地銅錢與珠子，證明史前臺灣已和東亞各地<b>交流</b>。</li></ul></div>
+<div class="teaser"><b>下集預告</b>一千年後，一艘掛著紅白藍旗的大船駛進臺南的內海。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q1</span><span>十三行文化最大的特色是什麼？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 打製石器</button><button class="opt-btn" type="button" data-k="B">(B) 煉鐵技術</button><button class="opt-btn" type="button" data-k="C">(C) 水稻梯田</button><button class="opt-btn" type="button" data-k="D">(D) 羅馬字書寫</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>十三行屬於金屬器時代，遺址有煉鐵的痕跡。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q2</span><span>十三行遺址出土外地銅錢，最能用來說明什麼？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 臺灣已使用貨幣納稅</button><button class="opt-btn" type="button" data-k="B">(B) 史前臺灣與外地有交流</button><button class="opt-btn" type="button" data-k="C">(C) 荷蘭人已經來臺</button><button class="opt-btn" type="button" data-k="D">(D) 漢人大量移民</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>外地錢幣與珠子出現在遺址，說明當時已有對外交流。</div></details></div></div>
+</section><section class="ep" id="ep1" role="tabpanel" aria-labelledby="tab1" hidden>
+<div class="ep-head"><span class="code">S1・E2</span><span class="yr">1624</span></div>
+<h2>大員的商館</h2><div class="scene"><p class="scene-cap">1624 年・大員</p><p>麗雅十二歲那年，海上出現從沒見過的大船。紅髮的人上岸，在沙洲上蓋起一座磚造的城，叫熱蘭遮城。</p><p class="line">「他們不是來種田的，」父親說，「他們是來做生意的。」</p><p>父親說得對。他們是荷蘭東印度公司。公司收購臺灣的鹿皮賣到日本，也把中國的生絲、瓷器轉運到日本和歐洲。大員成了轉運站。</p></div><div class="scene"><p class="scene-cap">新港社・教堂</p><p>傳教士來到麗雅的村子，用羅馬字母拼寫西拉雅語，教孩子讀聖經。麗雅學得最快。</p><p class="line">「原來我們說的話，也能寫下來。」</p><p>同一時間，公司把和各村社做買賣的權利公開標售，叫做<b>贌社</b>；又招來大批漢人開墾，種米和甘蔗，土地叫<b>王田</b>。麗雅看著田越開越多，鹿越來越少。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1624</b> 年荷蘭東印度公司占領大員（今臺南安平），建<b>熱蘭遮城</b>。</li><li>荷蘭來臺為了<b>貿易轉運</b>：鹿皮輸日本，轉口中國生絲、瓷器。</li><li>關鍵詞：<b>贌社</b>（標售村社交易權）、<b>王田</b>（招漢人開墾）、傳教士教<b>羅馬字</b>（日後的新港文書）。</li></ul></div>
+<div class="teaser"><b>下集預告</b>北邊的雞籠港，另一個歐洲國家也插下了旗子。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q3</span><span>荷蘭東印度公司占領大員的主要目的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 傳播天主教</button><button class="opt-btn" type="button" data-k="B">(B) 建立貿易轉運站</button><button class="opt-btn" type="button" data-k="C">(C) 開採金礦</button><button class="opt-btn" type="button" data-k="D">(D) 建立移民社會</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>荷蘭是商業公司，來臺是為了對中國、日本的貿易。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q4</span><span>「公司把與村社交易的權利公開標售」是哪個制度？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 王田</button><button class="opt-btn" type="button" data-k="B">(B) 贌社</button><button class="opt-btn" type="button" data-k="C">(C) 保甲</button><button class="opt-btn" type="button" data-k="D">(D) 番界</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>贌社制度：得標的商人獨占某社的買賣並繳稅。</div></details></div></div>
+</section><section class="ep" id="ep2" role="tabpanel" aria-labelledby="tab2" hidden>
+<div class="ep-head"><span class="code">S1・E3</span><span class="yr">1626－1642</span></div>
+<h2>雞籠的城</h2><div class="scene"><p class="scene-cap">1626 年・雞籠</p><p>消息從北方傳來：西班牙人占了雞籠，在和平島上蓋了聖薩爾瓦多城，後來又到淡水。</p><p class="line">「西班牙人跟荷蘭人是死對頭，」來大員做生意的漢人商人壓低聲音，「他們都想做中國和日本的生意。」</p><p>西班牙的根據地在菲律賓的馬尼拉。他們在北臺灣傳天主教，和南邊傳基督新教的荷蘭人隔著半個島對望。</p></div><div class="scene"><p class="scene-cap">1642 年・雞籠港外</p><p>荷蘭艦隊北上。這一年，西班牙人被趕出臺灣。</p><p>麗雅已經是年輕女子了，她在教堂的本子上寫下一行羅馬字：今年，整座島只剩下一個紅毛主人。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1626</b> 年西班牙占領北部<b>雞籠</b>（基隆），後擴及淡水，根據地在<b>馬尼拉</b>。</li><li>荷蘭在南、傳<b>基督新教</b>；西班牙在北、傳<b>天主教</b>。</li><li><b>1642</b> 年荷蘭驅逐西班牙，成為臺灣唯一的歐洲勢力。</li></ul></div>
+<div class="teaser"><b>下集預告</b>稅越收越重，漢人農民開始在夜裡磨刀。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q5</span><span>西班牙在臺灣的據點位於？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 南部大員</button><button class="opt-btn" type="button" data-k="B">(B) 北部雞籠、淡水</button><button class="opt-btn" type="button" data-k="C">(C) 東部花蓮</button><button class="opt-btn" type="button" data-k="D">(D) 澎湖</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>西班牙在 1626 年占領雞籠，後擴及淡水。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q6</span><span>1642 年發生什麼事？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 鄭成功來臺</button><button class="opt-btn" type="button" data-k="B">(B) 荷蘭驅逐西班牙</button><button class="opt-btn" type="button" data-k="C">(C) 清朝設臺灣府</button><button class="opt-btn" type="button" data-k="D">(D) 荷蘭人初次來臺</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1642 年荷蘭北上驅逐西班牙。</div></details></div></div>
+</section><section class="ep" id="ep3" role="tabpanel" aria-labelledby="tab3" hidden>
+<div class="ep-head"><span class="code">S1・E4</span><span class="yr">1652</span></div>
+<h2>郭懷一之夜</h2><div class="scene"><p class="scene-cap">1652 年・赤崁</p><p>漢人越來越多，公司的人頭稅也越收越重。農民郭懷一召集同伴，約好在中秋夜起事。</p><p class="line">「與其被稅逼死，不如拚一次。」</p><p>計畫走漏了。公司調來軍隊，還找來原住民村社的戰士幫忙。起事在幾天內被鎮壓，死了數千人。</p></div><div class="scene"><p class="scene-cap">事後</p><p>麗雅在村裡看著受傷的人被抬回來。她明白，這座島上的每一群人，都被捲進了一場不是自己發起的生意。</p><p>公司在赤崁加蓋了一座城堡，叫普羅民遮城，防備下一次動亂。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1652</b> 年<b>郭懷一事件</b>：漢人不滿重稅起事，被荷蘭鎮壓。</li><li>之後荷蘭在赤崁建<b>普羅民遮城</b>（今赤崁樓）。</li><li>荷蘭時期的臺灣：原住民、漢人、荷蘭人三方並存，關係緊張。</li></ul></div>
+<div class="teaser"><b>下集預告</b>海峽對岸，一位將軍正在找一座可以「反清復明」的島。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q7</span><span>郭懷一事件的主要原因是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 宗教衝突</button><button class="opt-btn" type="button" data-k="B">(B) 漢人不滿重稅</button><button class="opt-btn" type="button" data-k="C">(C) 西班牙煽動</button><button class="opt-btn" type="button" data-k="D">(D) 爭奪水源</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>漢人農民不滿荷蘭公司的重稅而起事。</div></details></div><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q8</span><span>郭懷一事件發生在哪個統治時期？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 西班牙</button><button class="opt-btn" type="button" data-k="B">(B) 荷蘭</button><button class="opt-btn" type="button" data-k="C">(C) 鄭氏</button><button class="opt-btn" type="button" data-k="D">(D) 清領</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>1652 年是荷蘭統治時期。</div></details></div></div>
+</section><section class="ep" id="ep4" role="tabpanel" aria-labelledby="tab4" hidden>
+<div class="ep-head"><span class="code">S1・E5</span><span class="yr">1661－1662</span></div>
+<h2>國姓爺的艦隊</h2><div class="scene"><p class="scene-cap">1661 年・鹿耳門</p><p>那天潮水特別高。數百艘戰船趁漲潮穿過鹿耳門水道，直接開進內海。帶頭的是鄭成功，人稱國姓爺。</p><p>他在中國打不過清軍，需要一個根據地，繼續反清復明。</p><p>岸上的漢人農民跑來看熱鬧，有人哭，有人跪下來。他們不知道這些軍隊會帶來什麼，只知道島上要換主人了。</p></div><div class="scene"><p class="scene-cap">1662 年・熱蘭遮城</p><p>荷蘭人在城裡守了九個月，最後投降，離開了經營三十八年的臺灣。</p><p>麗雅已經老了。她把一疊寫滿羅馬字的紙交給孫女：「新的主人來了，但我們的話不要忘。」</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li><b>1661</b> 年鄭成功從鹿耳門登陸，<b>1662</b> 年荷蘭投降離臺。</li><li>鄭氏來臺的目的：建立<b>反清復明</b>的根據地。</li><li>鄭成功設<b>承天府</b>，臺灣開始出現漢人政權。</li></ul></div>
+<div class="teaser"><b>下集預告</b>國姓爺來臺不到半年就過世了。他的兒子，和一位叫陳永華的謀士，要讓這座島自己站起來。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q9</span><span>鄭成功來臺的主要目的是？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 貿易轉運</button><button class="opt-btn" type="button" data-k="B">(B) 傳教</button><button class="opt-btn" type="button" data-k="C">(C) 建立反清復明根據地</button><button class="opt-btn" type="button" data-k="D">(D) 開採樟腦</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>鄭成功在中國抗清失利，以臺灣作為根據地。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q10</span><span>荷蘭人在哪一年離開臺灣？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 1624</button><button class="opt-btn" type="button" data-k="B">(B) 1642</button><button class="opt-btn" type="button" data-k="C">(C) 1662</button><button class="opt-btn" type="button" data-k="D">(D) 1683</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>1662 年荷蘭投降，結束 38 年的統治。</div></details></div></div>
+</section><section class="ep" id="ep5" role="tabpanel" aria-labelledby="tab5" hidden>
+<div class="ep-head"><span class="code">S1・E6</span><span class="yr">1662－1683</span></div>
+<h2>東寧的最後一年</h2><div class="scene"><p class="scene-cap">東寧・孔廟落成</p><p>鄭經繼位，把承天府改名東寧。謀士陳永華蓋了孔廟，設立學校，讓讀書人可以考試做官。</p><p>軍隊沒仗打的時候就下田，叫做「寓兵於農」，開出來的田叫<b>營盤田</b>。今天臺南還有很多地名叫「營」，就是這樣來的。</p></div><div class="scene"><p class="scene-cap">1683 年・澎湖</p><p>清朝水師提督施琅率艦隊攻下澎湖。消息傳回東寧，城裡一片安靜。</p><p class="line">「降吧，」大臣說，「再打，只會死更多人。」</p><p>十三歲的鄭克塽投降。隔年，清朝在臺灣設臺灣府，隸屬福建省。麗雅的孫女把那疊羅馬字的紙收進木盒。第一季，結束。</p></div>
+<div class="keypts"><h3>本集重點</h3><ul><li>鄭經改稱<b>東寧</b>；<b>陳永華</b>建孔廟、辦學校，帶進儒學教育。</li><li>軍隊<b>屯田</b>（營盤田），地名「營」由此而來。</li><li><b>1683</b> 年施琅攻臺，鄭克塽降清；<b>1684</b> 年設臺灣府，隸屬福建省。</li></ul></div>
+<div class="teaser"><b>下集預告</b>第二季：一個少年躲在船艙底，偷渡黑水溝。他要找的，是一塊屬於自己的田。</div>
+<div class="quiz"><h3>看完考一下</h3><div class="qcard mcq" data-ans="B"><div class="qhead"><span class="qnum">Q11</span><span>鄭氏時期在臺灣建孔廟、設學校的是誰？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 施琅</button><button class="opt-btn" type="button" data-k="B">(B) 陳永華</button><button class="opt-btn" type="button" data-k="C">(C) 郭懷一</button><button class="opt-btn" type="button" data-k="D">(D) 劉銘傳</button></div><details><summary>看解析</summary><div class="ans"><b>B。</b>陳永華建孔廟、辦教育，儒學在臺灣扎根。</div></details></div><div class="qcard mcq" data-ans="C"><div class="qhead"><span class="qnum">Q12</span><span>1684 年清朝設臺灣府，隸屬哪一省？</span></div><div class="opt-list"><button class="opt-btn" type="button" data-k="A">(A) 廣東</button><button class="opt-btn" type="button" data-k="B">(B) 浙江</button><button class="opt-btn" type="button" data-k="C">(C) 福建</button><button class="opt-btn" type="button" data-k="D">(D) 臺灣</button></div><details><summary>看解析</summary><div class="ans"><b>C。</b>臺灣府隸屬福建省；臺灣建省要到 1885 年。</div></details></div></div>
+</section>
+<div class="epnav"><button type="button" id="prev">← 上一集</button><button type="button" class="next" id="next">下一集 →</button><a class="next" id="nextSeason" href="drama-s2.html" hidden>看第二季 →</a></div>
+<section class="part" style="margin-top:2rem"><span class="part-kicker">對照教材</span><p style="margin:0">這一季的考點整理在 <a href="tw-early.html">早期台灣</a> 教材；年代可以到 <a href="timeline.html">世界歷史時間軸</a> 對照同時期的東亞和世界。</p></section>
+<footer>
+  <p>劇情中的主角、家族與對白為虛構；歷史人物只敘述其史實作為。年代與事件依部定必修台灣史整理。</p>
+  <div class="id"><span>筱葳學測歷史</span><span>台灣史劇場 S1</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var PAGE = (document.querySelector('.eyebrow') || {}).textContent || location.pathname;
+  var SKEY = 'practice-v1:' + PAGE;
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(SKEY) || '{}') || {}; } catch (e) { saved = {}; }
+  function persist(){ try { localStorage.setItem(SKEY, JSON.stringify(saved)); } catch (e) {} }
+
+  var cards = [].slice.call(document.querySelectorAll('.qcard.mcq[data-ans], .qcard.txt'));
+  var state = {};
+  var sb = document.getElementById('score');
+  function updScore(){
+    if (!sb) return;
+    var ok = 0, done = 0;
+    cards.forEach(function(c, i){ if (state[i] !== undefined) { done++; if (state[i]) ok++; } });
+    sb.textContent = '答對 ' + ok + ' / ' + cards.length + (done === cards.length && cards.length ? '・全部完成' : '');
+    sb.className = 'meter ' + (done === cards.length && cards.length ? (ok / cards.length >= 0.8 ? 'ok' : 'warn') : '');
+  }
+
+  /* ---------- multiple choice ---------- */
+  function lockMcq(q, k, idx){
+    var ans = q.getAttribute('data-ans');
+    var btn = q.querySelector('.opt-btn[data-k="' + k + '"]');
+    if (!btn) return;
+    if (k === ans) btn.classList.add('right');
+    else { btn.classList.add('wrong'); var r = q.querySelector('.opt-btn[data-k="' + ans + '"]'); if (r) r.classList.add('right'); }
+    q.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+    var d = q.querySelector('details'); if (d) d.open = true;
+    state[idx] = (k === ans);
+  }
+
+  /* ---------- text answers ---------- */
+  function expand(s){
+    return s.replace(/[’‘`]/g, "'")
+      .replace(/\b(won)'t\b/g, 'will not').replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+      .replace(/n't\b/g, ' not')
+      .replace(/\b(it|that|there|what|he|she|who)'s\b/g, '$1 is')
+      .replace(/'re\b/g, ' are').replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will').replace(/\bi'm\b/g, 'i am');
+  }
+  function norm(s){
+    s = expand(String(s).toLowerCase());
+    s = s.replace(/[（）()「」『』“”"]/g, ' ')
+         .replace(/[，。、！？；：,.!?;:／\/|]/g, ' ')
+         .replace(/(\w)-(\w)/g, '$1$2')
+         .replace(/\s+/g, ' ').trim();
+    return s;
+  }
+  function toks(s){ return norm(s) ? norm(s).split(' ') : []; }
+  function lcs(a, b){
+    var m = a.length, n = b.length, dp = [], i, j;
+    for (i = 0; i <= m; i++) { dp.push(new Array(n + 1).fill(0)); }
+    for (i = m - 1; i >= 0; i--) for (j = n - 1; j >= 0; j--)
+      dp[i][j] = a[i] === b[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    var ka = {}, kb = {}; i = 0; j = 0;
+    while (i < m && j < n) {
+      if (a[i] === b[j]) { ka[i] = 1; kb[j] = 1; i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return { len: dp[0][0], ka: ka, kb: kb };
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function judge(inp){
+    var val = inp.value;
+    if (!norm(val)) return { empty: true };
+    var kw = inp.getAttribute('data-kw');
+    if (kw) {
+      var groups = JSON.parse(kw), low = val.toLowerCase();
+      var ok = groups.every(function(g){ return g.some(function(w){ return low.indexOf(String(w).toLowerCase()) !== -1; }); });
+      return { kw: true, ok: ok };
+    }
+    var accepts = (inp.getAttribute('data-accept') || '').split('||').filter(Boolean);
+    var you = toks(val), best = null;
+    for (var i = 0; i < accepts.length; i++) {
+      var ref = toks(accepts[i]);
+      if (ref.join(' ') === you.join(' ')) return { ok: true, exact: true };
+      var r = lcs(you, ref), sim = (2 * r.len) / (you.length + ref.length || 1);
+      if (!best || sim > best.sim) best = { sim: sim, r: r, ref: ref, raw: accepts[i] };
+    }
+    return { ok: false, best: best, you: you };
+  }
+  function render(inp, res){
+    var v = inp.parentNode.querySelector('.verdict[data-for="' + inp.id + '"]');
+    if (!v) return;
+    if (res.empty) { v.innerHTML = '<span class="vd warn">還沒有作答</span>'; return; }
+    if (res.ok && res.kw) { v.innerHTML = '<span class="vd good">✓ 關鍵答案正確</span>　請再看下方解析確認說法。'; return; }
+    if (res.ok) { v.innerHTML = '<span class="vd good">✓ 和標準答案相同</span>'; return; }
+    if (res.kw) { v.innerHTML = '<span class="vd bad">✗ 還沒寫到關鍵答案</span>　看看下方解析。'; return; }
+    var b = res.best, you = res.you;
+    var yl = you.map(function(t, i){ return b.r.ka[i] ? esc(t) : '<span class="dx-bad">' + esc(t) + '</span>'; }).join(' ');
+    var rl = b.ref.map(function(t, i){ return b.r.kb[i] ? esc(t) : '<span class="dx-good">' + esc(t) + '</span>'; }).join(' ');
+    v.innerHTML = '<span class="vd bad">✗ 和標準答案不同（相似度 ' + Math.round(b.sim * 100) + '%）</span>' +
+      '<div class="dx"><div><b>你的答案</b>' + yl + '</div><div><b>標準答案</b>' + rl + '</div></div>' +
+      '<p class="dx-note">紅色是和標準答案不同的字，綠色是標準答案有、你沒寫到的字。大小寫與標點不影響比對；翻譯和改寫可能有其他正確寫法，請對照解析判斷。</p>';
+  }
+  function checkCard(c, idx){
+    var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+    var all = true, any = false;
+    ins.forEach(function(inp){ var r = judge(inp); render(inp, r); if (!r.empty) any = true; if (!r.ok) all = false; });
+    if (any) state[idx] = all;
+    var d = c.querySelector('details'); if (d && any) d.open = true;
+    updScore();
+  }
+
+  cards.forEach(function(c, idx){
+    if (c.classList.contains('mcq')) {
+      var answered = false;
+      c.querySelectorAll('.opt-btn').forEach(function(b){
+        b.addEventListener('click', function(){
+          if (answered) return; answered = true;
+          lockMcq(c, b.getAttribute('data-k'), idx);
+          saved['m' + idx] = b.getAttribute('data-k'); persist(); updScore();
+        });
+      });
+      if (saved['m' + idx]) { answered = true; lockMcq(c, saved['m' + idx], idx); }
+    } else {
+      var ins = [].slice.call(c.querySelectorAll('.ans-in'));
+      ins.forEach(function(inp, k){
+        if (!inp.id) inp.id = 'q' + idx + '_' + k;
+        var key = 't' + idx + '_' + k;
+        if (saved[key]) inp.value = saved[key];
+        inp.addEventListener('input', function(){ saved[key] = inp.value; persist(); });
+        inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' && inp.tagName === 'INPUT') { e.preventDefault(); checkCard(c, idx); } });
+      });
+      var btn = c.querySelector('.chk');
+      if (btn) btn.addEventListener('click', function(){ checkCard(c, idx); });
+      if (ins.some(function(i){ return norm(i.value); }) && saved['c' + idx]) checkCard(c, idx);
+      if (btn) btn.addEventListener('click', function(){ saved['c' + idx] = 1; persist(); });
+    }
+  });
+
+  var reset = document.getElementById('resetPractice');
+  if (reset) reset.addEventListener('click', function(){
+    saved = {}; persist(); location.reload();
+  });
+  updScore();
+})();
+
+</script>
+<script>
+(function(){
+  var K='s1', N=6, SK='drama-watch-v1', st={};
+  try{ st=JSON.parse(localStorage.getItem(SK)||'{}')||{}; }catch(e){ st={}; }
+  st[K]=st[K]||{seen:{},cur:0};
+  function save(){ try{ localStorage.setItem(SK, JSON.stringify(st)); }catch(e){} }
+  var tabs=[].slice.call(document.querySelectorAll('.eptabs button'));
+  var panels=[].slice.call(document.querySelectorAll('.ep'));
+  var prev=document.getElementById('prev'), next=document.getElementById('next'), ns=document.getElementById('nextSeason');
+  var h=(location.hash||'').match(/^#e(\d+)$/);
+  var cur = h ? Math.min(N-1, Math.max(0, +h[1]-1)) : (st[K].cur||0);
+  function paint(){
+    tabs.forEach(function(t,i){ t.setAttribute('aria-selected', i===cur?'true':'false'); t.classList.toggle('seen', !!st[K].seen[i]); });
+    panels.forEach(function(p,i){ p.hidden = i!==cur; });
+    prev.hidden = cur===0; next.hidden = cur===N-1; ns.hidden = cur!==N-1;
+  }
+  function go(i, scroll){ cur=i; st[K].cur=i; save(); paint(); if(scroll) document.querySelector('.eptabs').scrollIntoView({behavior:'smooth', block:'start'}); }
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){ go(i,false); }); });
+  prev.addEventListener('click',function(){ go(cur-1,true); });
+  next.addEventListener('click',function(){ st[K].seen[cur]=1; go(cur+1,true); });
+  ns.addEventListener('click',function(){ st[K].seen[cur]=1; save(); });
+  panels.forEach(function(p,i){
+    p.querySelectorAll('.opt-btn').forEach(function(b){ b.addEventListener('click',function(){
+      setTimeout(function(){ var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done){ st[K].seen[i]=1; save(); paint(); } },0);
+    }); });
+    var done=[].every.call(p.querySelectorAll('.qcard'),function(q){ return q.querySelector('.opt-btn:disabled'); }); if(done) st[K].seen[i]=1;
+  });
+  save(); paint();
+})();
+</script>
+</body>
+</html>
