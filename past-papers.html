@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>歷屆試題練習｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E7EDF4;
+    --ink:#1E2A38;
+    --ink-muted:#5B6B7C;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --a2:#6E9FD8;      --a2-ink:#0F2038;
+    --ab:#4E9C8C;      --ab-ink:#0B241F;
+    --b2:#E0973C;      --b2-ink:#3A2306;
+    --grid-line: rgba(46,125,91,0.07);
+    --shadow: 0 1px 2px rgba(30,42,56,0.06), 0 8px 24px rgba(30,42,56,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1621;
+      --surface:#17202D;
+      --surface-2:#1C2634;
+      --ink:#E7ECF3;
+      --ink-muted:#93A2B4;
+      --line:#2B3648;
+      --accent:#7CC9A2;
+      --accent-ink:#0B1521;
+      --accent-soft:#1E3A2E;
+      --a2:#3E6DA6;      --a2-ink:#EAF1FB;
+      --ab:#3E8776;      --ab-ink:#E7F5F1;
+      --b2:#C97E2E;      --b2-ink:#2A1A05;
+      --grid-line: rgba(124,201,162,0.07);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1621;
+    --surface:#17202D;
+    --surface-2:#1C2634;
+    --ink:#E7ECF3;
+    --ink-muted:#93A2B4;
+    --line:#2B3648;
+    --accent:#7CC9A2;
+    --accent-ink:#0B1521;
+    --accent-soft:#1E3A2E;
+    --a2:#3E6DA6;      --a2-ink:#EAF1FB;
+    --ab:#3E8776;      --ab-ink:#E7F5F1;
+    --b2:#C97E2E;      --b2-ink:#2A1A05;
+    --grid-line: rgba(124,201,162,0.07);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    font-size:17px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ scroll-behavior:auto !important; transition:none !important; animation:none !important; }
+  }
+  h1,h2,h3{
+    font-family:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    font-weight:600;
+    text-wrap:balance;
+    color:var(--ink);
+    margin:0;
+  }
+  a{ color:var(--accent); }
+  .mono{ font-family:'JetBrains Mono','Cascadia Code',ui-monospace,monospace; font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:820px; margin:0 auto; padding:0 1.25rem 5rem; }
+
+  .hero{ padding:3.6rem 0 2rem; }
+  .eyebrow{
+    display:inline-block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid var(--line);
+    padding:0.3rem 0.7rem;
+    border-radius:4px;
+    margin-bottom:1.1rem;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; margin-bottom:0.8rem; }
+  .hero p.sub{ color:var(--ink-muted); font-size:1.05rem; max-width:600px; margin:0; }
+
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:0.9rem;
+    margin:2.2rem 0 2.6rem;
+  }
+  .stat-tile{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:1rem 1.1rem;
+    box-shadow:var(--shadow);
+  }
+  .stat-num{ font-family:'JetBrains Mono',monospace; font-size:1.85rem; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; line-height:1; }
+  .stat-num.muted{ color:var(--ink); }
+  .stat-label{ font-size:0.82rem; color:var(--ink-muted); margin-top:0.4rem; }
+
+  .legend{ display:flex; flex-wrap:wrap; gap:0.6rem 1.2rem; margin:0 0 2rem; font-size:0.85rem; color:var(--ink-muted); }
+  .legend span{ display:inline-flex; align-items:center; gap:0.4rem; }
+  .legend i{ display:inline-block; width:10px; height:10px; border-radius:3px; }
+  .legend i.done{ background:var(--accent); }
+  .legend i.ref{ background:var(--b2); }
+  .legend i.todo{ background:var(--surface-2); border:1px solid var(--line); }
+
+  .book-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    margin-bottom:1.3rem;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .book-head{
+    padding:1rem 1.4rem;
+    background:var(--surface-2);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:0.3rem 1rem;
+  }
+  .book-head h2{ font-size:1.2rem; margin:0; }
+  .book-sub{ font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:var(--ink-muted); white-space:nowrap; }
+
+  .chapter-head{
+    padding:0.85rem 1.4rem 0.3rem;
+    font-weight:700;
+    font-size:0.96rem;
+    color:var(--ink);
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:0.6rem;
+  }
+  .book-card > .chapter-head:first-of-type{ border-top:1px solid var(--line); }
+
+  .topic-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    padding:0.65rem 1.4rem 0.65rem 2.1rem;
+  }
+  .topic-row .name{ font-size:0.95rem; }
+  .topic-row a.topic-link{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:0.95rem;
+    display:inline-flex;
+    align-items:center;
+    gap:0.35rem;
+  }
+  .topic-row a.topic-link:hover{ color:var(--accent); }
+  .topic-row a.topic-link .go{ color:var(--accent); transition:transform .12s ease; }
+  .topic-row a.topic-link:hover .go{ transform:translateX(2px); }
+
+  .subnote{
+    padding:0 1.4rem 0.9rem 2.1rem;
+    font-size:0.82rem;
+    color:var(--ink-muted);
+    margin-top:-0.3rem;
+  }
+
+  .pill{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.68rem;
+    padding:0.2rem 0.6rem;
+    border-radius:999px;
+    white-space:nowrap;
+    flex:none;
+  }
+  .pill.done{ background:var(--accent); color:var(--accent-ink); }
+  .pill.ref{ background:var(--b2); color:var(--b2-ink); }
+  .pill.todo{ background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line); }
+  .pill.draft{ background:var(--b2); color:var(--b2-ink); }
+  .legend i.draft{ background:var(--b2); }
+
+  footer{
+    padding-top:2rem; margin-top:1.5rem;
+    border-top:1px solid var(--line);
+    color:var(--ink-muted);
+    font-size:0.85rem;
+  }
+  footer p{ margin:0 0 0.5rem; }
+  footer .id{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.8rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;
+    margin-top:1rem;
+  }
+
+  .pill.prog{ cursor:pointer; font-family:'JetBrains Mono',monospace; background:var(--surface); color:var(--ink-muted); border:1px solid var(--line); }
+  .pill.prog:hover{ border-color:var(--accent); color:var(--accent); }
+  .pill.prog[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .chap-prog{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--ink-muted); white-space:nowrap; }
+  .chap-prog.full{ color:var(--accent); font-weight:700; }
+  .stat-of{ font-size:1rem; color:var(--ink-muted); font-weight:500; }
+  .stat-label .mono{ font-size:0.72rem; }
+  #sMonth{ font-family:'Noto Sans TC',sans-serif; font-size:1.35rem; line-height:1.25; }
+  .phase.now{ border-color:var(--accent); background:var(--accent-soft); box-shadow:0 0 0 1px var(--accent) inset; }
+  .phase.now .when::after{ content:'・現在'; }
+</style>
+<style>
+  .exam-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1.1rem 1.4rem 1.2rem;
+    margin:0 0 1.6rem;
+    box-shadow:var(--shadow);
+  }
+  .exam-card h2{ font-size:1.1rem; margin-bottom:0.2rem; }
+  .exam-card .hint{ font-size:0.82rem; color:var(--ink-muted); margin:0 0 0.9rem; }
+  .bar{ display:flex; height:30px; border-radius:6px; overflow:hidden; gap:2px; }
+  .bar div{ display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; white-space:nowrap; overflow:hidden; }
+  .bar .s1{ background:var(--accent); color:var(--accent-ink); }
+  .bar .s2{ background:var(--ab); color:var(--ab-ink); }
+  .bar .s3{ background:var(--b2); color:var(--b2-ink); }
+  .bar-key{ display:flex; flex-wrap:wrap; gap:0.3rem 1.2rem; margin-top:0.6rem; font-size:0.82rem; color:var(--ink-muted); }
+  .bar-key span{ display:inline-flex; align-items:center; gap:0.4rem; }
+  .bar-key i{ display:inline-block; width:10px; height:10px; border-radius:3px; }
+  .phases{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.6rem; }
+  .phase{ border:1px solid var(--line); border-radius:8px; padding:0.6rem 0.8rem; background:var(--surface-2); }
+  .phase .when{ font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--accent); font-weight:700; }
+  .phase .what{ font-size:0.86rem; line-height:1.55; margin-top:0.2rem; }
+  .pts{ font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--ink-muted); font-weight:400; white-space:nowrap; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <span class="eyebrow"><a href="index.html" style="color:inherit;text-decoration:none">← 歷史 學習地圖</a></span>
+    <h1>歷屆試題練習</h1>
+    <p class="sub">111 到 115 學年度學測社會考科裡的歷史題，直接在線上作答。111 學年度起是新課綱，題型和 2027 年學測相同。每份約 20 題、建議 35 分鐘，交卷後自動批改，並列出各主題的得分率。</p>
+  </header>
+  <div class="exam-card">
+    <h2>建議順序</h2>
+    <p class="hint">配合學習地圖：第 2 週寫第一份當基準線，第 4、7、10 週各一份，第 12、13 週再寫最後兩份。</p>
+    <div class="phases">
+      <div class="phase"><div class="when">第 2 週</div><div class="what">111（基準線）</div></div>
+      <div class="phase"><div class="when">第 4・7 週</div><div class="what">112、113</div></div>
+      <div class="phase"><div class="when">第 10・12 週</div><div class="what">114、115</div></div>
+      <div class="phase"><div class="when">第 13 週</div><div class="what">錯最多的那份重寫</div></div>
+    </div>
+  </div>
+  <div class="book-card">
+    <div class="book-head"><h2>學測社會考科・歷史題</h2><span class="book-sub">右側顯示最近一次交卷的分數</span></div>
+    <div class="topic-row"><a class="topic-link" href="past-115.html"><span class="name">115 學年度學測</span><span class="go">→</span></a><span class="pill todo" data-year="115" data-total="50">未作答</span></div>
+<div class="subnote">2026 年 1 月・單選 19 題＋非選 3 題・共 50 分</div><div class="topic-row"><a class="topic-link" href="past-114.html"><span class="name">114 學年度學測</span><span class="go">→</span></a><span class="pill todo" data-year="114" data-total="50">未作答</span></div>
+<div class="subnote">2025 年 1 月・單選 19 題＋非選 3 題・共 50 分</div><div class="topic-row"><a class="topic-link" href="past-113.html"><span class="name">113 學年度學測</span><span class="go">→</span></a><span class="pill todo" data-year="113" data-total="58">未作答</span></div>
+<div class="subnote">2024 年 1 月・單選 23 題＋非選 3 題・共 58 分</div><div class="topic-row"><a class="topic-link" href="past-112.html"><span class="name">112 學年度學測</span><span class="go">→</span></a><span class="pill todo" data-year="112" data-total="48">未作答</span></div>
+<div class="subnote">2023 年 1 月・單選 19 題＋非選 3 題・共 48 分</div><div class="topic-row"><a class="topic-link" href="past-111.html"><span class="name">111 學年度學測</span><span class="go">→</span></a><span class="pill todo" data-year="111" data-total="47">未作答</span></div>
+<div class="subnote">2022 年 1 月・單選 19 題＋非選 3 題・共 47 分</div>
+  </div>
+  <div class="exam-card">
+    <h2>怎麼用</h2>
+    <p class="hint" style="margin:0">先用「模擬考」模式限時寫完再交卷。交卷後看每題解析，答錯的按「加入錯題本」並選錯因。非選擇題要先寫，再對照大考中心的參考答案替自己評分。想再練一次，按「清除重寫」。</p>
+  </div>
+  <footer>
+    <p>試題、答案與非選擇題參考答案來源：大學入學考試中心歷屆學科能力測驗社會考科。依著作權法第 9 條，依法令舉行之考試試題不得為著作權之標的。解析為教學用自編，僅供參考。</p>
+    <p>作答紀錄只存在這台裝置的瀏覽器裡。</p>
+    <div class="id"><span>筱葳學測歷史</span><span>歷屆試題練習</span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.pill[data-year]').forEach(function(p){
+    var st={}; try{ st=JSON.parse(localStorage.getItem('hist-exam-'+p.getAttribute('data-year'))||'{}')||{}; }catch(e){}
+    var tot=+p.getAttribute('data-total');
+    if(st.done && st.score!=null){ p.textContent=st.score+' / '+tot+'（'+Math.round(st.score/tot*100)+'%）'; p.className='pill done'; }
+    else if(st.a && Object.keys(st.a).length){ p.textContent='作答中'; p.className='pill draft'; }
+  });
+})();
+</script>
+</body>
+</html>

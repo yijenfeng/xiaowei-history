@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>113 學測歷史題｜筱葳學測歷史</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>[hidden]{display:none!important}</style>
+<style>
+  /* Layout: single reading column, PART sections in sequence, English passages set apart as "answer sheet" panels */
+  :root{
+    --bg:#F2F6F3;
+    --surface:#FFFFFF;
+    --surface-2:#E6EEE9;
+    --ink:#1C2A24;
+    --ink-muted:#58695F;
+    --line:#CADBD1;
+    --accent:#2E7D5B;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDEFE5;
+    --amber:#E0973C;  --amber-ink:#3A2306;
+    --teal:#4E9C8C;   --teal-ink:#0B241F;
+    --bad:#B5483B;    --bad-soft:#F6E1DD;
+    --hl-ts:#CFE8DA;  --hl-sup:#DCE8F5;  --hl-ex:#F7E3C6;  --hl-cs:#E9DDF2;
+    --grid-line:rgba(46,125,91,0.07);
+    --shadow:0 1px 2px rgba(28,42,36,0.06), 0 8px 24px rgba(28,42,36,0.05);
+    --f-display:'Noto Serif TC','Songti TC','PMingLiU',serif;
+    --f-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+    --f-en:'Source Serif 4','Georgia','Times New Roman',serif;
+    --f-mono:'JetBrains Mono','Cascadia Code',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+      --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+      --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+      --bad:#E48A7D; --bad-soft:#3A201C;
+      --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+      --grid-line:rgba(124,201,162,0.07);
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1914; --surface:#16231C; --surface-2:#1B2B23; --ink:#E6EEE9; --ink-muted:#93A89C;
+    --line:#2A3D33; --accent:#7CC9A2; --accent-ink:#0B1A12; --accent-soft:#1E3A2E;
+    --amber:#C97E2E; --amber-ink:#2A1A05; --teal:#3E8776; --teal-ink:#E7F5F1;
+    --bad:#E48A7D; --bad-soft:#3A201C;
+    --hl-ts:#24452F; --hl-sup:#22334A; --hl-ex:#4A3519; --hl-cs:#3A2A48;
+    --grid-line:rgba(124,201,162,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    color-scheme:dark;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; transition:none !important; } }
+  h1,h2,h3{ font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0; color:var(--ink); }
+  a{ color:var(--accent); }
+  p{ margin:0; }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .mono{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+
+  .page{ max-width:780px; margin:0 auto; padding-inline:1.25rem; padding-block:0 5rem; }
+
+  .back{ display:inline-block; margin-top:1.6rem; font-size:0.85rem; color:var(--ink-muted); text-decoration:none; }
+  .back:hover{ color:var(--accent); }
+
+  .hero{ padding-block:2rem 1.6rem; display:grid; gap:0.9rem; }
+  .eyebrow{
+    justify-self:start;
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.06em;
+    color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+    padding:0.3rem 0.7rem; border-radius:4px;
+  }
+  .hero h1{ font-size:clamp(1.9rem,5vw,2.5rem); line-height:1.25; }
+  .hero .sub{ color:var(--ink-muted); font-size:1.03rem; max-width:640px; }
+
+  .lede{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:1.1rem 1.3rem; box-shadow:var(--shadow); display:grid; gap:0.9rem;
+  }
+  .toc{ display:flex; flex-wrap:wrap; gap:0.5rem; padding:0; margin:0; list-style:none; }
+  .toc a{
+    display:inline-flex; gap:0.45rem; align-items:center; text-decoration:none;
+    font-size:0.88rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    padding:0.25rem 0.75rem; border-radius:999px;
+  }
+  .toc a:hover{ border-color:var(--accent); color:var(--accent); }
+  .toc b{ font-family:var(--f-mono); color:var(--accent); font-weight:700; }
+
+  section.part{ margin-top:3.2rem; display:grid; gap:1.1rem; }
+  .part-kicker{ font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.08em; color:var(--accent); }
+  .part h2{ font-size:1.55rem; line-height:1.35; }
+  .part h3{ font-size:1.08rem; margin-top:0.4rem; }
+
+  .step{ display:grid; gap:0.5rem; }
+  .step-tag{
+    justify-self:start; font-family:var(--f-mono); font-size:0.72rem; font-weight:700;
+    padding:0.1rem 0.55rem; border-radius:4px; background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--line);
+  }
+  .step-tag.rule{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+  .prompt{
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber);
+    border-radius:6px; padding:0.9rem 1.1rem; font-size:0.95rem;
+  }
+  .prompt .label{ font-family:var(--f-mono); font-size:0.72rem; color:var(--amber); font-weight:700; letter-spacing:0.05em; display:block; margin-bottom:0.2rem; }
+
+  .sheet{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:1rem 1.2rem; box-shadow:var(--shadow);
+    font-family:var(--f-en); font-size:1.06rem; line-height:1.85;
+  }
+  .sheet p + p{ margin-top:0.8rem; }
+  .sheet-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem 1rem;
+    font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin-bottom:0.5rem;
+  }
+  .sheet.weak{ border-color:var(--bad); }
+  .sheet .err{ text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+
+  .compare{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:0.9rem; }
+  .compare > *{ min-width:0; }
+
+  .note{
+    background:var(--accent-soft); border:1px solid var(--line); border-radius:8px;
+    padding:0.8rem 1rem; font-size:0.93rem;
+  }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:0.92rem; min-width:520px; }
+  th,td{ text-align:left; padding:0.6rem 0.85rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--surface-2); font-weight:700; font-size:0.85rem; }
+  tr:last-child td{ border-bottom:none; }
+  td.en{ font-family:var(--f-en); font-size:1rem; }
+
+  /* score band bar, drawn to scale 0–20 */
+  .bands{ display:grid; gap:0.4rem; }
+  .band-bar{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:40px; }
+  .band-bar div{ display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1.15; font-size:0.78rem; font-weight:700; }
+  .band-bar small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+  .b0{ background:var(--bad-soft); color:var(--bad); }
+  .b1{ background:var(--surface-2); color:var(--ink-muted); }
+  .b2{ background:var(--hl-sup); color:var(--ink); }
+  .b3{ background:var(--hl-ts); color:var(--ink); }
+  .b4{ background:var(--accent); color:var(--accent-ink); }
+  .band-scale{ display:flex; justify-content:space-between; font-family:var(--f-mono); font-size:0.7rem; color:var(--ink-muted); }
+
+  /* paragraph anatomy */
+  .anatomy-ctrl{ display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:center; }
+  button.toggle{
+    font:inherit; font-size:0.88rem; cursor:pointer;
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0.4rem 0.9rem;
+  }
+  button.toggle[aria-pressed="false"]{ background:var(--surface); color:var(--accent); border:1px solid var(--accent); }
+  .key{ display:flex; flex-wrap:wrap; gap:0.3rem 0.9rem; font-size:0.82rem; color:var(--ink-muted); }
+  .key span{ display:inline-flex; align-items:center; gap:0.35rem; }
+  .key i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .anatomy.on .ts{ background:var(--hl-ts); }
+  .anatomy.on .sup{ background:var(--hl-sup); }
+  .anatomy.on .ex{ background:var(--hl-ex); }
+  .anatomy.on .cs{ background:var(--hl-cs); }
+  .anatomy .ts,.anatomy .sup,.anatomy .ex,.anatomy .cs{ border-radius:3px; padding:0 2px; transition:background .2s ease; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .anatomy .tr{ font-weight:600; }
+  .anatomy.on .tr{ color:var(--accent); }
+
+  .skeleton{ display:grid; gap:0.4rem; counter-reset:sk; }
+  .skeleton div{
+    display:grid; grid-template-columns:7.5rem 1fr; gap:0.8rem; align-items:baseline;
+    padding:0.55rem 0.9rem; border-radius:6px; font-size:0.92rem;
+  }
+  .skeleton div > *{ min-width:0; }
+  .skeleton b{ font-size:0.86rem; }
+  @media (max-width:480px){ .skeleton div{ grid-template-columns:1fr; gap:0.1rem; } }
+
+  ul.clean{ margin:0; padding-left:1.2rem; display:grid; gap:0.3rem; }
+
+  .timeline{ display:flex; gap:2px; border-radius:6px; overflow:hidden; height:46px; }
+  .timeline div{ display:flex; flex-direction:column; justify-content:center; align-items:center; font-size:0.78rem; font-weight:700; line-height:1.15; text-align:center; padding:0 0.2rem; }
+  .timeline small{ font-family:var(--f-mono); font-weight:400; font-size:0.68rem; }
+
+  .checklist{ display:grid; gap:0.35rem; }
+  .checklist label{ display:flex; gap:0.6rem; align-items:flex-start; font-size:0.93rem; cursor:pointer; }
+  .checklist input{ margin-top:0.45rem; accent-color:var(--accent); }
+
+  /* practice */
+  .practice{ margin-top:3.2rem; display:grid; gap:1rem; }
+  .qcard{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; display:grid; gap:0.6rem; }
+  .qhead{ display:flex; gap:0.6rem; align-items:baseline; }
+  .qnum{ font-family:var(--f-mono); font-weight:700; color:var(--accent); flex:none; }
+  .qcard .en{ font-family:var(--f-en); font-size:1.02rem; }
+  .opts{ margin:0; padding-left:1.4rem; font-family:var(--f-en); font-size:1rem; display:grid; gap:0.15rem; }
+  details{ border-top:1px dashed var(--line); padding-top:0.5rem; }
+  summary{ cursor:pointer; color:var(--accent); font-size:0.88rem; font-weight:500; }
+  details .ans{ margin-top:0.5rem; font-size:0.93rem; }
+
+  /* draft box */
+  .draft{ display:grid; gap:0.6rem; }
+  textarea{
+    width:100%; min-height:260px; resize:vertical;
+    font-family:var(--f-en); font-size:1.02rem; line-height:1.75;
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:0.9rem 1rem;
+  }
+  textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .meters{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+  .meter{ font-family:var(--f-mono); font-size:0.8rem; padding:0.25rem 0.7rem; border-radius:999px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink-muted); }
+  .meter.ok{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .meter.warn{ background:var(--amber); color:var(--amber-ink); border-color:var(--amber); }
+
+  footer{ margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-muted); font-size:0.85rem; display:grid; gap:0.4rem; }
+  footer .id{ font-family:var(--f-mono); font-size:0.8rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem; }
+</style>
+<style>
+  .wt td.zh{ transition:filter .2s ease, opacity .2s ease; }
+  .masked td.zh{ filter:blur(6px); opacity:.55; user-select:none; }
+  .masked td.zh:hover,.masked td.zh:focus{ filter:none; opacity:1; }
+  .tools{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.85rem; color:var(--ink-muted); }
+  .pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.8rem; }
+  .pair > *{ min-width:0; }
+  .ex-line{ font-family:var(--f-en); font-size:1.02rem; }
+  .ex-line + .ex-line{ margin-top:0.3rem; }
+  .ok{ color:var(--accent); font-weight:600; }
+  .no{ color:var(--bad); text-decoration:line-through; text-decoration-thickness:1px; }
+  .hl{ background:var(--hl-ex); border-radius:3px; padding:0 2px; }
+  .hl2{ background:var(--hl-ts); border-radius:3px; padding:0 2px; }
+  .hl3{ background:var(--hl-sup); border-radius:3px; padding:0 2px; }
+  .formula{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.8rem 1.1rem; font-family:var(--f-mono); font-size:0.9rem; line-height:1.9; overflow-x:auto; }
+</style>
+<style>
+  .opt-list{ display:grid; gap:0.4rem; }
+  .opt-btn{
+    display:block; width:100%; text-align:left; cursor:pointer;
+    font-family:var(--f-en); font-size:1rem; line-height:1.5; color:var(--ink);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.8rem;
+  }
+  .opt-btn:hover{ border-color:var(--accent); }
+  .opt-btn.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .opt-btn.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .opt-btn:disabled{ cursor:default; }
+  .scorebar{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; font-size:0.9rem; color:var(--ink-muted); }
+  .scorebar .meter{ font-size:0.85rem; }
+  .passage{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.2rem; font-family:var(--f-en); font-size:1.04rem; line-height:1.9; box-shadow:var(--shadow); }
+  .passage p + p{ margin-top:0.7rem; }
+  .blank{ font-family:var(--f-mono); font-size:0.85rem; font-weight:700; color:var(--accent); background:var(--accent-soft); border-radius:4px; padding:0 0.35rem; }
+  .optgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.4rem; font-family:var(--f-en); }
+  .optgrid span{ background:var(--surface-2); border:1px solid var(--line); border-radius:6px; padding:0.3rem 0.6rem; }
+  .fill{ width:100%; font:inherit; font-family:var(--f-en); background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.4rem 0.6rem; }
+  .fill:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .panels{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0.6rem; }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:0.7rem 0.8rem; font-size:0.9rem; }
+  .panel b{ font-family:var(--f-mono); color:var(--accent); display:block; font-size:0.78rem; }
+  .log-form{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:0.6rem; align-items:end; }
+  .log-form label{ display:grid; gap:0.2rem; font-size:0.82rem; color:var(--ink-muted); }
+  select.fill{ appearance:auto; }
+</style>
+<style>
+  .chk-row{ display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
+  textarea.ans-in{ min-height:0; resize:vertical; font-size:1rem; line-height:1.6; padding:0.5rem 0.7rem; }
+  .verdict{ font-size:0.9rem; display:grid; gap:0.35rem; }
+  .verdict:empty{ display:none; }
+  .vd{ display:inline-block; font-weight:700; font-size:0.85rem; padding:0.1rem 0.6rem; border-radius:999px; }
+  .vd.good{ background:var(--accent); color:var(--accent-ink); }
+  .vd.bad{ background:var(--bad-soft); color:var(--bad); }
+  .vd.warn{ background:var(--surface-2); color:var(--ink-muted); }
+  .dx{ display:grid; gap:0.25rem; font-family:var(--f-en); font-size:1rem; background:var(--surface-2); border-radius:6px; padding:0.5rem 0.75rem; }
+  .dx b{ font-family:var(--f-body); font-size:0.75rem; color:var(--ink-muted); display:inline-block; min-width:4.5rem; }
+  .dx-bad{ color:var(--bad); text-decoration:underline wavy var(--bad); text-underline-offset:3px; }
+  .dx-good{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+  .dx-note{ font-size:0.8rem; color:var(--ink-muted); }
+  td .verdict{ margin-top:0.3rem; }
+</style>
+<style>
+  /* history additions: vertical chronology, primary-source boxes */
+  .chron{ list-style:none; margin:0.8rem 0 0; padding:0 0 0 0.2rem; display:grid; gap:0; }
+  .chron li{ display:grid; grid-template-columns:5.6rem 1fr; gap:0.9rem; position:relative; padding:0.35rem 0 0.55rem; }
+  .chron li > *{ min-width:0; }
+  .chron li::before{ content:''; position:absolute; left:6.05rem; top:0; bottom:0; width:2px; background:var(--line); }
+  .chron li::after{ content:''; position:absolute; left:calc(6.05rem - 4px); top:0.85rem; width:10px; height:10px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
+  .chron li.turn::after{ background:var(--accent); }
+  .chron .yr{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:0.82rem; font-weight:700; color:var(--accent); text-align:right; padding-top:0.15rem; }
+  .chron .ev{ padding-left:0.9rem; font-size:0.95rem; line-height:1.65; }
+  .chron .ev small{ display:block; color:var(--ink-muted); font-size:0.82rem; }
+  @media (max-width:480px){
+    .chron li{ grid-template-columns:4.4rem 1fr; gap:0.6rem; }
+    .chron li::before{ left:4.75rem; } .chron li::after{ left:calc(4.75rem - 4px); }
+  }
+  .src{ background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:6px; padding:0.7rem 1rem; font-family:var(--f-display); font-size:1rem; line-height:1.85; margin:0; }
+  .src cite{ display:block; font-style:normal; font-family:var(--f-body); font-size:0.78rem; color:var(--ink-muted); margin-top:0.3rem; }
+  .qcard .qtext{ margin:0; }
+  textarea.fill{ font-family:var(--f-body); }
+  .kwtag{ font-family:var(--f-mono); font-size:0.75rem; background:var(--accent-soft); color:var(--accent); border:1px solid var(--line); border-radius:4px; padding:0.05rem 0.4rem; white-space:nowrap; }
+</style>
+<style>
+  .exam-tools{ position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; background:var(--bg); border-bottom:1px solid var(--line); margin:0 -0.2rem 1.2rem; padding:0.6rem 0.2rem; display:flex; flex-wrap:wrap; gap:0.5rem 0.9rem; align-items:center; font-size:0.86rem; color:var(--ink-muted); }
+  .exam-tools .seg{ display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .exam-tools .seg button{ font:inherit; font-size:0.82rem; border:0; background:var(--surface); color:var(--ink-muted); padding:0.3rem 0.7rem; cursor:pointer; }
+  .exam-tools .seg button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); }
+  .exam-tools .timer{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:1rem; color:var(--ink); }
+  .exam-tools .prog{ font-family:var(--f-mono); font-variant-numeric:tabular-nums; }
+  .exam-tools .grow{ flex:1; }
+  .stem{ background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:0.6rem; margin:1.6rem 0 0.6rem; }
+  .stem .lbl, .qcard .lbl{ font-family:var(--f-mono); font-size:0.75rem; color:var(--ink-muted); margin:0 0 0.4rem; display:flex; gap:0.5rem; flex-wrap:wrap; }
+  .scanwrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:4px; }
+  .scan{ display:block; width:100%; height:auto; border-radius:4px; background:#fff; cursor:zoom-in; }
+  .scanhint{ display:none; font-size:0.75rem; color:var(--ink-muted); margin:0.25rem 0 0; }
+  @media (max-width:720px){
+    .scan{ width:600px; max-width:none; }
+    .scanwrap.fit .scan{ width:100%; cursor:zoom-in; }
+    .scanhint{ display:block; }
+  }
+  .qcard{ margin:0.8rem 0; }
+  .qcard.answered-ok{ border-color:var(--accent); }
+  .qcard.answered-bad{ border-color:var(--bad); }
+  .abcd{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:0.5rem; }
+  .abcd button, .chips button{ font:inherit; font-weight:700; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:8px; padding:0.55rem 0; cursor:pointer; }
+  .abcd button:hover, .chips button:hover{ border-color:var(--accent); }
+  .abcd button[aria-pressed="true"], .chips button[aria-pressed="true"]{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent); }
+  .abcd button.right, .chips button.right{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .abcd button.wrong, .chips button.wrong{ background:var(--bad-soft); color:var(--bad); border-color:var(--bad); }
+  .chips{ display:grid; gap:0.4rem; }
+  .chips button{ font-weight:500; text-align:left; padding:0.5rem 0.8rem; font-size:0.92rem; }
+  .fb{ border-top:1px dashed var(--line); padding-top:0.6rem; font-size:0.93rem; display:grid; gap:0.4rem; }
+  .fb .row{ display:flex; flex-wrap:wrap; gap:0.4rem 0.8rem; align-items:center; font-size:0.84rem; }
+  .fb a{ font-size:0.84rem; }
+  .fb select{ font:inherit; font-size:0.82rem; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:0.2rem 0.4rem; }
+  .self{ display:flex; flex-wrap:wrap; gap:0.4rem; }
+  .self button{ font:inherit; font-size:0.84rem; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:6px; padding:0.3rem 0.7rem; cursor:pointer; }
+  .self button[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .ncf{ display:grid; gap:0.2rem; font-size:0.84rem; color:var(--ink-muted); }
+  .ncf textarea{ font:inherit; font-size:0.95rem; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:0.45rem 0.6rem; width:100%; }
+  .result{ background:var(--surface); border:2px solid var(--accent); border-radius:10px; padding:1rem 1.2rem; margin:1.4rem 0; box-shadow:var(--shadow); }
+  .result .big{ font-family:var(--f-mono); font-size:2rem; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .result table{ font-size:0.88rem; }
+  .submitbar{ display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center; margin:1.6rem 0; }
+  .submitbar .primary{ font:inherit; font-weight:700; background:var(--accent); color:var(--accent-ink); border:0; border-radius:8px; padding:0.6rem 1.4rem; cursor:pointer; }
+  .confirm{ font-size:0.88rem; color:var(--bad); }
+  @media (max-width:480px){ .abcd button{ padding:0.7rem 0; } }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="past-papers.html">← 回到歷屆試題練習</a>
+<header class="hero">
+  <span class="eyebrow">歷屆試題・113 學年度</span>
+  <h1>113 學測歷史題</h1>
+  <p class="sub">2024 年 1 月考的學測社會考科中，挑出的歷史題：單選 23 題、非選擇題 3 題，共 58 分。建議限時 35 分鐘。題目是大考中心原卷截圖。</p>
+</header>
+<div class="lede"><p>兩種寫法：<b>模擬考</b>全部寫完再交卷，最接近考場；<b>練習</b>每寫一題就對答案、看解析。作答會保留在這台裝置，交卷後的分數會自動記到「歷屆試題與時間配置」的答對率紀錄。</p></div>
+<div class="exam-tools">
+  <span class="seg" role="group" aria-label="作答模式"><button type="button" id="mExam" aria-pressed="true">模擬考</button><button type="button" id="mPrac" aria-pressed="false">練習</button></span>
+  <span class="timer" id="timer">00:00</span><button class="toggle" type="button" id="tBtn" aria-pressed="false">開始計時</button>
+  <span class="grow"></span><span class="prog" id="prog">0/26</span>
+</div>
+<div class="qcard" id="q4" data-n="4"><p class="lbl"><span>第 4 題</span><span>單選・2 分</span><span>早期台灣</span></p><div class="scanwrap"><img class="scan" src="past/113/q4.webp" width="992" height="250" alt="第 4 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 4 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。西班牙官員建議在臺灣「另一個港口」取得據點，就是 1626 年占領的基隆；「根據地」指西班牙在亞洲的據點馬尼拉。</p><div class="row"><a href="tw-early.html">複習相關教材：早期台灣 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q5" data-n="5"><p class="lbl"><span>第 5 題</span><span>單選・2 分</span><span>傳統東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q5.webp" width="992" height="178" alt="第 5 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 5 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。南宋城市民家緊鄰壕溝、跨溝造屋、垃圾丟進溝中，反映城市人口密集、公共衛生欠佳。</p><div class="row"><a href="ea-traditional.html">複習相關教材：傳統東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q6" data-n="6"><p class="lbl"><span>第 6 題</span><span>單選・2 分</span><span>帝國主義到冷戰</span></p><div class="scanwrap"><img class="scan" src="past/113/q6.webp" width="992" height="215" alt="第 6 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 6 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。前國防部長承認美國誤判：越南人不是為美國理解的自由民主而戰。美國忽略了越南人民追求民族獨立的意志。</p><div class="row"><a href="wd-imperialism.html">複習相關教材：帝國主義到冷戰 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q7" data-n="7"><p class="lbl"><span>第 7 題</span><span>單選・2 分</span><span>傳統東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q7.webp" width="992" height="649" alt="第 7 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 7 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>A</b>。明代一條鞭法把賦役簡化為按田地、人丁徵銀，官員不必再精算戶口，所以鄞縣、象山的數字幾乎不變。</p><div class="row"><a href="ea-traditional.html">複習相關教材：傳統東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q8" data-n="8"><p class="lbl"><span>第 8 題</span><span>單選・2 分</span><span>古代到近代早期</span></p><div class="scanwrap"><img class="scan" src="past/113/q8.webp" width="992" height="444" alt="第 8 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 8 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。社會菁英以畫家、雕塑家為最多，又多出身工匠或店主家庭，最符合十五世紀文藝復興時期的義大利。</p><div class="row"><a href="wd-early.html">複習相關教材：古代到近代早期 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q9" data-n="9"><p class="lbl"><span>第 9 題</span><span>單選・2 分</span><span>日治時期</span></p><div class="scanwrap"><img class="scan" src="past/113/q9.webp" width="992" height="430" alt="第 9 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 9 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。1897 到 1903 年官隘人數大增，民隘歸零，顯示山區防禦逐漸由官方主導。</p><div class="row"><a href="tw-japan.html">複習相關教材：日治時期 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q10" data-n="10"><p class="lbl"><span>第 10 題</span><span>單選・2 分</span><span>20 世紀東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q10.webp" width="992" height="178" alt="第 10 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 10 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>A</b>。1960 年的沿海小島是金門（八二三砲戰後）；歐洲城市是冷戰前線的柏林。</p><div class="row"><a href="ea-20c.html">複習相關教材：20 世紀東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q11" data-n="11"><p class="lbl"><span>第 11 題</span><span>單選・2 分</span><span>近代東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q11.webp" width="992" height="214" alt="第 11 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 11 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。以國民黨領導的國民革命為準繩，宣傳三民主義，最可能是北伐統一後、1930 年代初國民政府時期上海的教科書。</p><div class="row"><a href="ea-modern.html">複習相關教材：近代東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q12" data-n="12"><p class="lbl"><span>第 12 題</span><span>單選・2 分</span><span>傳統東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q12.webp" width="992" height="142" alt="第 12 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 12 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。日本大化革新後實施班田收授與租庸調，模仿唐代的均田制與租庸調法。</p><div class="row"><a href="ea-traditional.html">複習相關教材：傳統東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q13" data-n="13"><p class="lbl"><span>第 13 題</span><span>單選・2 分</span><span>帝國主義到冷戰</span></p><div class="scanwrap"><img class="scan" src="past/113/q13.webp" width="992" height="179" alt="第 13 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 13 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>A</b>。1819 年英國人萊佛士開闢新加坡，數年間成為大都會，華人渡海經商並建天后宮。</p><div class="row"><a href="wd-imperialism.html">複習相關教材：帝國主義到冷戰 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q14" data-n="14"><p class="lbl"><span>第 14 題</span><span>單選・2 分</span><span>傳統東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q14.webp" width="992" height="179" alt="第 14 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 14 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。紫雲山中山寺是佛寺，佛教是東亞文化圈的共同要素之一。</p><div class="row"><a href="ea-traditional.html">複習相關教材：傳統東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q15" data-n="15"><p class="lbl"><span>第 15 題</span><span>單選・2 分</span><span>傳統東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q15.webp" width="992" height="215" alt="第 15 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 15 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。泉州人口稠密、山多地瘠，居民造船通往海外，以貿易利潤彌補家鄉生計。</p><div class="row"><a href="ea-traditional.html">複習相關教材：傳統東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q17" data-n="17"><p class="lbl"><span>第 17 題</span><span>單選・2 分</span><span>清領時期</span></p><div class="scanwrap"><img class="scan" src="past/113/q17.webp" width="992" height="251" alt="第 17 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 17 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>A</b>。1860 年代開港後茶業興盛，產地集中在北部丘陵，最符合新北市石碇。</p><div class="row"><a href="tw-qing.html">複習相關教材：清領時期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 27-28</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g27-28.webp" width="992" height="576" alt="題組 27-28 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q27" data-n="27"><p class="lbl"><span>第 27 題</span><span>單選・2 分</span><span>古代到近代早期</span></p><div class="scanwrap"><img class="scan" src="past/113/q27.webp" width="992" height="178" alt="第 27 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 27 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。胡椒從遠方輸入、價格昂貴，又放在精緻的銀器中，用來彰顯主人的身分。</p><div class="row"><a href="wd-early.html">複習相關教材：古代到近代早期 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q28" data-n="28"><p class="lbl"><span>第 28 題</span><span>單選・2 分</span><span>古代到近代早期</span></p><div class="scanwrap"><img class="scan" src="past/113/q28.webp" width="992" height="70" alt="第 28 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 28 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。胡椒產於印度西南的科欽一帶。羅馬帝國經埃及、紅海、阿拉伯海前往印度，是丙。乙繞過非洲南端，是十五世紀末大航海時代才出現的路線。</p><div class="row"><a href="wd-early.html">複習相關教材：古代到近代早期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 33-35</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g33-35.webp" width="992" height="387" alt="題組 33-35 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q33" data-n="33"><p class="lbl"><span>第 33 題</span><span>單選・2 分</span><span>古代到近代早期</span></p><div class="scanwrap"><img class="scan" src="past/113/q33.webp" width="992" height="186" alt="第 33 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 33 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。九世紀的基輔羅斯被烏克蘭人視為自己歷史文化的源頭，可反駁「烏克蘭本來就屬於俄國」的說法。</p><div class="row"><a href="wd-early.html">複習相關教材：古代到近代早期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 39-40</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g39-40.webp" width="992" height="551" alt="題組 39-40 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q39" data-n="39"><p class="lbl"><span>第 39 題</span><span>單選・2 分</span><span>日治時期</span></p><div class="scanwrap"><img class="scan" src="past/113/q39.webp" width="992" height="142" alt="第 39 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 39 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。總督府把東臺灣當作熱帶栽培的試驗地，主要因為那裡有廣大未開墾、容易取得的官有地。</p><div class="row"><a href="tw-japan.html">複習相關教材：日治時期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 41-43</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g41-43.webp" width="992" height="526" alt="題組 41-43 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q41" data-n="41"><p class="lbl"><span>第 41 題</span><span>單選・2 分</span><span>史料判讀</span></p><div class="scanwrap"><img class="scan" src="past/113/q41.webp" width="992" height="182" alt="第 41 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 41 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。資料甲依序講古代印度教文明、十三世紀伊斯蘭統治、近代英國殖民。</p><div class="row"><a href="source-method.html">複習相關教材：史料判讀 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q42" data-n="42"><p class="lbl"><span>第 42 題</span><span>單選・2 分</span><span>史料判讀</span></p><div class="scanwrap"><img class="scan" src="past/113/q42.webp" width="992" height="108" alt="第 42 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 42 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>B</b>。甲、乙對伊斯蘭統治的評價相反，適合探討不同文化的異同，以及它們帶來的發展機會。</p><div class="row"><a href="source-method.html">複習相關教材：史料判讀 →</a><span class="addmis"></span></div></div></div><div class="qcard nc" id="q43" data-n="43"><p class="lbl"><span>第 43 題</span><span>非選擇題・4 分</span><span>史料判讀</span></p><div class="scanwrap"><img class="scan" src="past/113/q43.webp" width="992" height="312" alt="第 43 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<p style="margin:0;font-size:0.84rem;color:var(--ink-muted)">勾選一項（2 分，自動批改）</p><div class="chips" role="group"><button type="button" data-k="0">資料甲</button><button type="button" data-k="1">資料乙</button><button type="button" data-k="2">資料丙</button></div><label class="ncf">不同之處（20 字內）<textarea rows="2" id="t113-43-0" data-i="0" autocomplete="off"></textarea></label>
+<div class="fb" hidden><p><b>參考答案</b>（摘自大考中心評分原則）：資料乙。不同之處：乙認為穆斯林（伊斯蘭）的統治並未導致印度落後；甲、丙都認為伊斯蘭統治使印度衰退。</p>
+<p style="margin:0;font-size:0.84rem;color:var(--ink-muted)">對照參考答案，替文字部分自評（2 分）：</p><div class="self" role="group"><button type="button" data-s="2">完全寫到（2 分）</button><button type="button" data-s="1">寫到一部分（1 分）</button><button type="button" data-s="0">沒寫到（0 分）</button></div>
+<div class="row"><a href="source-method.html">複習相關教材：史料判讀 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 44-46</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g44-46.webp" width="992" height="333" alt="題組 44-46 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q44" data-n="44"><p class="lbl"><span>第 44 題</span><span>單選・2 分</span><span>近代東亞</span></p><div class="scanwrap"><img class="scan" src="past/113/q44.webp" width="992" height="214" alt="第 44 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 44 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。明治政府扶植郵船公司開闢歐亞航路，目的是發展商業貿易，增加國家財富。</p><div class="row"><a href="ea-modern.html">複習相關教材：近代東亞 →</a><span class="addmis"></span></div></div></div><div class="qcard" id="q45" data-n="45"><p class="lbl"><span>第 45 題</span><span>單選・2 分</span><span>近代革命</span></p><div class="scanwrap"><img class="scan" src="past/113/q45.webp" width="992" height="214" alt="第 45 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 45 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>C</b>。1850 年蘇伊士運河還沒開通（1869 年才通航），英國船要繞過好望角，經孟買、檳城、麻六甲海峽到新加坡。</p><div class="row"><a href="wd-revolutions.html">複習相關教材：近代革命 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 47-50</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g47-50.webp" width="992" height="327" alt="題組 47-50 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard nc" id="q50" data-n="50"><p class="lbl"><span>第 50 題</span><span>非選擇題・4 分</span><span>清領時期</span></p><div class="scanwrap"><img class="scan" src="past/113/q50.webp" width="992" height="226" alt="第 50 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<label class="ncf">措施或政策<textarea rows="2" id="t113-50-0" data-i="0" autocomplete="off"></textarea></label><label class="ncf">判斷依據<textarea rows="2" id="t113-50-1" data-i="1" autocomplete="off"></textarea></label>
+<div class="fb" hidden><p><b>參考答案</b>（摘自大考中心評分原則）：措施：開山撫番（1874 年牡丹社事件後）。依據：題文提到政府在該地設立撫墾區、番學堂。</p>
+<p style="margin:0;font-size:0.84rem;color:var(--ink-muted)">對照參考答案，替文字部分自評（4 分）：</p><div class="self" role="group"><button type="button" data-s="4">完全寫到（4 分）</button><button type="button" data-s="2">寫到一部分（2 分）</button><button type="button" data-s="0">沒寫到（0 分）</button></div>
+<div class="row"><a href="tw-qing.html">複習相關教材：清領時期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 51-53</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g51-53.webp" width="992" height="500" alt="題組 51-53 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q51" data-n="51"><p class="lbl"><span>第 51 題</span><span>單選・2 分</span><span>古代到近代早期</span></p><div class="scanwrap"><img class="scan" src="past/113/q51.webp" width="992" height="209" alt="第 51 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 51 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。時代先後：特洛伊戰爭的古希臘陶瓶（丁）→君士坦丁皇帝金幣（乙，四世紀）→希臘文福音馬賽克（甲，拜占庭）→古蘭經（丙，伊斯蘭時期）。</p><div class="row"><a href="wd-early.html">複習相關教材：古代到近代早期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 58-60</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g58-60.webp" width="992" height="291" alt="題組 58-60 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard" id="q58" data-n="58"><p class="lbl"><span>第 58 題</span><span>單選・2 分</span><span>日治時期</span></p><div class="scanwrap"><img class="scan" src="past/113/q58.webp" width="992" height="106" alt="第 58 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<div class="abcd" role="group" aria-label="第 58 題選項"><button type="button" data-k="A">A</button><button type="button" data-k="B">B</button><button type="button" data-k="C">C</button><button type="button" data-k="D">D</button></div>
+<div class="fb" hidden><p><b class="verdict-t"></b>正確答案 <b>D</b>。初等女子教育以日語、裁縫、家政為主，目的是培養具有日本婦德的賢妻良母。</p><div class="row"><a href="tw-japan.html">複習相關教材：日治時期 →</a><span class="addmis"></span></div></div></div><div class="stem"><p class="lbl"><span>題組 61-64</span><span>（只收錄其中的歷史題）</span></p><div class="scanwrap"><img class="scan" src="past/113/g61-64.webp" width="992" height="546" alt="題組 61-64 題幹" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p></div><div class="qcard nc" id="q64" data-n="64"><p class="lbl"><span>第 64 題</span><span>非選擇題・4 分</span><span>近代革命</span></p><div class="scanwrap"><img class="scan" src="past/113/q64.webp" width="992" height="225" alt="第 64 題" loading="lazy"></div><p class="scanhint">題目可左右滑動；點一下圖片可縮成整頁寬度。</p>
+<label class="ncf">廢除的制度<textarea rows="2" id="t113-64-0" data-i="0" autocomplete="off"></textarea></label><label class="ncf">過類似光棍生活的因素<textarea rows="2" id="t113-64-1" data-i="1" autocomplete="off"></textarea></label>
+<div class="fb" hidden><p><b>參考答案</b>（摘自大考中心評分原則）：廢除的制度：奴隸制度。光棍因素：妻子留在家鄉照顧老小；或海外謀生不易，妻子即使赴美也缺乏工作機會。</p>
+<p style="margin:0;font-size:0.84rem;color:var(--ink-muted)">對照參考答案，替文字部分自評（4 分）：</p><div class="self" role="group"><button type="button" data-s="4">完全寫到（4 分）</button><button type="button" data-s="2">寫到一部分（2 分）</button><button type="button" data-s="0">沒寫到（0 分）</button></div>
+<div class="row"><a href="wd-revolutions.html">複習相關教材：近代革命 →</a><span class="addmis"></span></div></div></div>
+<div class="submitbar"><button class="primary" type="button" id="submit">交卷並批改</button><button class="toggle" type="button" id="reset" aria-pressed="false">清除重寫</button><span class="confirm" id="confirm"></span></div>
+<div id="result"></div>
+<footer>
+  <p>試題與答案來源：大學入學考試中心 113 學年度學科能力測驗社會考科試題、選擇題答案、非選擇題評分原則。依著作權法第 9 條，依法令舉行之考試試題不得為著作權之標的。解析為教學用自編。</p>
+  <div class="id"><span>筱葳學測歷史</span><span>歷屆試題 113</span></div>
+</footer>
+</div>
+<script>
+(function(){
+  var Q=[{"n": 4, "t": "m", "a": "B", "tag": "tw1", "tn": "早期台灣", "pts": 2}, {"n": 5, "t": "m", "a": "D", "tag": "ea1", "tn": "傳統東亞", "pts": 2}, {"n": 6, "t": "m", "a": "D", "tag": "wd3", "tn": "帝國主義到冷戰", "pts": 2}, {"n": 7, "t": "m", "a": "A", "tag": "ea1", "tn": "傳統東亞", "pts": 2}, {"n": 8, "t": "m", "a": "C", "tag": "wd1", "tn": "古代到近代早期", "pts": 2}, {"n": 9, "t": "m", "a": "B", "tag": "tw3", "tn": "日治時期", "pts": 2}, {"n": 10, "t": "m", "a": "A", "tag": "ea3", "tn": "20 世紀東亞", "pts": 2}, {"n": 11, "t": "m", "a": "B", "tag": "ea2", "tn": "近代東亞", "pts": 2}, {"n": 12, "t": "m", "a": "C", "tag": "ea1", "tn": "傳統東亞", "pts": 2}, {"n": 13, "t": "m", "a": "A", "tag": "wd3", "tn": "帝國主義到冷戰", "pts": 2}, {"n": 14, "t": "m", "a": "C", "tag": "ea1", "tn": "傳統東亞", "pts": 2}, {"n": 15, "t": "m", "a": "D", "tag": "ea1", "tn": "傳統東亞", "pts": 2}, {"n": 17, "t": "m", "a": "A", "tag": "tw2", "tn": "清領時期", "pts": 2}, {"n": 27, "t": "m", "a": "B", "tag": "wd1", "tn": "古代到近代早期", "pts": 2}, {"n": 28, "t": "m", "a": "C", "tag": "wd1", "tn": "古代到近代早期", "pts": 2}, {"n": 33, "t": "m", "a": "C", "tag": "wd1", "tn": "古代到近代早期", "pts": 2}, {"n": 39, "t": "m", "a": "B", "tag": "tw3", "tn": "日治時期", "pts": 2}, {"n": 41, "t": "m", "a": "D", "tag": "sk", "tn": "史料題四步驟", "pts": 2}, {"n": 42, "t": "m", "a": "B", "tag": "sk", "tn": "史料題四步驟", "pts": 2}, {"n": 43, "t": "n", "a": 1, "tag": "sk", "tn": "史料題四步驟", "pts": 4, "cp": 2, "wp": 2}, {"n": 44, "t": "m", "a": "C", "tag": "ea2", "tn": "近代東亞", "pts": 2}, {"n": 45, "t": "m", "a": "C", "tag": "wd2", "tn": "近代革命", "pts": 2}, {"n": 50, "t": "n", "a": null, "tag": "tw2", "tn": "清領時期", "pts": 4, "cp": 0, "wp": 4}, {"n": 51, "t": "m", "a": "D", "tag": "wd1", "tn": "古代到近代早期", "pts": 2}, {"n": 58, "t": "m", "a": "D", "tag": "tw3", "tn": "日治時期", "pts": 2}, {"n": 64, "t": "n", "a": null, "tag": "wd2", "tn": "近代革命", "pts": 4, "cp": 0, "wp": 4}], YEAR='113', TOTAL=58;
+  var KEY='hist-exam-'+YEAR, st={};
+  try{ st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ st={}; }
+  st.a=st.a||{}; st.t=st.t||{}; st.s=st.s||{}; st.mode=st.mode||'exam'; st.sec=st.sec||0;
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  var byN={}; Q.forEach(function(q){ byN[q.n]=q; });
+  var cards=[].slice.call(document.querySelectorAll('.qcard'));
+  function answered(q){ return q.t==='m' ? st.a[q.n]!=null : (st.a[q.n]!=null || Object.keys(st.t).some(function(k){ return k.indexOf(q.n+'-')===0 && st.t[k].trim(); })); }
+  function prog(){ var c=Q.filter(answered).length; document.getElementById('prog').textContent='已作答 '+c+'/'+Q.length; }
+  function reveal(card, q){
+    var fb=card.querySelector('.fb'); fb.hidden=false;
+    if(q.t==='m'){
+      var my=st.a[q.n];
+      card.querySelectorAll('.abcd button').forEach(function(b){ var k=b.getAttribute('data-k'); b.disabled=true; b.classList.toggle('right',k===q.a); b.classList.toggle('wrong',k===my && my!==q.a); });
+      var ok=my===q.a; card.classList.toggle('answered-ok',ok); card.classList.toggle('answered-bad',!ok);
+      fb.querySelector('.verdict-t').textContent = my==null ? '沒有作答。' : (ok ? '答對了。' : '答錯了，你選 '+my+'。');
+      if(!ok) mis(card,q);
+    } else {
+      if(q.a!=null){
+        var myc=st.a[q.n];
+        card.querySelectorAll('.chips button').forEach(function(b){ var k=+b.getAttribute('data-k'); b.disabled=true; b.classList.toggle('right',k===q.a); b.classList.toggle('wrong',k===myc && myc!==q.a); });
+        if(myc!==q.a) mis(card,q);
+      }
+      card.querySelectorAll('textarea').forEach(function(t){ t.readOnly=true; });
+      paintSelf(card,q);
+    }
+  }
+  function mis(card,q){
+    var box=card.querySelector('.addmis'); if(!box || box.childNodes.length) return;
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','錯因');
+    [['A','A 時代判斷錯'],['B','B 史料讀錯'],['C','C 概念混淆'],['D','D 選項陷阱'],['E','E 完全不會']].forEach(function(o){ var op=document.createElement('option'); op.value=o[0]; op.textContent=o[1]; sel.appendChild(op); });
+    var btn=document.createElement('button'); btn.type='button'; btn.className='toggle'; btn.setAttribute('aria-pressed','false'); btn.textContent='加入錯題本';
+    btn.addEventListener('click',function(){
+      var rows=[]; try{ rows=JSON.parse(localStorage.getItem('hist-mistakes-v1')||'[]')||[]; }catch(e){}
+      var tw=new Date(Date.now()+8*3600000).toISOString().slice(0,10);
+      rows.push({id:Date.now(),d:tw,t:q.tn,c:sel.value,s:YEAR+' 學測社會 第 '+q.n+' 題',n:'（請補上一句正確觀念）'});
+      try{ localStorage.setItem('hist-mistakes-v1',JSON.stringify(rows)); }catch(e){}
+      btn.textContent='已加入錯題本'; btn.disabled=true; sel.disabled=true;
+    });
+    box.appendChild(sel); box.appendChild(btn);
+  }
+  function paintSelf(card,q){ card.querySelectorAll('.self button').forEach(function(b){ b.setAttribute('aria-pressed', String(st.s[q.n])===b.getAttribute('data-s') ? 'true':'false'); }); }
+  cards.forEach(function(card){
+    var q=byN[+card.getAttribute('data-n')];
+    var btns=card.querySelectorAll(q.t==='m' ? '.abcd button' : '.chips button');
+    function paint(){ btns.forEach(function(b){ var k=b.getAttribute('data-k'); b.setAttribute('aria-pressed', String(st.a[q.n])===k ? 'true':'false'); }); }
+    btns.forEach(function(b){ b.addEventListener('click',function(){
+      if(st.done) return;
+      var k=b.getAttribute('data-k'); st.a[q.n]= q.t==='m' ? k : +k; save(); paint(); prog();
+      if(st.mode==='prac' && q.t==='m'){ st.shown=st.shown||{}; st.shown[q.n]=1; save(); reveal(card,q); }
+    }); });
+    card.querySelectorAll('textarea').forEach(function(t){
+      var key=q.n+'-'+t.getAttribute('data-i'); if(st.t[key]) t.value=st.t[key];
+      t.addEventListener('input',function(){ st.t[key]=t.value; save(); prog(); });
+    });
+    card.querySelectorAll('.self button').forEach(function(b){ b.addEventListener('click',function(){ st.s[q.n]=+b.getAttribute('data-s'); save(); paintSelf(card,q); if(st.done) score(); }); });
+    if(q.t==='n' && st.mode==='prac'){
+      var show=document.createElement('button'); show.type='button'; show.className='toggle'; show.setAttribute('aria-pressed','false'); show.textContent='寫完了，看參考答案'; show.style.justifySelf='start';
+      show.addEventListener('click',function(){ st.shown=st.shown||{}; st.shown[q.n]=1; save(); show.remove(); reveal(card,q); });
+      card.querySelector('.fb').before(show);
+    }
+    paint();
+    if(st.done || (st.shown&&st.shown[q.n])) reveal(card,q);
+  });
+  function score(){
+    var got=0, mc=0, ok=0, need=[]; var bt={};
+    Q.forEach(function(q){
+      bt[q.tn]=bt[q.tn]||[0,0];
+      if(q.t==='m'){ mc++; bt[q.tn][1]+=2; if(st.a[q.n]===q.a){ ok++; got+=2; bt[q.tn][0]+=2; } }
+      else { bt[q.tn][1]+=q.pts; var p=(q.a!=null && st.a[q.n]===q.a ? q.cp : 0); if(st.s[q.n]==null) need.push(q.n); else p+=st.s[q.n]; got+=p; bt[q.tn][0]+=p; }
+    });
+    var pct=Math.round(got/TOTAL*100);
+    var rows=Object.keys(bt).sort(function(a,b){ return (bt[a][0]/bt[a][1])-(bt[b][0]/bt[b][1]); }).map(function(k){ return '<tr><td>'+k+'</td><td class="mono">'+bt[k][0]+' / '+bt[k][1]+'</td><td class="mono">'+Math.round(bt[k][0]/bt[k][1]*100)+'%</td></tr>'; }).join('');
+    var r=document.getElementById('result');
+    r.innerHTML='<div class="result"><p style="margin:0">'+YEAR+' 學測歷史題・得分</p><p class="big" style="margin:0.2rem 0">'+got+' / '+TOTAL+'（'+pct+'%）</p>'+
+      '<p style="margin:0 0 0.6rem;font-size:0.9rem;color:var(--ink-muted)">單選答對 '+ok+' / '+mc+' 題'+(st.sec?'・用時 '+fmt(st.sec):'')+(need.length?'・第 '+need.join('、')+' 題的文字部分還沒自評，自評後分數會更新':'')+'</p>'+
+      '<p style="margin:0 0 0.3rem;font-size:0.9rem"><b>依主題的得分率</b>（由低到高，最上面的先補）</p><div class="table-wrap"><table><thead><tr><th>主題</th><th>得分</th><th>得分率</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+      '<p style="margin:0.6rem 0 0;font-size:0.85rem">往上捲可以看每題的正確答案與解析；答錯的題目旁有「加入錯題本」。分數已記到 <a href="past-exams.html#p3">答對率紀錄</a>。</p></div>';
+    var rec=[]; try{ rec=JSON.parse(localStorage.getItem('hist-past-v1')||'[]')||[]; }catch(e){}
+    var name=YEAR+' 學測歷史題', found=false;
+    rec.forEach(function(x){ if(x.n===name && x.auto){ x.ok=got; x.all=TOTAL; found=true; } });
+    if(!found) rec.push({n:name,ok:got,all:TOTAL,auto:1});
+    try{ localStorage.setItem('hist-past-v1',JSON.stringify(rec)); }catch(e){}
+    st.score=got; save();
+  }
+  function fmt(s){ var m=Math.floor(s/60), x=s%60; return (m<10?'0':'')+m+':'+(x<10?'0':'')+x; }
+  var timer=null, tEl=document.getElementById('timer'), tBtn=document.getElementById('tBtn');
+  tEl.textContent=fmt(st.sec);
+  tBtn.addEventListener('click',function(){
+    if(timer){ clearInterval(timer); timer=null; tBtn.textContent='繼續計時'; tBtn.setAttribute('aria-pressed','false'); return; }
+    timer=setInterval(function(){ st.sec++; tEl.textContent=fmt(st.sec); if(st.sec%5===0) save(); tEl.style.color = st.sec>=2100 ? 'var(--bad)' : ''; },1000);
+    tBtn.textContent='暫停'; tBtn.setAttribute('aria-pressed','true');
+  });
+  function setMode(m){ if(st.done) return; st.mode=m; save(); location.reload(); }
+  document.getElementById('mExam').setAttribute('aria-pressed', st.mode==='exam'?'true':'false');
+  document.getElementById('mPrac').setAttribute('aria-pressed', st.mode==='prac'?'true':'false');
+  document.getElementById('mExam').addEventListener('click',function(){ if(st.mode!=='exam') setMode('exam'); });
+  document.getElementById('mPrac').addEventListener('click',function(){ if(st.mode!=='prac') setMode('prac'); });
+  var sub=document.getElementById('submit'), cf=document.getElementById('confirm');
+  sub.addEventListener('click',function(){
+    if(st.done){ score(); document.getElementById('result').scrollIntoView({behavior:'smooth'}); return; }
+    var left=Q.length-Q.filter(answered).length;
+    if(left && !sub.dataset.armed){ sub.dataset.armed='1'; cf.textContent='還有 '+left+' 題沒作答，再按一次確定交卷。'; return; }
+    st.done=1; if(timer){ clearInterval(timer); timer=null; } save();
+    cards.forEach(function(card){ reveal(card, byN[+card.getAttribute('data-n')]); });
+    cf.textContent=''; sub.textContent='更新分數'; score();
+    document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  });
+  var rs=document.getElementById('reset');
+  rs.addEventListener('click',function(){
+    if(!rs.dataset.armed){ rs.dataset.armed='1'; rs.textContent='確定清除？再按一次'; return; }
+    st={mode:st.mode}; save(); location.reload();
+  });
+  if(st.done){ sub.textContent='更新分數'; score(); }
+  document.querySelectorAll('.scanwrap').forEach(function(w){ w.addEventListener('click',function(){ w.classList.toggle('fit'); }); });
+  prog();
+})();
+</script>
+</body>
+</html>
